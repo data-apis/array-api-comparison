@@ -39,6 +39,21 @@ Through specification and array library compliance, we facilitate array interope
 
 * * *
 
+## Array Libraries
+
+Currently, the following array libraries are evaluated:
+
+-   **NumPy**: serves as the reference API against which all other array libraries are compared.
+-   **CuPy**
+-   **Dask**
+-   **JAX**
+-   **MXNET**
+-   **PyTorch**
+-   **rnumpy**: an opinionated curation of NumPy APIs, serving as an exercise in evaluating what is most "essential" (i.e., the smallest set of building block functionality on which most array functionality can be built).
+-   **Sparse**
+
+* * *
+
 ## Usage
 
 To view array API data in your local web browser, first clone the repository
@@ -69,3 +84,21 @@ This repository contains the following directories:
 -   **data**: array API data (e.g., array library APIs and their NumPy equivalents).
 -   **docs**: browser-based documentation for viewing array API data.
 -   **scripts**: scripts for data manipulation and documentation generation.
+
+The `data` directory contains the following datasets:
+
+-   `XXXXX_numpy.(csv|json)`: array library APIs and their NumPy equivalents.
+-   `unified_join.(csv|json)`: all array library API data combined in a single file.
+
+When editing the data files, consider the JSON data to be the source of truth. From the JSON data, we generate the CSV files.
+
+* * *
+
+## Contributing
+
+To contribute array API data to this repository, add an `XXXXX_numpy.json` file, where `XXXXX` is the lowercase name of the relevant array library (e.g., `cupy`). The JSON file should include a JSON array, where each array element has the following fields:
+
+-   `name`: array library API name.
+-   `numpy`: NumPy API equivalent.
+
+Once added, the CSV variant can be generated using internal tooling.
