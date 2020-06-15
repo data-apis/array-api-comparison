@@ -126,6 +126,48 @@ all: install
 .PHONY: all
 
 #/
+# Prints the runtime value of a `Makefile` variable.
+#
+# ## Notes
+#
+# -   The rule uses the following format:
+#
+#     ```bash
+#     $ make inspect.<variable>
+#     ```
+#
+# @example
+# make inspect.ROOT_DIR
+#
+# @example
+# make inspect.CC
+#/
+inspect.%:
+	$(QUIET) echo '$*=$($*)'
+
+#/
+# Asserts that a `Makefile` variable is set.
+#
+# ## Notes
+#
+# -   The rule uses the following format:
+#
+#     ```bash
+#     $ make assert.<variable>
+#     ```
+#
+# -   If a variable is **not** set, the recipe exits with a non-zero exit code.
+#
+# @example
+# make inspect.CXX
+#/
+assert.%:
+	$(QUIET) if [[ "${${*}}" = "" ]]; then \
+		echo "\nError: You must set the environment variable: ${*}.\n"; \
+		exit 1; \
+	fi
+
+#/
 # Installs project dependencies.
 #
 # @example
@@ -173,47 +215,6 @@ clean-node:
 # make clean-docs
 #/
 clean-docs:
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(DOCS_DIR)/index.html
 
 .PHONY: clean-docs
-
-#/
-# Prints the runtime value of a `Makefile` variable.
-#
-# ## Notes
-#
-# -   The rule uses the following format:
-#
-#     ```bash
-#     $ make inspect.<variable>
-#     ```
-#
-# @example
-# make inspect.ROOT_DIR
-#
-# @example
-# make inspect.CC
-#/
-inspect.%:
-	$(QUIET) echo '$*=$($*)'
-
-#/
-# Asserts that a `Makefile` variable is set.
-#
-# ## Notes
-#
-# -   The rule uses the following format:
-#
-#     ```bash
-#     $ make assert.<variable>
-#     ```
-#
-# -   If a variable is **not** set, the recipe exits with a non-zero exit code.
-#
-# @example
-# make inspect.CXX
-#/
-assert.%:
-	$(QUIET) if [[ "${${*}}" = "" ]]; then \
-		echo "\nError: You must set the environment variable: ${*}.\n"; \
-		exit 1; \
-	fi
