@@ -25,3 +25,33 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 > Data and tooling to compare the API surfaces of various array libraries.
 
+## Usage
+
+To view array API data in your local web browser, first clone the repository
+
+```bash
+$ cd ./repository/destination/directory
+$ git clone https://github.com/pydata-apis/array-api-comparison.git
+```
+
+Once cloned, navigate to the repository documentation directory
+
+```bash
+$ cd ./array-api-comparison/docs
+```
+
+Open the HTML index file in your local web browser
+
+```bash
+$ open ./index.html
+```
+
+* * *
+
+## Organization
+
+This repository contains the following directories:
+
+-   **data**: array API data (e.g., array library APIs and their NumPy equivalents).
+-   **docs**: browser-based documentation for viewing array API data.
+-   **scripts**: scripts for data manipulation and documentation generation.
