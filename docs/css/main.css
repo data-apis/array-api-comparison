@@ -1,0 +1,124 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; }
+
+body {
+	font-family: 'Lato', Arial, sans-serif;
+	color: #7c8d87;
+	background: #f8f8f8;
+}
+
+a {
+	color: #31bc86;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #7c8d87;
+}
+
+.container > header {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+	background: rgba(0,0,0,0.01);
+}
+
+.container > header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+.component {
+	line-height: 1.5em;
+	margin: 0 auto;
+	padding: 2em 0 3em;
+	width: 100%;
+	max-width: 1400px;
+	overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 3em;
+    width: 100%;
+    background: #fff;
+}
+
+td, th {
+    padding: 0.75em 1.5em;
+    text-align: left;
+}
+
+th {
+    background-color: #31bc86;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+
+tbody th {
+	background-color: #2ea879;
+}
+
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+
+tbody tr:hover {
+    background-color: rgba(129,208,177,.3);
+}
+
+.sticky-wrap {
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative;
+	margin: 3em 0;
+	width: 100%;
+}
+
+.sticky-wrap .sticky-thead,
+.sticky-wrap .sticky-col,
+.sticky-wrap .sticky-intersect {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all .125s ease-in-out;
+	z-index: 50;
+	width: auto; /* Prevent table from stretching to full size */
+}
+
+.sticky-wrap .sticky-thead {
+	box-shadow: 0 0.25em 0.1em -0.1em rgba(0,0,0,.125);
+	z-index: 100;
+	width: 100%; /* Force stretch */
+}
+
+.sticky-wrap .sticky-intersect {
+	opacity: 1;
+	z-index: 150;
+}
+
+.sticky-wrap .sticky-intersect th {
+	background-color: #666;
+	color: #eee;
+}
+
+.sticky-wrap td,
+.sticky-wrap th {
+	box-sizing: border-box;
+}
+
+.sticky-wrap.overflow-y {
+	overflow-y: auto;
+	max-height: 50vh;
+}
