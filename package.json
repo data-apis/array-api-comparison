@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "array-api-comparison",
+  "version": "0.0.0",
+  "description": "Array API comparison.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pydata-apis/array-api-comparison.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pydata-apis/array-api-comparison/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@stdlib/stdlib": "0.0.90"
+  },
+  "keywords": []
+}
