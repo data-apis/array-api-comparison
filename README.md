@@ -37,6 +37,8 @@ Currently, the needs of the library author in the above user story are not met, 
 
 Through specification and array library compliance, we facilitate array interoperability for both users and library developers.
 
+* * *
+
 ## Usage
 
 To view array API data in your local web browser, first clone the repository
