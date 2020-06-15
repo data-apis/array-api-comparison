@@ -25,6 +25,18 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 > Data and tooling to compare the API surfaces of various array libraries.
 
+## Overview
+
+The goal of this repository is to compare the public API surfaces of various PyData array libraries in order to better understand existing practice. In analyzing both the commonalities and differences across array libraries, we can derive a common API subset which can be standardized and used to ensure consistency (naming and otherwise) across array libraries. This API subset should include attribute names, method names, and positional and keyword arguments.
+
+By deriving a common API subset, we can reduce friction among library consumers by reducing the cognitive overhead of learning array dialects. This is exemplified by the following user story:
+
+> As an array library author, I know that, regardless of the input array, whether NumPy, Dask, PyTorch, etc, the array has a method to compute the transpose which is guaranteed to have options `x`, `y`, and `z`.
+
+Currently, the needs of the library author in the above user story are not met, as libraries vary in their naming conventions and the optional arguments they support.
+
+Through specification and array library compliance, we facilitate array interoperability for both users and library developers.
+
 ## Usage
 
 To view array API data in your local web browser, first clone the repository
