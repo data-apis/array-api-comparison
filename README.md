@@ -47,10 +47,11 @@ Currently, the following array libraries are evaluated:
 -   **CuPy**
 -   **Dask**
 -   **JAX**
--   **MXNET**
+-   **MXNet**
 -   **PyTorch**
 -   **rnumpy**: an opinionated curation of NumPy APIs, serving as an exercise in evaluating what is most "essential" (i.e., the smallest set of building block functionality on which most array functionality can be built).
--   **Sparse**
+-   **PyData/Sparse**
+-   **Tensorflow**
 
 * * *
 
