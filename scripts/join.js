@@ -107,13 +107,13 @@ function main() {
 	ref = keyBy( ref, keyByCallback( 'name' ) );
 
 	// Load the individual join data:
-	dpath = resolve( __dirname, '..', 'data', 'joins' );
+	dpath = resolve( __dirname, '..', 'data' );
 	files = readDir( dpath );
 	libs = [ 'numpy' ];
 	for ( i = 0; i < files.length; i++ ) {
 		f = files[ i ];
 		ext = extname( f );
-		if ( ext !== '.json' || /unified_join/.test( f ) ) {
+		if ( ext !== '.json' || /join/.test( f ) ) {
 			continue;
 		}
 		fpath = resolve( dpath, f );
@@ -167,14 +167,14 @@ function main() {
 		out.push( tmp );
 	}
 	// Save the table to file:
-	fpath = resolve( __dirname, '..', 'data', 'joins', 'unified_join.json' );
+	fpath = resolve( __dirname, '..', 'data', 'join.json' );
 	tmp = writeFile( fpath, JSON.stringify( out ) + '\n', fopts );
 	if ( tmp instanceof Error ) {
 		console.error( tmp.message );
 		return;
 	}
 	// Generate a CSV file:
-	fpath = resolve( __dirname, '..', 'data', 'joins', 'unified_join.csv' );
+	fpath = resolve( __dirname, '..', 'data', 'join.csv' );
 	tmp = json2csv( out );
 	tmp = writeFile( fpath, tmp, fopts );
 	if ( tmp instanceof Error ) {

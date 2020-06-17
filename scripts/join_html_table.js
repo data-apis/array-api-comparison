@@ -61,7 +61,7 @@ function main() {
 	fopts = {
 		'encoding': 'utf8'
 	};
-	fpath = resolve( __dirname, '..', 'data', 'joins', 'unified_join.json' );
+	fpath = resolve( __dirname, '..', 'data', 'join.json' );
 	data = readJSON( fpath, fopts );
 	if ( data instanceof Error ) {
 		console.error( data.message );
