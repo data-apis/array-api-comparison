@@ -57,14 +57,26 @@ Currently, the following array libraries are evaluated:
 
 ## Usage
 
-To view array API data in your local web browser, first clone the repository
+To view array API data in your local web browser, first navigate to the directory into which you want to clone this repository
 
 ```bash
 $ cd ./repository/destination/directory
+```
+
+Next, clone the repository
+
+```bash
 $ git clone https://github.com/pydata-apis/array-api-comparison.git
 ```
 
-Once cloned, you can view the main data table in your local web browser
+Once cloned, navigate to the repository directory
+
+
+```bash
+$ cd ./array-api-comparison
+```
+
+You can view the main data table in your local web browser by running
 
 ```bash
 $ make view-data-table
