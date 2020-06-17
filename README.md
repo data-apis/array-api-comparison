@@ -64,16 +64,10 @@ $ cd ./repository/destination/directory
 $ git clone https://github.com/pydata-apis/array-api-comparison.git
 ```
 
-Once cloned, navigate to the repository documentation directory
+Once cloned, you can view the main data table in your local web browser
 
 ```bash
-$ cd ./array-api-comparison/docs
-```
-
-Open the HTML index file in your local web browser
-
-```bash
-$ open ./index.html
+$ make view-data-table
 ```
 
 * * *
