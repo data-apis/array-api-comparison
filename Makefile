@@ -75,6 +75,27 @@ else
 	QUIET :=
 endif
 
+# Determine the OS:
+#
+# [1]: https://en.wikipedia.org/wiki/Uname#Examples
+# [2]: http://stackoverflow.com/a/27776822/2225624
+OS ?= $(shell uname)
+ifneq (, $(findstring MINGW,$(OS)))
+	OS := WINNT
+else
+ifneq (, $(findstring MSYS,$(OS)))
+	OS := WINNT
+else
+ifneq (, $(findstring CYGWIN,$(OS)))
+	OS := WINNT
+else
+ifneq (, $(findstring Windows_NT,$(OS)))
+	OS := WINNT
+endif
+endif
+endif
+endif
+
 # Determine the filename:
 this_file := $(lastword $(MAKEFILE_LIST))
 
@@ -108,6 +129,14 @@ NODE ?= node
 
 # Define the command for `npm`:
 NPM ?= npm
+
+# Determine the `open` command:
+ifeq ($(OS), Darwin)
+	OPEN ?= open
+else
+	OPEN ?= xdg-open
+endif
+# TODO: add Windows command
 
 
 # RULES #
@@ -218,3 +247,14 @@ clean-docs:
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(DOCS_DIR)/index.html
 
 .PHONY: clean-docs
+
+#/
+# Opens the main data table in a web browser.
+#
+# @example
+# make view-data-table
+#/
+view-data-table:
+	$(QUIET) $(OPEN) $(DOCS_DIR)/index.html
+
+.PHONY: view-data-table
