@@ -37,7 +37,7 @@ var keyBy = require( '@stdlib/utils/key-by' );
 var objectKeys = require( '@stdlib/utils/keys' );
 var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var replace = require( '@stdlib/string/replace' );
-var json2csv = require( './json2csv.js' );
+var json2csv = require( './utils/json2csv.js' );
 
 
 // FUNCTIONS //
