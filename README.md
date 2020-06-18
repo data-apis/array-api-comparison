@@ -108,4 +108,20 @@ To contribute array API data to this repository, add an `XXXXX_numpy.json` file,
 -   `name`: array library API name.
 -   `numpy`: NumPy API equivalent.
 
+For example,
+
+```text
+[
+    {
+        "name": "all",
+        "numpy": "numpy.all"
+    },
+    {
+        "name": "allclose",
+        "numpy": "numpy.allclose"
+    },
+    ...
+]
+```
+
 Once added, the CSV variant can be generated using internal tooling.

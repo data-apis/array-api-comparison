@@ -112,7 +112,7 @@ function main() {
 	for ( i = 0; i < files.length; i++ ) {
 		f = files[ i ];
 		ext = extname( f );
-		if ( ext !== '.json' || /join/.test( f ) ) {
+		if ( ext !== '.json' || /^join$/.test( f ) ) {
 			continue;
 		}
 		fpath = resolve( dpath, f );
