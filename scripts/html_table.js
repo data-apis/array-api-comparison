@@ -24,15 +24,14 @@
 * SOFTWARE.
 */
 
-'use strict';
-
 // MODULES //
 
 var resolve = require( 'path' ).resolve;
 var readJSON = require( '@stdlib/fs/read-json' ).sync;
-var replace = require( '@stdlib/string/replace' );
-var pick = require( '@stdlib/utils/pick' );
-var LIBRARIES = require( './../etc/libraries.json' );
+var parseJSON = require( '@stdlib/utils/parse-json' );
+var CLI = require( '@stdlib/tools/cli' );
+var stdin = require( '@stdlib/process/read-stdin' );
+var createTable = require( './utils/html_table.js' );
 
 
 // MAIN //
@@ -41,41 +40,58 @@ var LIBRARIES = require( './../etc/libraries.json' );
 * Main execution sequence.
 *
 * @private
+* @returns {void}
 */
 function main() {
-	var fpath;
 	var fopts;
+	var flags;
+	var args;
 	var data;
-	var out;
-	var cnt;
-	var d;
-	var i;
-	var j;
+	var cli;
 
-	fpath = resolve( __dirname, '..', 'data', 'join.json' );
+	// Create a command-line interface:
+	cli = new CLI({
+		'options': {
+			'string': [
+				'title'
+			]
+		}
+	});
+	// Get any provided command-line options:
+	flags = cli.flags();
+
+	// Get any provided command-line arguments:
+	args = cli.args();
+
+	// Check if we are receiving data from `stdin`...
+	if ( !process.stdin.isTTY ) {
+		return stdin( onRead );
+	}
+	// Read a JSON file:
 	fopts = {
 		'encoding': 'utf8'
 	};
-	data = readJSON( fpath, fopts );
+	data = readJSON( args[ 0 ], fopts );
 	if ( data instanceof Error ) {
-		console.error( data.message );
-		return;
+		return cli.error( data );
 	}
-	out = [];
-	for ( i = 0; i < data.length; i++ ) {
-		d = data[ i ];
-		cnt = 0;
-		for ( j = 0; j < LIBRARIES.length; j++ ) {
-			if ( d[ LIBRARIES[j] ] ) {
-				cnt += 1;
-			}
+	console.log( createTable( data, flags.title || '' ) );
+
+	/**
+	* Callback invoked upon reading from `stdin`.
+	*
+	* @private
+	* @param {(Error|null)} error - error object
+	* @param {Buffer} data - data
+	* @returns {void}
+	*/
+	function onRead( error, data ) {
+		if ( error ) {
+			return cli.error( error );
 		}
-		if ( cnt === LIBRARIES.length ) {
-			out.push( pick( d, LIBRARIES ) );
-		}
+		data = parseJSON( data.toString() );
+		console.log( createTable( data, flags.title || '' ) );
 	}
-	// Print the data as JSON to stdout:
-	console.log( JSON.stringify( out ) );
 }
 
 main();

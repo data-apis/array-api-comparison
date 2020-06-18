@@ -64,7 +64,7 @@ function main() {
 	};
 	data = readJSON( args[ 0 ], fopts );
 	if ( data instanceof Error ) {
-		return cli.error( error );
+		return cli.error( data );
 	}
 	console.log( json2csv( data ) );
 

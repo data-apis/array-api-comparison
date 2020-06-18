@@ -39,7 +39,7 @@ a:hover, a:focus {
 .component {
 	line-height: 1.5em;
 	margin: 0 auto;
-	padding: 2em 0 3em;
+	padding: 0 0 3em;
 	width: 100%;
 	max-width: 1400px;
 	overflow: hidden;
@@ -81,7 +81,7 @@ tbody tr:hover {
 	overflow-x: auto;
 	overflow-y: hidden;
 	position: relative;
-	margin: 3em 0;
+	margin: 2em 0;
 	width: 100%;
 }
 

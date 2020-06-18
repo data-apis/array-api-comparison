@@ -29,10 +29,10 @@
 // MODULES //
 
 var resolve = require( 'path' ).resolve;
-var readFile = require( '@stdlib/fs/read-file' ).sync;
 var readJSON = require( '@stdlib/fs/read-json' ).sync;
 var replace = require( '@stdlib/string/replace' );
-var objectKeys = require( '@stdlib/utils/keys' );
+var pick = require( '@stdlib/utils/pick' );
+var LIBRARIES = require( './../etc/libraries.json' );
 
 
 // MAIN //
@@ -45,67 +45,44 @@ var objectKeys = require( '@stdlib/utils/keys' );
 function main() {
 	var fpath;
 	var fopts;
-	var data;
-	var keys;
-	var tmpl;
+	var join;
+	var int;
 	var out;
-	var N;
-	var M;
 	var d;
 	var i;
 	var j;
-	var k;
 
 	fopts = {
 		'encoding': 'utf8'
 	};
 	fpath = resolve( __dirname, '..', 'data', 'join.json' );
-	data = readJSON( fpath, fopts );
-	if ( data instanceof Error ) {
-		console.error( data.message );
+	join = readJSON( fpath, fopts );
+	if ( join instanceof Error ) {
+		console.error( join.message );
 		return;
 	}
-	out = '<table>\n';
-
-	keys = objectKeys( data[ 0 ] );
-	N = keys.length;
-
-	out += '<thead>\n<tr>\n';
-	for ( i = 0; i < N; i++ ) {
-		out += '<th>' + keys[ i ] + '</th>\n';
+	fpath = resolve( __dirname, '..', 'data', 'intersection.json' );
+	int = readJSON( fpath, fopts );
+	if ( int instanceof Error ) {
+		console.error( int.message );
+		return;
 	}
-	out += '</tr>\n</thead>\n';
+	out = [];
+	for ( i = 0; i < join.length; i++ ) {
+		d = join[ i ];
 
-	out += '<tbody>\n';
-	M = data.length;
-	for ( i = 0; i < M; i++ ) {
-		d = data[ i ];
-		out += '<tr>\n';
-		for ( j = 0; j < N; j++ ) {
-			k = keys[ j ];
-			if ( j === 0 ) {
-				out += '<th>' + d[ k ] + '</th>\n';
-			} else {
-				out += '<td>' + d[ k ] + '</td>\n';
+		// Check if the data is in the API intersection (if so, skip it)....
+		for ( j = 0; j < int.length; j++ ) {
+			if ( d.numpy === int[ j ].numpy ) {
+				break;
 			}
 		}
-		out += '</tr>\n';
+		if ( j === int.length ) {
+			out.push( pick( d, LIBRARIES ) );
+		}
 	}
-	out += '</tbody>\n';
-	out += '</table>';
-
-	// Load the HTML template:
-	fpath = resolve( __dirname, '..', 'docs', 'table_template.html' );
-	tmpl = readFile( fpath, fopts );
-	if ( tmpl instanceof Error ) {
-		console.error( tmpl.message );
-		return;
-	}
-	tmpl = replace( tmpl, '{{TITLE}}', 'Array API Comparison' );
-	tmpl = replace( tmpl, '{{TABLE}}', out );
-
-	// Print the generated HTML table to stdout:
-	console.log( tmpl );
+	// Print the list as JSON to stdout:
+	console.log( JSON.stringify( out ) );
 }
 
 main();

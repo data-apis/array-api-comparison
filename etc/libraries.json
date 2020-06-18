@@ -1,0 +1,8 @@
+[
+	"numpy",
+	"cupy",
+	"dask.array",
+	"jax",
+	"mxnet",
+	"pytorch"
+]

@@ -156,6 +156,18 @@ INTERSECTION_JSON_OUT ?= $(DATA_DIR)/intersection.json
 # Define the output file path for API intersection data as CSV:
 INTERSECTION_CSV_OUT ?= $(DATA_DIR)/intersection.csv
 
+# Define the output file path for viewing API intersection data as an HTML table:
+INTERSECTION_HTML_OUT ?= $(DOCS_DIR)/intersection.html
+
+# Define the output file path for API complement data as JSON:
+COMPLEMENT_JSON_OUT ?= $(DATA_DIR)/complement.json
+
+# Define the output file path for API complement data as CSV:
+COMPLEMENT_CSV_OUT ?= $(DATA_DIR)/complement.csv
+
+# Define the output file path for viewing API complement data as an HTML table:
+COMPLEMENT_HTML_OUT ?= $(DOCS_DIR)/complement.html
+
 
 # RULES #
 
@@ -168,7 +180,7 @@ INTERSECTION_CSV_OUT ?= $(DATA_DIR)/intersection.csv
 # @example
 # make all
 #/
-all: install join
+all: install join intersection complement
 
 .PHONY: all
 
@@ -215,7 +227,7 @@ $(JOIN_CSV_OUT): $(JOIN_JSON_OUT)
 # @private
 #/
 $(JOIN_HTML_OUT): $(JOIN_JSON_OUT)
-	$(QUIET) $(NODE) $(SCRIPTS_DIR)/join_html.js > $(JOIN_HTML_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(JOIN_JSON_OUT) --title="Array API Comparison" > $(JOIN_HTML_OUT)
 
 #/
 # Generates data assets combining individual join data.
@@ -240,8 +252,16 @@ $(INTERSECTION_JSON_OUT): $(JOIN_JSON_OUT)
 #
 # @private
 #/
-$(INTERSECTION_CSV_OUT): $(JOIN_JSON_OUT)
+$(INTERSECTION_CSV_OUT): $(INTERSECTION_JSON_OUT)
 	$(QUIET) $(NODE) $(SCRIPTS_DIR)/json2csv.js $(INTERSECTION_JSON_OUT) > $(INTERSECTION_CSV_OUT)
+
+#/
+# Generates HTML assets for viewing intersection data.
+#
+# @private
+#/
+$(INTERSECTION_HTML_OUT): $(INTERSECTION_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(INTERSECTION_JSON_OUT) --title="API Intersection" > $(INTERSECTION_HTML_OUT)
 
 #/
 # Generates data assets computing the intersection of library APIs.
@@ -249,20 +269,86 @@ $(INTERSECTION_CSV_OUT): $(JOIN_JSON_OUT)
 # @example
 # make intersection
 #/
-intersection: $(INTERSECTION_JSON_OUT) $(INTERSECTION_CSV_OUT)
+intersection: $(INTERSECTION_JSON_OUT) $(INTERSECTION_CSV_OUT) $(INTERSECTION_HTML_OUT)
 
 .PHONY: intersection
 
 #/
-# Opens a data table in a web browser.
+# Generates a JSON file containing the complement of the library API intersection.
+#
+# @private
+#/
+$(COMPLEMENT_JSON_OUT): $(JOIN_JSON_OUT) $(INTERSECTION_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/complement_json.js > $(COMPLEMENT_JSON_OUT)
+
+#/
+# Generates a CSV file containing the complement of the library API intersection.
+#
+# @private
+#/
+$(COMPLEMENT_CSV_OUT): $(COMPLEMENT_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/json2csv.js $(COMPLEMENT_JSON_OUT) > $(COMPLEMENT_CSV_OUT)
+
+#/
+# Generates HTML assets for viewing complement data.
+#
+# @private
+#/
+$(COMPLEMENT_HTML_OUT): $(COMPLEMENT_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(COMPLEMENT_JSON_OUT) --title="Non-Universal APIs" > $(COMPLEMENT_HTML_OUT)
+
+#/
+# Generates data assets computing the complement of the library API intersection.
 #
 # @example
-# make view-table
+# make complement
 #/
-view-table: $(JOIN_HTML_OUT)
+complement: $(COMPLEMENT_JSON_OUT) $(COMPLEMENT_CSV_OUT) $(COMPLEMENT_HTML_OUT)
+
+.PHONY: complement
+
+#/
+# Generates API documentation.
+#
+# @example
+# make docs
+#/
+docs: $(JOIN_HTML_OUT) $(INTERSECTION_HTML_OUT) $(COMPLEMENT_HTML_OUT)
+
+.PHONY: docs
+
+#/
+# Opens an HTML table showing all API data in a web browser.
+#
+# @example
+# make view-join
+#/
+view-join: $(JOIN_HTML_OUT)
 	$(QUIET) $(OPEN) $(JOIN_HTML_OUT)
 
-.PHONY: view-table
+.PHONY: view-join
+
+#/
+# Opens an HTML table showing the API intersection in a web browser.
+#
+# @example
+# make view-intersection
+#/
+view-intersection: $(INTERSECTION_HTML_OUT)
+	$(QUIET) $(OPEN) $(INTERSECTION_HTML_OUT)
+
+.PHONY: view-intersection
+
+#/
+# Opens an HTML table showing all APIs which are not in the API intersection in a web browser.
+#
+# @example
+# make view-complement
+#/
+view-complement: $(COMPLEMENT_HTML_OUT)
+	$(QUIET) $(OPEN) $(COMPLEMENT_HTML_OUT)
+
+.PHONY: view-complement
 
 #/
 # Runs the project's cleanup sequence.
@@ -285,16 +371,48 @@ clean-node:
 .PHONY: clean-node
 
 #/
+# Removes generated join datasets.
+#
+# @example
+# make clean-data-join
+#/
+clean-data-join:
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_JSON_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_CSV_OUT)
+
+.PHONY: clean-data-join
+
+#/
+# Removes generated intersection datasets.
+#
+# @example
+# make clean-data-intersection
+#/
+clean-data-intersection:
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_JSON_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_CSV_OUT)
+
+.PHONY: clean-data-intersection
+
+#/
+# Removes generated complement datasets.
+#
+# @example
+# make clean-data-complement
+#/
+clean-data-complement:
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMPLEMENT_JSON_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMPLEMENT_CSV_OUT)
+
+.PHONY: clean-data-complement
+
+#/
 # Removes generated datasets.
 #
 # @example
 # make clean-data
 #/
-clean-data:
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_JSON_OUT)
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_CSV_OUT)
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_JSON_OUT)
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_CSV_OUT)
+clean-data: clean-data-join clean-data-intersection clean-data-complement
 
 .PHONY: clean-data
 
@@ -306,6 +424,8 @@ clean-data:
 #/
 clean-docs:
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_HTML_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_HTML_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMPLEMENT_HTML_OUT)
 
 .PHONY: clean-docs
 

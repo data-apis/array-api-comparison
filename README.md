@@ -101,7 +101,19 @@ $ make
 To view array API data in your local web browser,
 
 ```bash
-$ make view-table
+$ make view-join
+```
+
+To view the view the intersection of array library APIs,
+
+```bash
+$ make view-intersection
+```
+
+To view array library APIs which are not in the intersection,
+
+```bash
+$ make view-complement
 ```
 
 * * *
@@ -112,6 +124,7 @@ This repository contains the following directories:
 
 -   **data**: array API data (e.g., array library APIs and their NumPy equivalents).
 -   **docs**: browser-based documentation for viewing array API data.
+-   **etc**: configuration files.
 -   **scripts**: scripts for data manipulation and documentation generation.
 
 The `data` directory contains the following directories
