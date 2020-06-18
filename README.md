@@ -125,7 +125,7 @@ When editing the data files, consider the JSON data to be the source of truth. F
 
 ## Contributing
 
-To contribute array API data to this repository, add an `XXXXX_numpy.json` file, where `XXXXX` is the lowercase name of the relevant array library (e.g., `cupy`). The JSON file should include a JSON array, where each array element has the following fields:
+To contribute array API data to this repository, add an `data/joins/XXXXX_numpy.json` file, where `XXXXX` is the lowercase name of the relevant array library (e.g., `cupy`). The JSON file should include a JSON array, where each array element has the following fields:
 
 -   `name`: array library API name.
 -   `numpy`: NumPy API equivalent.

@@ -53,7 +53,6 @@ var LIBRARIES = [
 * @private
 */
 function main() {
-	var dpath;
 	var fpath;
 	var fopts;
 	var data;
@@ -63,9 +62,7 @@ function main() {
 	var i;
 	var j;
 
-	dpath = resolve( __dirname, '..', 'data' );
-	fpath = resolve( dpath, 'join.json' );
-
+	fpath = resolve( _dirname, '..', 'data', 'join.json' );
 	fopts = {
 		'encoding': 'utf8'
 	};

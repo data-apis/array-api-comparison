@@ -96,7 +96,7 @@ function main() {
 	};
 
 	// Load NumPy data:
-	fpath = resolve( __dirname, '..', 'data', 'numpy.json' );
+	fpath = resolve( __dirname, '..', 'data', 'raw', 'numpy.json' );
 	ref = readJSON( fpath, fopts );
 	if ( ref instanceof Error ) {
 		console.error( ref.message );
@@ -106,13 +106,13 @@ function main() {
 	ref = keyBy( ref, keyByCallback( 'name' ) );
 
 	// Load the individual join data:
-	dpath = resolve( __dirname, '..', 'data' );
+	dpath = resolve( __dirname, '..', 'data', 'joins' );
 	files = readDir( dpath );
 	libs = [ 'numpy' ];
 	for ( i = 0; i < files.length; i++ ) {
 		f = files[ i ];
 		ext = extname( f );
-		if ( ext !== '.json' || /^join$/.test( f ) ) {
+		if ( ext !== '.json' ) {
 			continue;
 		}
 		fpath = resolve( dpath, f );
