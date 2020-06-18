@@ -82,6 +82,12 @@ Create an Anaconda environment
 $ conda create -n array-api-comparison -c conda-forge python=3.8 nodejs
 ```
 
+To activate the environment,
+
+```bash
+$ conda activate array-api-comparison
+```
+
 Run the installation sequence
 
 ```bash
