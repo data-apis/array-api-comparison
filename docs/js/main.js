@@ -74,6 +74,11 @@ $(function main() {
 
 		return;
 
+		/**
+		* Sets sticky table element dimensions.
+		*
+		* @private
+		*/
 		function setWidths() {
 			$t.find( 'thead th' ).each( setHeadingWidth ).end().find( 'tr' ).each( setRowHeight );
 
@@ -84,16 +89,33 @@ $(function main() {
 			$stickyCol.find( 'th' ).add( $stickyIntersect.find( 'th' ) ).width( $t.find( 'thead th' ).width() );
 		}
 
+		/**
+		* Callback invoked to set a table heading width.
+		*
+		* @private
+		* @param {number} i - index
+		*/
 		function setHeadingWidth( i ) {
 			var $el = $( this );
 			$stickyHead.find( 'th' ).eq( i ).width( $el.width() );
 		}
 
+		/**
+		* Callback invoked to set a table row height.
+		*
+		* @private
+		* @param {number} i - index
+		*/
 		function setRowHeight( i ) {
 			var $el = $( this );
 			$stickyCol.find( 'tr' ).eq( i ).height( $el.height() );
 		}
 
+		/**
+		* Repositions a stick table head.
+		*
+		* @private
+		*/
 		function repositionStickyHead() {
 			// Return value of calculated allowance:
 			var allowance = calcAllowance();
@@ -132,6 +154,11 @@ $(function main() {
 			}
 		}
 
+		/**
+		* Repositions a stick table column.
+		*
+		* @private
+		*/
 		function repositionStickyCol() {
 			if( $stickyWrap.scrollLeft() > 0 ) {
 				// When left of wrapping parent is out of view...
@@ -145,6 +172,12 @@ $(function main() {
 			}
 		}
 
+		/**
+		* Calculates table height allowance.
+		*
+		* @private
+		* @returns {number} allowed height
+		*/
 		function calcAllowance() {
 			var a = 0;
 
@@ -166,11 +199,21 @@ $(function main() {
 			}
 		}
 
+		/**
+		* Callback invoked upon page scroll.
+		*
+		* @private
+		*/
 		function onScroll() {
 			repositionStickyHead();
 			repositionStickyCol();
 		}
 
+		/**
+		* Callback invoked upon resizing a page.
+		*
+		* @private
+		*/
 		function onResize() {
 			setWidths();
 			repositionStickyHead();
