@@ -95,12 +95,13 @@ function main() {
 	out += '</table>';
 
 	// Load the HTML template:
-	fpath = resolve( __dirname, '..', 'docs', 'join_template.html' );
+	fpath = resolve( __dirname, '..', 'docs', 'table_template.html' );
 	tmpl = readFile( fpath, fopts );
 	if ( tmpl instanceof Error ) {
 		console.error( tmpl.message );
 		return;
 	}
+	tmpl = replace( tmpl, '{{TITLE}}', 'Array API Comparison' );
 	tmpl = replace( tmpl, '{{TABLE}}', out );
 
 	// Print the generated HTML table to stdout:
