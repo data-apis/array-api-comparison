@@ -162,7 +162,7 @@ $(function main() {
 			return a;
 
 			function onRow() {
-				a += $(this).height();
+				a += $( this ).height();
 			}
 		}
 
