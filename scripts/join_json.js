@@ -30,7 +30,6 @@
 
 var resolve = require( 'path' ).resolve;
 var readDir = require( '@stdlib/fs/read-dir' ).sync;
-var writeFile = require( '@stdlib/fs/write-file' ).sync;
 var readJSON = require( '@stdlib/fs/read-json' ).sync;
 var extname = require( '@stdlib/utils/extname' );
 var keyBy = require( '@stdlib/utils/key-by' );
@@ -166,21 +165,8 @@ function main() {
 		}
 		out.push( tmp );
 	}
-	// Save the table to file:
-	fpath = resolve( __dirname, '..', 'data', 'join.json' );
-	tmp = writeFile( fpath, JSON.stringify( out ) + '\n', fopts );
-	if ( tmp instanceof Error ) {
-		console.error( tmp.message );
-		return;
-	}
-	// Generate a CSV file:
-	fpath = resolve( __dirname, '..', 'data', 'join.csv' );
-	tmp = json2csv( out );
-	tmp = writeFile( fpath, tmp, fopts );
-	if ( tmp instanceof Error ) {
-		console.error( tmp.message );
-		return;
-	}
+	// Print the table to stdout:
+	console.log( JSON.stringify( out ) );
 }
 
 main();

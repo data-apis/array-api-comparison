@@ -111,14 +111,17 @@ ROOT_DIR ?= $(this_dir)
 # Define the directory for documentation:
 DOCS_DIR ?= $(ROOT_DIR)/docs
 
+# Define the directory for data:
+DATA_DIR ?= $(ROOT_DIR)/data
+
+# Define the directory for scripts:
+SCRIPTS_DIR ?= $(ROOT_DIR)/scripts
+
 # Define the path to the root `package.json`:
 ROOT_PACKAGE_JSON ?= $(ROOT_DIR)/package.json
 
 # Define the top-level directory containing node module dependencies:
 NODE_MODULES ?= $(ROOT_DIR)/node_modules
-
-# Define the folder name convention for scripts:
-SCRIPTS_FOLDER ?= scripts
 
 # Define the delete command:
 DELETE ?= -rm
@@ -138,6 +141,15 @@ else
 endif
 # TODO: add Windows command
 
+# Define the output file path for combined join data as JSON:
+JOIN_JSON_OUT ?= $(DATA_DIR)/join.json
+
+# Define the output file path for combined join data as CSV:
+JOIN_CSV_OUT ?= $(DATA_DIR)/join.csv
+
+# Define the output file path for viewing join data as an HTML table:
+JOIN_HTML_OUT ?= $(DOCS_DIR)/join.html
+
 
 # RULES #
 
@@ -150,51 +162,9 @@ endif
 # @example
 # make all
 #/
-all: install
+all: install join
 
 .PHONY: all
-
-#/
-# Prints the runtime value of a `Makefile` variable.
-#
-# ## Notes
-#
-# -   The rule uses the following format:
-#
-#     ```bash
-#     $ make inspect.<variable>
-#     ```
-#
-# @example
-# make inspect.ROOT_DIR
-#
-# @example
-# make inspect.CC
-#/
-inspect.%:
-	$(QUIET) echo '$*=$($*)'
-
-#/
-# Asserts that a `Makefile` variable is set.
-#
-# ## Notes
-#
-# -   The rule uses the following format:
-#
-#     ```bash
-#     $ make assert.<variable>
-#     ```
-#
-# -   If a variable is **not** set, the recipe exits with a non-zero exit code.
-#
-# @example
-# make inspect.CXX
-#/
-assert.%:
-	$(QUIET) if [[ "${${*}}" = "" ]]; then \
-		echo "\nError: You must set the environment variable: ${*}.\n"; \
-		exit 1; \
-	fi
 
 #/
 # Installs project dependencies.
@@ -218,12 +188,55 @@ install-node:
 .PHONY: install-node
 
 #/
+# Generates a JSON file combining individual library join data.
+#
+# @private
+#/
+$(JOIN_JSON_OUT):
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/join_json.js > $(JOIN_JSON_OUT)
+
+#/
+# Generates a CSV file combining individual library join data.
+#
+# @private
+#/
+$(JOIN_CSV_OUT): $(JOIN_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/join_csv.js > $(JOIN_CSV_OUT)
+
+#/
+# Generates HTML assets for viewing join data.
+#
+# @private
+#/
+$(JOIN_HTML_OUT): $(JOIN_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/join_html.js > $(JOIN_HTML_OUT)
+
+#/
+# Generates data assets combining individual join data.
+#
+# @example
+# make join
+#/
+join: $(JOIN_JSON_OUT) $(JOIN_CSV_OUT) $(JOIN_HTML_OUT)
+
+#/
+# Opens a data table in a web browser.
+#
+# @example
+# make view-table
+#/
+view-table: $(JOIN_HTML_OUT)
+	$(QUIET) $(OPEN) $(JOIN_HTML_OUT)
+
+.PHONY: view-table
+
+#/
 # Runs the project's cleanup sequence.
 #
 # @example
 # make clean
 #/
-clean: clean-node clean-docs
+clean: clean-node clean-data clean-docs
 
 .PHONY: clean
 
@@ -238,23 +251,61 @@ clean-node:
 .PHONY: clean-node
 
 #/
+# Removes generated datasets.
+#
+# @example
+# make clean-data
+#/
+clean-data:
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_JSON_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_CSV_OUT)
+
+#/
 # Removes generated documentation.
 #
 # @example
 # make clean-docs
 #/
 clean-docs:
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(DOCS_DIR)/index.html
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_HTML_OUT)
 
 .PHONY: clean-docs
 
 #/
-# Opens the main data table in a web browser.
+# Prints the runtime value of a `Makefile` variable.
+#
+# ## Notes
+#
+# -   The rule uses the following format:
+#
+#     ```bash
+#     $ make inspect.<variable>
+#     ```
 #
 # @example
-# make view-data-table
+# make inspect.ROOT_DIR
 #/
-view-data-table:
-	$(QUIET) $(OPEN) $(DOCS_DIR)/index.html
+inspect.%:
+	$(QUIET) echo '$*=$($*)'
 
-.PHONY: view-data-table
+#/
+# Asserts that a `Makefile` variable is set.
+#
+# ## Notes
+#
+# -   The rule uses the following format:
+#
+#     ```bash
+#     $ make assert.<variable>
+#     ```
+#
+# -   If a variable is **not** set, the recipe exits with a non-zero exit code.
+#
+# @example
+# make assert.ROOT_DIR
+#/
+assert.%:
+	$(QUIET) if [[ "${${*}}" = "" ]]; then \
+		echo "\nError: You must set the environment variable: ${*}.\n"; \
+		exit 1; \
+	fi

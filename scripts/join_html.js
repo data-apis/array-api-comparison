@@ -29,7 +29,6 @@
 // MODULES //
 
 var resolve = require( 'path' ).resolve;
-var writeFile = require( '@stdlib/fs/write-file' ).sync;
 var readFile = require( '@stdlib/fs/read-file' ).sync;
 var readJSON = require( '@stdlib/fs/read-json' ).sync;
 var replace = require( '@stdlib/string/replace' );
@@ -50,7 +49,6 @@ function main() {
 	var keys;
 	var tmpl;
 	var out;
-	var err;
 	var N;
 	var M;
 	var d;
@@ -97,7 +95,7 @@ function main() {
 	out += '</table>';
 
 	// Load the HTML template:
-	fpath = resolve( __dirname, '..', 'docs', 'template.html' );
+	fpath = resolve( __dirname, '..', 'docs', 'join_template.html' );
 	tmpl = readFile( fpath, fopts );
 	if ( tmpl instanceof Error ) {
 		console.error( tmpl.message );
@@ -105,13 +103,8 @@ function main() {
 	}
 	tmpl = replace( tmpl, '{{TABLE}}', out );
 
-	// Write the generated HTML table to file:
-	fpath = resolve( __dirname, '..', 'docs', 'index.html' );
-	err = writeFile( fpath, tmpl, fopts );
-	if ( err instanceof Error ) {
-		console.error( err.message );
-		return;
-	}
+	// Print the generated HTML table to stdout:
+	console.log( tmpl );
 }
 
 main();

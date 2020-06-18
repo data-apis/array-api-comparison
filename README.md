@@ -79,7 +79,7 @@ $ cd ./array-api-comparison
 You can view the main data table in your local web browser by running
 
 ```bash
-$ make view-data-table
+$ make view-table
 ```
 
 * * *
