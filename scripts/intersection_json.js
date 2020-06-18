@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
 * @license MIT
 *
@@ -26,67 +28,67 @@
 
 // MODULES //
 
-var objectKeys = require( '@stdlib/utils/keys' );
+var resolve = require( 'path' ).resolve;
+var readJSON = require( '@stdlib/fs/read-json' ).sync;
 var replace = require( '@stdlib/string/replace' );
-var isString = require( '@stdlib/assert/is-string' ).isPrimitive;
+
+
+// VARIABLES //
+
+var LIBRARIES = [
+	'numpy',
+	'cupy',
+	'dask.array',
+	'jax',
+	'mxnet',
+	'pytorch'
+];
 
 
 // MAIN //
 
 /**
-* Converts a JSON array to a CSV string.
+* Main execution sequence.
 *
 * @private
-* @param {(Array<Object>|Array<string>)} arr - JSON array
-* @returns {string} CSV string
 */
-function json2csv( arr ) {
-	var headers;
+function main() {
+	var dpath;
+	var fpath;
+	var fopts;
+	var data;
 	var out;
-	var tmp;
-	var N;
-	var M;
-	var o;
-	var v;
+	var cnt;
+	var d;
 	var i;
 	var j;
 
-	out = '';
-	if ( arr.length === 0 ) {
-		return out;
-	}
-	if ( isString( arr[ 0 ] ) ) {
-		return arr.join( '\n' );
-	}
-	headers = objectKeys( arr[ 0 ] );
-	N = headers.length;
-	for ( i = 0; i < N; i++ ) {
-		out += headers[ i ];
-		if ( i < N-1 ) {
-			out += ',';
-		}
-	}
-	out += '\n';
+	dpath = resolve( __dirname, '..', 'data' );
+	fpath = resolve( dpath, 'join.json' );
 
-	M = arr.length;
-	for ( i = 0; i < M; i++ ) {
-		o = arr[ i ];
-		tmp = '';
-		for ( j = 0; j < N; j++ ) {
-			v = o[ headers[ j ] ];
-			v = replace( v, ',', '\\,' );
-			v = replace( v, '"', '""' );
-			tmp += '"' + v + '"';
-			if ( j < N-1 ) {
-				tmp += ',';
+	fopts = {
+		'encoding': 'utf8'
+	};
+	data = readJSON( fpath, fopts );
+	if ( data instanceof Error ) {
+		console.error( data.message );
+		return;
+	}
+	out = [];
+	for ( i = 0; i < data.length; i++ ) {
+		d = data[ i ];
+		cnt = 0;
+		for ( j = 0; j < LIBRARIES.length; j++ ) {
+			if ( d[ LIBRARIES[j] ] ) {
+				cnt += 1;
 			}
 		}
-		out += tmp + '\n';
+		if ( cnt === LIBRARIES.length ) {
+			out.push( replace( d[ 'numpy' ], /^numpy\./, '' ) );
+		}
 	}
-	return out;
+	// Print the list as JSON to stdout:
+	console.log( JSON.stringify( out ) );
 }
 
-
-// EXPORTS //
-
-module.exports = json2csv;
+main();

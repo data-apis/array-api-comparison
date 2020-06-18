@@ -24,6 +24,13 @@
 
 # VARIABLES #
 
+# Verbosity:
+ifndef VERBOSE
+	QUIET := @
+else
+	QUIET :=
+endif
+
 # Instruct make to warn us when we use an undefined variable (e.g., misspellings).
 MAKEFLAGS += --warn-undefined-variables
 
@@ -67,13 +74,6 @@ SHELL := bash
 # [1]: https://www.gnu.org/software/make/manual/html_node/Suffix-Rules.html#Suffix-Rules
 # [2]: https://www.gnu.org/software/make/manual/html_node/Suffix-Rules.html#Suffix-Rules
 .SUFFIXES:
-
-# Verbosity:
-ifndef VERBOSE
-	QUIET := @
-else
-	QUIET :=
-endif
 
 # Determine the OS:
 #
@@ -150,6 +150,12 @@ JOIN_CSV_OUT ?= $(DATA_DIR)/join.csv
 # Define the output file path for viewing join data as an HTML table:
 JOIN_HTML_OUT ?= $(DOCS_DIR)/join.html
 
+# Define the output file path for API intersection data as JSON:
+INTERSECTION_JSON_OUT ?= $(DATA_DIR)/intersection.json
+
+# Define the output file path for API intersection data as CSV:
+INTERSECTION_CSV_OUT ?= $(DATA_DIR)/intersection.csv
+
 
 # RULES #
 
@@ -201,7 +207,7 @@ $(JOIN_JSON_OUT):
 # @private
 #/
 $(JOIN_CSV_OUT): $(JOIN_JSON_OUT)
-	$(QUIET) $(NODE) $(SCRIPTS_DIR)/join_csv.js > $(JOIN_CSV_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/json2csv.js $(JOIN_JSON_OUT) > $(JOIN_CSV_OUT)
 
 #/
 # Generates HTML assets for viewing join data.
@@ -218,6 +224,34 @@ $(JOIN_HTML_OUT): $(JOIN_JSON_OUT)
 # make join
 #/
 join: $(JOIN_JSON_OUT) $(JOIN_CSV_OUT) $(JOIN_HTML_OUT)
+
+.PHONY: join
+
+#/
+# Generates a JSON file containing the intersection of library APIs.
+#
+# @private
+#/
+$(INTERSECTION_JSON_OUT): $(JOIN_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/intersection_json.js > $(INTERSECTION_JSON_OUT)
+
+#/
+# Generates a CSV file containing the intersection of library APIs.
+#
+# @private
+#/
+$(INTERSECTION_CSV_OUT): $(JOIN_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/json2csv.js $(INTERSECTION_JSON_OUT) > $(INTERSECTION_CSV_OUT)
+
+#/
+# Generates data assets computing the intersection of library APIs.
+#
+# @example
+# make intersection
+#/
+intersection: $(INTERSECTION_JSON_OUT) $(INTERSECTION_CSV_OUT)
+
+.PHONY: intersection
 
 #/
 # Opens a data table in a web browser.
@@ -259,6 +293,10 @@ clean-node:
 clean-data:
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_JSON_OUT)
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_CSV_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_JSON_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_CSV_OUT)
+
+.PHONY: clean-data
 
 #/
 # Removes generated documentation.

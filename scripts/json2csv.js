@@ -24,12 +24,13 @@
 * SOFTWARE.
 */
 
-'use strict';
-
 // MODULES //
 
 var resolve = require( 'path' ).resolve;
 var readJSON = require( '@stdlib/fs/read-json' ).sync;
+var parseJSON = require( '@stdlib/utils/parse-json' );
+var CLI = require( '@stdlib/tools/cli' );
+var stdin = require( '@stdlib/process/read-stdin' );
 var json2csv = require( './utils/json2csv.js' );
 
 
@@ -39,25 +40,48 @@ var json2csv = require( './utils/json2csv.js' );
 * Main execution sequence.
 *
 * @private
+* @returns {void}
 */
 function main() {
-	var fpath;
 	var fopts;
+	var args;
 	var data;
+	var cli;
 
+	// Create a command-line interface:
+	cli = new CLI();
+
+	// Get any provided command-line arguments:
+	args = cli.args();
+
+	// Check if we are receiving data from `stdin`...
+	if ( !process.stdin.isTTY ) {
+		return stdin( onRead );
+	}
+	// Read a JSON file:
 	fopts = {
 		'encoding': 'utf8'
 	};
-
-	// Load source data:
-	fpath = resolve( __dirname, '..', 'data', 'join.json' );
-	data = readJSON( fpath, fopts );
+	data = readJSON( args[ 0 ], fopts );
 	if ( data instanceof Error ) {
-		console.error( data.message );
-		return;
+		return cli.error( error );
 	}
-	// Print the data as CSV:
 	console.log( json2csv( data ) );
+
+	/**
+	* Callback invoked upon reading from `stdin`.
+	*
+	* @private
+	* @param {(Error|null)} error - error object
+	* @param {Buffer} data - data
+	* @returns {void}
+	*/
+	function onRead( error, data ) {
+		if ( error ) {
+			return cli.error( error );
+		}
+		console.log( json2csv( parseJSON( data.toString() ) ) );
+	}
 }
 
 main();
