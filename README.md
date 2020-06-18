@@ -114,14 +114,25 @@ This repository contains the following directories:
 -   **docs**: browser-based documentation for viewing array API data.
 -   **scripts**: scripts for data manipulation and documentation generation.
 
-The `data` directory contains the following datasets:
+The `data` directory contains the following directories
 
--   `raw/XXXXX.(csv|json)`: raw array library API data.
--   `joins/XXXXX_numpy.(csv|json)`: array library APIs and their NumPy equivalents.
+-   `raw`: raw array library API data.
+-   `joins`: array library APIs matched to their NumPy equivalents.
+
+The `raw` data directory contains the following datasets:
+
+-   `XXXXX.(csv|json)`: raw array library API data.
+
+The `joins` data directory contains the following datasets:
+
+-   `XXXXX_numpy.(csv|json)`: array library APIs and their NumPy equivalents.
+
+Lastly, the root `data` directory contains the following additional datasets:
+
 -   `join.(csv|json)`: array library API data combined in a single file.
 -   `intersection.(csv|json)`: array library API intersection.
 
-When editing the data files, consider the JSON data to be the source of truth. From the JSON data, we generate the CSV files.
+When editing data files, consider the JSON data to be the source of truth. CSV files are generated from the JSON data.
 
 * * *
 
