@@ -361,6 +361,16 @@ docs: $(JOIN_HTML_OUT) $(INTERSECTION_HTML_OUT) $(INTERSECTION_RANKS_HTML_OUT) $
 .PHONY: docs
 
 #/
+# Opens API HTML tables in a web browser.
+#
+# @example
+# make view-docs
+#/
+view-docs: view-join view-intersection view-intersection-ranks view-complement
+
+.PHONY: view-docs
+
+#/
 # Opens an HTML table showing all API data in a web browser.
 #
 # @example

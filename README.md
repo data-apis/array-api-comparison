@@ -98,16 +98,28 @@ $ make
 
 ## Usage
 
-To view array API data in your local web browser,
+To view all array API tables in your local web browser,
+
+```bash
+$ make view-docs
+```
+
+To view cross-library array API data,
 
 ```bash
 $ make view-join
 ```
 
-To view the view the intersection of array library APIs,
+To view the intersection of array library APIs,
 
 ```bash
 $ make view-intersection
+```
+
+To view a table ranking the intersection of array library APIs,
+
+```bash
+$ make view-intersection-ranks
 ```
 
 To view array library APIs which are not in the intersection,
