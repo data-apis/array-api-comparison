@@ -116,8 +116,10 @@ This repository contains the following directories:
 
 The `data` directory contains the following datasets:
 
--   `XXXXX_numpy.(csv|json)`: array library APIs and their NumPy equivalents.
--   `unified_join.(csv|json)`: all array library API data combined in a single file.
+-   `raw/XXXXX.(csv|json)`: raw array library API data.
+-   `joins/XXXXX_numpy.(csv|json)`: array library APIs and their NumPy equivalents.
+-   `join.(csv|json)`: array library API data combined in a single file.
+-   `intersection.(csv|json)`: array library API intersection.
 
 When editing the data files, consider the JSON data to be the source of truth. From the JSON data, we generate the CSV files.
 
