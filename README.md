@@ -116,18 +116,18 @@ This repository contains the following directories:
 
 The `data` directory contains the following directories
 
--   `raw`: raw array library API data.
--   `joins`: array library APIs matched to their NumPy equivalents.
+-   **raw**: raw array library API data.
+-   **joins**: array library APIs matched to their NumPy equivalents.
 
-The `raw` data directory contains the following datasets:
+The **raw** data directory contains the following datasets:
 
 -   `XXXXX.(csv|json)`: raw array library API data.
 
-The `joins` data directory contains the following datasets:
+The **joins** data directory contains the following datasets:
 
 -   `XXXXX_numpy.(csv|json)`: array library APIs and their NumPy equivalents.
 
-Lastly, the root `data` directory contains the following additional datasets:
+Lastly, the root **data** directory contains the following additional datasets:
 
 -   `join.(csv|json)`: array library API data combined in a single file.
 -   `intersection.(csv|json)`: array library API intersection.
