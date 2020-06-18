@@ -168,6 +168,15 @@ COMPLEMENT_CSV_OUT ?= $(DATA_DIR)/complement.csv
 # Define the output file path for viewing API complement data as an HTML table:
 COMPLEMENT_HTML_OUT ?= $(DOCS_DIR)/complement.html
 
+# Define the output file path for API intersection rank data as JSON:
+INTERSECTION_RANKS_JSON_OUT ?= $(DATA_DIR)/intersection_ranks.json
+
+# Define the output file path for API intersection rank data as CSV:
+INTERSECTION_RANKS_CSV_OUT ?= $(DATA_DIR)/intersection_ranks.csv
+
+# Define the output file path for viewing API intersection rank data as an HTML table:
+INTERSECTION_RANKS_HTML_OUT ?= $(DOCS_DIR)/intersection_ranks.html
+
 
 # RULES #
 
@@ -180,7 +189,7 @@ COMPLEMENT_HTML_OUT ?= $(DOCS_DIR)/complement.html
 # @example
 # make all
 #/
-all: install join intersection complement
+all: install join intersection intersection-ranks complement
 
 .PHONY: all
 
@@ -274,6 +283,40 @@ intersection: $(INTERSECTION_JSON_OUT) $(INTERSECTION_CSV_OUT) $(INTERSECTION_HT
 .PHONY: intersection
 
 #/
+# Generates a JSON file which ranks the intersection of library APIs.
+#
+# @private
+#/
+$(INTERSECTION_RANKS_JSON_OUT): $(INTERSECTION_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/intersection_ranks.js > $(INTERSECTION_RANKS_JSON_OUT)
+
+#/
+# Generates a CSV file which ranks the intersection of library APIs.
+#
+# @private
+#/
+$(INTERSECTION_RANKS_CSV_OUT): $(INTERSECTION_RANKS_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/json2csv.js $(INTERSECTION_RANKS_JSON_OUT) > $(INTERSECTION_RANKS_CSV_OUT)
+
+#/
+# Generates HTML assets for viewing intersection rank data.
+#
+# @private
+#/
+$(INTERSECTION_RANKS_HTML_OUT): $(INTERSECTION_RANKS_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(INTERSECTION_RANKS_JSON_OUT) --title="NumPy Intersection Ranks" > $(INTERSECTION_RANKS_HTML_OUT)
+
+#/
+# Generates data assets computing the ranks of the intersection of library APIs.
+#
+# @example
+# make intersection-ranks
+#/
+intersection-ranks: $(INTERSECTION_RANKS_JSON_OUT) $(INTERSECTION_RANKS_CSV_OUT) $(INTERSECTION_RANKS_HTML_OUT)
+
+.PHONY: intersection-ranks
+
+#/
 # Generates a JSON file containing the complement of the library API intersection.
 #
 # @private
@@ -313,7 +356,7 @@ complement: $(COMPLEMENT_JSON_OUT) $(COMPLEMENT_CSV_OUT) $(COMPLEMENT_HTML_OUT)
 # @example
 # make docs
 #/
-docs: $(JOIN_HTML_OUT) $(INTERSECTION_HTML_OUT) $(COMPLEMENT_HTML_OUT)
+docs: $(JOIN_HTML_OUT) $(INTERSECTION_HTML_OUT) $(INTERSECTION_RANKS_HTML_OUT) $(COMPLEMENT_HTML_OUT)
 
 .PHONY: docs
 
@@ -338,6 +381,17 @@ view-intersection: $(INTERSECTION_HTML_OUT)
 	$(QUIET) $(OPEN) $(INTERSECTION_HTML_OUT)
 
 .PHONY: view-intersection
+
+#/
+# Opens an HTML table showing the API intersection ranks in a web browser.
+#
+# @example
+# make view-intersection-ranks
+#/
+view-intersection-ranks: $(INTERSECTION_RANKS_HTML_OUT)
+	$(QUIET) $(OPEN) $(INTERSECTION_RANKS_HTML_OUT)
+
+.PHONY: view-intersection-ranks
 
 #/
 # Opens an HTML table showing all APIs which are not in the API intersection in a web browser.
@@ -395,6 +449,18 @@ clean-data-intersection:
 .PHONY: clean-data-intersection
 
 #/
+# Removes generated intersection ranks datasets.
+#
+# @example
+# make clean-data-intersection-ranks
+#/
+clean-data-intersection-ranks:
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_RANKS_JSON_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_RANKS_CSV_OUT)
+
+.PHONY: clean-data-intersection-ranks
+
+#/
 # Removes generated complement datasets.
 #
 # @example
@@ -412,7 +478,7 @@ clean-data-complement:
 # @example
 # make clean-data
 #/
-clean-data: clean-data-join clean-data-intersection clean-data-complement
+clean-data: clean-data-join clean-data-intersection clean-data-intersection-ranks clean-data-complement
 
 .PHONY: clean-data
 
@@ -425,6 +491,7 @@ clean-data: clean-data-join clean-data-intersection clean-data-complement
 clean-docs:
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_HTML_OUT)
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_HTML_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_RANKS_HTML_OUT)
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMPLEMENT_HTML_OUT)
 
 .PHONY: clean-docs

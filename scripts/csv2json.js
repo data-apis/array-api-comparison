@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
 * @license MIT
 *
@@ -22,74 +24,64 @@
 * SOFTWARE.
 */
 
-'use strict';
-
 // MODULES //
 
-var objectKeys = require( '@stdlib/utils/keys' );
-var replace = require( '@stdlib/string/replace' );
-var isString = require( '@stdlib/assert/is-string' ).isPrimitive;
+var resolve = require( 'path' ).resolve;
+var readFile = require( '@stdlib/fs/read-file' ).sync;
+var CLI = require( '@stdlib/tools/cli' );
+var stdin = require( '@stdlib/process/read-stdin' );
+var csv2json = require( './utils/csv2json.js' );
 
 
 // MAIN //
 
 /**
-* Converts a JSON array to a CSV string.
+* Main execution sequence.
 *
 * @private
-* @param {(Array<Object>|Array<string>)} arr - JSON array
-* @returns {string} CSV string
+* @returns {void}
 */
-function json2csv( arr ) {
-	var headers;
-	var out;
-	var tmp;
-	var N;
-	var M;
-	var o;
-	var v;
-	var i;
-	var j;
+function main() {
+	var fopts;
+	var args;
+	var data;
+	var cli;
 
-	out = '';
-	if ( arr.length === 0 ) {
-		return out;
-	}
-	if ( isString( arr[ 0 ] ) ) {
-		return arr.join( '\n' );
-	}
-	headers = objectKeys( arr[ 0 ] );
-	N = headers.length;
-	for ( i = 0; i < N; i++ ) {
-		out += headers[ i ];
-		if ( i < N-1 ) {
-			out += ',';
-		}
-	}
-	out += '\n';
+	// Create a command-line interface:
+	cli = new CLI();
 
-	M = arr.length;
-	for ( i = 0; i < M; i++ ) {
-		o = arr[ i ];
-		tmp = '';
-		for ( j = 0; j < N; j++ ) {
-			v = o[ headers[ j ] ].toString();
-			v = replace( v, ',', '\\,' );
-			v = replace( v, '"', '""' );
-			tmp += '"' + v + '"';
-			if ( j < N-1 ) {
-				tmp += ',';
-			}
-		}
-		out += tmp;
-		if ( i < M-1 ) {
-			out += '\n';
-		}
+	// Get any provided command-line arguments:
+	args = cli.args();
+
+	// Check if we are receiving data from `stdin`...
+	if ( !process.stdin.isTTY ) {
+		return stdin( onRead );
 	}
-	return out;
+	// Read a JSON file:
+	fopts = {
+		'encoding': 'utf8'
+	};
+	data = readFile( args[ 0 ], fopts );
+	if ( data instanceof Error ) {
+		return cli.error( data );
+	}
+	console.log( JSON.stringify( csv2json( data ) ) );
+
+	/**
+	* Callback invoked upon reading from `stdin`.
+	*
+	* @private
+	* @param {(Error|null)} error - error object
+	* @param {Buffer} data - data
+	* @returns {void}
+	*/
+	function onRead( error, data ) {
+		if ( error ) {
+			return cli.error( error );
+		}
+		data = csv2json( data.toString() );
+		console.log( JSON.stringify( data ) );
+	}
 }
 
-
-// EXPORTS //
-
-module.exports = json2csv;
+main();

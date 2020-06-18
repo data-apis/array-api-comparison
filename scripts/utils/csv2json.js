@@ -26,65 +26,54 @@
 
 // MODULES //
 
-var objectKeys = require( '@stdlib/utils/keys' );
-var replace = require( '@stdlib/string/replace' );
-var isString = require( '@stdlib/assert/is-string' ).isPrimitive;
+var RE_EOL = require( '@stdlib/regexp/eol' );
 
 
 // MAIN //
 
 /**
-* Converts a JSON array to a CSV string.
+* Converts a CSV string to a JSON array.
 *
 * @private
-* @param {(Array<Object>|Array<string>)} arr - JSON array
-* @returns {string} CSV string
+* @param {string} csv - CSV string
+* @returns {Array<Object>} JSON array
 */
-function json2csv( arr ) {
-	var headers;
+function csv2json( csv ) {
+	var nfields;
+	var fields;
+	var nrows;
+	var rows;
 	var out;
-	var tmp;
-	var N;
-	var M;
+	var r;
 	var o;
-	var v;
 	var i;
 	var j;
 
-	out = '';
-	if ( arr.length === 0 ) {
+	out = [];
+	rows = csv.split( RE_EOL );
+	nrows = rows.length;
+	if ( nrows === 0 ) {
 		return out;
 	}
-	if ( isString( arr[ 0 ] ) ) {
-		return arr.join( '\n' );
-	}
-	headers = objectKeys( arr[ 0 ] );
-	N = headers.length;
-	for ( i = 0; i < N; i++ ) {
-		out += headers[ i ];
-		if ( i < N-1 ) {
-			out += ',';
-		}
-	}
-	out += '\n';
+	// We assume that the first row is a header row:
+	fields = rows[ 0 ].split( ',' );
+	nfields = fields.length;
 
-	M = arr.length;
-	for ( i = 0; i < M; i++ ) {
-		o = arr[ i ];
-		tmp = '';
-		for ( j = 0; j < N; j++ ) {
-			v = o[ headers[ j ] ].toString();
-			v = replace( v, ',', '\\,' );
-			v = replace( v, '"', '""' );
-			tmp += '"' + v + '"';
-			if ( j < N-1 ) {
-				tmp += ',';
-			}
+	for ( i = 1; i < nrows; i++ ) {
+		r = rows[ i ];
+		if ( r === '' ) {
+			continue;
 		}
-		out += tmp;
-		if ( i < M-1 ) {
-			out += '\n';
+		// We assume simple CSV rows:
+		r = r.substring( 1, r.length-1 ).split( '","' );
+
+		// Assemble the data object...
+		o = {};
+		for ( j = 0; j < nfields; j++ ) {
+			o[ fields[ j ] ] = r[ j ];
 		}
+		// Append to the output data array:
+		out.push( o );
 	}
 	return out;
 }
@@ -92,4 +81,4 @@ function json2csv( arr ) {
 
 // EXPORTS //
 
-module.exports = json2csv;
+module.exports = csv2json;
