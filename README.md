@@ -55,9 +55,9 @@ Currently, the following array libraries are evaluated:
 
 * * *
 
-## Usage
+## Installation
 
-To view array API data in your local web browser, first navigate to the directory into which you want to clone this repository
+Navigate to the directory into which you want to clone this repository
 
 ```bash
 $ cd ./repository/destination/directory
@@ -76,7 +76,23 @@ Once cloned, navigate to the repository directory
 $ cd ./array-api-comparison
 ```
 
-You can view the main data table in your local web browser by running
+Create an Anaconda environment
+
+```bash
+$ conda create -n array-api-comparison -c conda-forge python=3.8 nodejs
+```
+
+Run the installation sequence
+
+```bash
+$ make
+```
+
+* * *
+
+## Usage
+
+To view array API data in your local web browser,
 
 ```bash
 $ make view-table
