@@ -122,6 +122,18 @@ To view a table ranking the intersection of array library APIs,
 $ make view-intersection-ranks
 ```
 
+To view relatively common array library APIs,
+
+```bash
+$ make view-threshold
+```
+
+To view a table ranking relatively common array library APIs,
+
+```bash
+$ make view-threshold-ranks
+```
+
 To view array library APIs which are not in the intersection,
 
 ```bash
