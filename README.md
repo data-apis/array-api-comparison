@@ -45,7 +45,7 @@ Currently, the following array libraries are evaluated:
 
 -   **NumPy**: serves as the reference API against which all other array libraries are compared.
 -   **CuPy**
--   **Dask**
+-   **Dask.array**
 -   **JAX**
 -   **MXNet**
 -   **PyTorch**
