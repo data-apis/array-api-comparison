@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Array API comparison" />
+	<meta name="keywords" content="pydata numpy numerical array library apis comparison" />
+	<meta name="author" content="Quansight" />
+	<title>Top K Common APIs</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Top K Common APIs</h1>
+		</header>
+		<div class="component">
+			<table>
+<thead>
+<tr>
+<th>dask.array</th>
+<th>matplotlib</th>
+<th>pandas</th>
+<th>skimage</th>
+<th>xarray</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>array</th>
+<td>array</td>
+<td>array</td>
+<td>array</td>
+<td>arange</td>
+</tr>
+<tr>
+<th>arange</th>
+<td>arange</td>
+<td>arange</td>
+<td>zeros</td>
+<td>array</td>
+</tr>
+<tr>
+<th>ones</th>
+<td>asarray</td>
+<td>asarray</td>
+<td>ones</td>
+<td>asarray</td>
+</tr>
+<tr>
+<th>sum</th>
+<td>linspace</td>
+<td>isnan</td>
+<td>arange</td>
+<td>linspace</td>
+</tr>
+<tr>
+<th>mean</th>
+<td>zeros</td>
+<td>zeros</td>
+<td>sum</td>
+<td>ones</td>
+</tr>
+<tr>
+<th>isnan</th>
+<td>sin</td>
+<td>empty</td>
+<td>absolute</td>
+<td>zeros</td>
+</tr>
+<tr>
+<th>prod</th>
+<td>absolute</td>
+<td>mean</td>
+<td>sqrt</td>
+<td>einsum</td>
+</tr>
+<tr>
+<th>all</th>
+<td>vstack</td>
+<td>ones</td>
+<td>all</td>
+<td>mean</td>
+</tr>
+<tr>
+<th>amin</th>
+<td>cos</td>
+<td>sum</td>
+<td>asarray</td>
+<td>sin</td>
+</tr>
+<tr>
+<th>amax</th>
+<td>concatenate</td>
+<td>concatenate</td>
+<td>pad</td>
+<td>allclose</td>
+</tr>
+<tr>
+<th>nansum</th>
+<td>meshgrid</td>
+<td>where</td>
+<td>amax</td>
+<td>maximum</td>
+</tr>
+<tr>
+<th>any</th>
+<td>ones</td>
+<td>repeat</td>
+<td>empty</td>
+<td>pad</td>
+</tr>
+<tr>
+<th>zeros</th>
+<td>deg2rad</td>
+<td>all</td>
+<td>zeros_like</td>
+<td>empty</td>
+</tr>
+<tr>
+<th>std</th>
+<td>amin</td>
+<td>add</td>
+<td>linspace</td>
+<td>isnan</td>
+</tr>
+<tr>
+<th>var</th>
+<td>sqrt</td>
+<td>sqrt</td>
+<td>clip</td>
+<td>unique</td>
+</tr>
+<tr>
+<th>eye</th>
+<td>hypot</td>
+<td>tile</td>
+<td>mean</td>
+<td>all</td>
+</tr>
+<tr>
+<th>empty</th>
+<td>isfinite</td>
+<td>std</td>
+<td>cos</td>
+<td>amin</td>
+</tr>
+<tr>
+<th>nanmax</th>
+<td>amax</td>
+<td>any</td>
+<td>any</td>
+<td>concatenate</td>
+</tr>
+<tr>
+<th>dot</th>
+<td>ceil</td>
+<td>amin</td>
+<td>sin</td>
+<td>cos</td>
+</tr>
+<tr>
+<th>nanmin</th>
+<td>log10</td>
+<td>amax</td>
+<td>eye</td>
+<td>stack</td>
+</tr>
+<tr>
+<th>diagonal</th>
+<td>sum</td>
+<td>percentile</td>
+<td>allclose</td>
+<td>sum</td>
+</tr>
+<tr>
+<th>nanprod</th>
+<td>repeat</td>
+<td>prod</td>
+<td>unique</td>
+<td>amax</td>
+</tr>
+<tr>
+<th>argmin</th>
+<td>empty</td>
+<td>absolute</td>
+<td>concatenate</td>
+<td>atleast_1d</td>
+</tr>
+<tr>
+<th>asarray</th>
+<td>dot</td>
+<td>sort</td>
+<td>ceil</td>
+<td>ravel</td>
+</tr>
+<tr>
+<th>concatenate</th>
+<td>tile</td>
+<td>linspace</td>
+<td>reshape</td>
+<td>add</td>
+</tr>
+</tbody>
+</table>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
+
