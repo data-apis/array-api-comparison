@@ -50,8 +50,8 @@ function main() {
 	fopts = {
 		'encoding': 'utf8'
 	};
-	// Load the threshold data:
-	fpath = resolve( __dirname, '..', 'data', 'threshold.json' );
+	// Load the common APIs data:
+	fpath = resolve( __dirname, '..', 'data', 'common_apis.json' );
 	list = readJSON( fpath, fopts );
 	if ( list instanceof Error ) {
 		console.error( list.message );
