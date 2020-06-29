@@ -201,6 +201,16 @@ COMMON_APIS_RANKS_CSV_OUT ?= $(DATA_DIR)/common_apis_ranks.csv
 COMMON_APIS_RANKS_HTML_OUT ?= $(DOCS_DIR)/common_apis_ranks.html
 
 
+# Define the output file path for common API top K data as JSON:
+LIB_TOP_K_COMMON_JSON_OUT ?= $(DATA_DIR)/lib_top_k_common.json
+
+# Define the output file path for common API top K data as CSV:
+LIB_TOP_K_COMMON_CSV_OUT ?= $(DATA_DIR)/lib_top_k_common.csv
+
+# Define the output file path for viewing common API top K data as an HTML table:
+LIB_TOP_K_COMMON_HTML_OUT ?= $(DOCS_DIR)/lib_top_k_common.html
+
+
 # RULES #
 
 #/
@@ -212,7 +222,7 @@ COMMON_APIS_RANKS_HTML_OUT ?= $(DOCS_DIR)/common_apis_ranks.html
 # @example
 # make all
 #/
-all: install join intersection intersection-ranks common-apis common-apis-ranks complement
+all: install join intersection intersection-ranks common-apis common-apis-ranks lib-top-k-common complement
 
 .PHONY: all
 
@@ -442,12 +452,46 @@ complement: $(COMPLEMENT_JSON_OUT) $(COMPLEMENT_CSV_OUT) $(COMPLEMENT_HTML_OUT)
 .PHONY: complement
 
 #/
+# Generates a JSON file containing the top K common APIs for various libraries.
+#
+# @private
+#/
+$(LIB_TOP_K_COMMON_JSON_OUT): $(JOIN_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/lib_top_k_common_json.js > $(LIB_TOP_K_COMMON_JSON_OUT)
+
+#/
+# Generates a CSV file containing the top K common APIs for various libraries.
+#
+# @private
+#/
+$(LIB_TOP_K_COMMON_CSV_OUT): $(LIB_TOP_K_COMMON_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/json2csv.js $(LIB_TOP_K_COMMON_JSON_OUT) > $(LIB_TOP_K_COMMON_CSV_OUT)
+
+#/
+# Generates HTML assets for viewing top K data.
+#
+# @private
+#/
+$(LIB_TOP_K_COMMON_HTML_OUT): $(LIB_TOP_K_COMMON_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(LIB_TOP_K_COMMON_JSON_OUT) --title="Top K Common APIs" > $(LIB_TOP_K_COMMON_HTML_OUT)
+
+#/
+# Generates data assets computing the top K common APIs for various libraries.
+#
+# @example
+# make lib-top-k-common
+#/
+lib-top-k-common: $(LIB_TOP_K_COMMON_JSON_OUT) $(LIB_TOP_K_COMMON_CSV_OUT) $(LIB_TOP_K_COMMON_HTML_OUT)
+
+.PHONY: lib-top-k-common
+
+#/
 # Generates API documentation.
 #
 # @example
 # make docs
 #/
-docs: $(JOIN_HTML_OUT) $(INTERSECTION_HTML_OUT) $(INTERSECTION_RANKS_HTML_OUT) $(COMPLEMENT_HTML_OUT)
+docs: $(JOIN_HTML_OUT) $(INTERSECTION_HTML_OUT) $(INTERSECTION_RANKS_HTML_OUT) $(COMMON_APIS_HTML_OUT) $(COMMON_APIS_RANKS_HTML_OUT) $(COMPLEMENT_HTML_OUT) $(LIB_TOP_K_COMMON_HTML_OUT)
 
 .PHONY: docs
 
@@ -457,7 +501,7 @@ docs: $(JOIN_HTML_OUT) $(INTERSECTION_HTML_OUT) $(INTERSECTION_RANKS_HTML_OUT) $
 # @example
 # make view-docs
 #/
-view-docs: view-join view-intersection view-intersection-ranks view-common-apis view-common-apis-ranks view-complement
+view-docs: view-join view-intersection view-intersection-ranks view-common-apis view-common-apis-ranks view-complement view-lib-top-k-common
 
 .PHONY: view-docs
 
@@ -526,6 +570,17 @@ view-complement: $(COMPLEMENT_HTML_OUT)
 	$(QUIET) $(OPEN) $(COMPLEMENT_HTML_OUT)
 
 .PHONY: view-complement
+
+#/
+# Opens an HTML table showing the top K common APIs in a web browser.
+#
+# @example
+# make view-lib-top-k-common
+#/
+view-lib-top-k-common: $(LIB_TOP_K_COMMON_HTML_OUT)
+	$(QUIET) $(OPEN) $(LIB_TOP_K_COMMON_HTML_OUT)
+
+.PHONY: view-lib-top-k-common
 
 #/
 # Runs the project's cleanup sequence.
@@ -620,12 +675,24 @@ clean-data-complement:
 .PHONY: clean-data-complement
 
 #/
+# Removes generated top K common datasets.
+#
+# @example
+# make clean-data-lib-top-k-common
+#/
+clean-data-lib-top-k-common:
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(LIB_TOP_K_COMMON_JSON_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(LIB_TOP_K_COMMON_CSV_OUT)
+
+.PHONY: clean-data-lib-top-k-common
+
+#/
 # Removes generated datasets.
 #
 # @example
 # make clean-data
 #/
-clean-data: clean-data-join clean-data-intersection clean-data-intersection-ranks clean-data-common-apis clean-data-common-apis-ranks clean-data-complement
+clean-data: clean-data-join clean-data-intersection clean-data-intersection-ranks clean-data-common-apis clean-data-common-apis-ranks clean-data-complement clean-data-lib-top-k-common
 
 .PHONY: clean-data
 
@@ -642,6 +709,7 @@ clean-docs:
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_HTML_OUT)
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_RANKS_HTML_OUT)
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMPLEMENT_HTML_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(LIB_TOP_K_COMMON_HTML_OUT)
 
 .PHONY: clean-docs
 
