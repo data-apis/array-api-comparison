@@ -26,15 +26,9 @@
 
 // MODULES //
 
-var resolve = require( 'path' ).resolve;
-var readJSON = require( '@stdlib/fs/read-json' ).sync;
-var isNumber = require( '@stdlib/assert/is-number' ).isPrimitive;
 var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var objectKeys = require( '@stdlib/utils/keys' );
-var floor = require( '@stdlib/math/base/special/floor' );
-var variance = require( '@stdlib/stats/base/variance' );
-var mediansorted = require( '@stdlib/stats/base/mediansorted' );
-var PINF = require( '@stdlib/constants/math/float64-pinf' );
+var replace = require( '@stdlib/string/replace' );
 var RECORD_DATA = require( './../../data/vendor/record.json' );
 
 
@@ -67,43 +61,16 @@ function descending( a, b ) {
 * @returns {number} integer indicating sort order
 */
 function ascending( a, b ) {
-	// Sort values having greater counts (i.e., used by more libraries) to lower indices...
-	if ( a.count > b.count ) {
-		return -1;
-	}
-	if ( a.count < b.count ) {
+	if ( a.rank === null ) {
 		return 1;
 	}
-	// Sort values with a lower median rank (where "lower" means *more* common) to lower indices...
-	if ( a.median < b.median ) {
+	if ( b.rank === null ) {
 		return -1;
 	}
-	if ( a.median > b.median ) {
-		return 1;
-	}
-	// Sort values with a more "consistent" median rank to lower indices...
-	if ( a.variance < b.variance ) {
+	if ( a.rank < b.rank ) {
 		return -1;
 	}
-	if ( a.variance > b.variance ) {
-		return 1;
-	}
-	return 0;
-}
-
-/**
-* Comparison function for sorting in ascending order.
-*
-* @private
-* @param {number} a - first value
-* @param {number} b - second value
-* @returns {number} integer indicating sort order
-*/
-function ascendingNumeric( a, b ) {
-	if ( a < b ) {
-		return -1;
-	}
-	if ( a > b ) {
+	if ( a.rank > b.rank ) {
 		return 1;
 	}
 	return 0;
@@ -135,69 +102,18 @@ function rank( arr, lib ) {
 	return tmp;
 }
 
-/**
-* Sorts a ranked array based on the median rank across libraries.
-*
-* @private
-* @param {Array<Object>} arr - array to sort
-* @returns {Array<Object>} sorted array
-*/
-function sort( arr ) {
-	var keys;
-	var tmp;
-	var N;
-	var r;
-	var d;
-	var o;
-	var i;
-	var j;
-	var k;
-
-	keys = objectKeys( arr[ 0 ] );
-	N = keys.length;
-
-	tmp = [];
-	r = [];
-	for ( i = 0; i < arr.length; i++ ) {
-		d = arr[ i ];
-		r.length = 0;
-		for ( j = 0; j < N; j++ ) {
-			k = keys[ j ];
-			if ( isNumber( d[ k ] ) ) {
-				r.push( d[ k ] );
-			}
-		}
-		// Sort in ascending order...
-		r.sort( ascendingNumeric );
-
-		// Compute statistics...
-		o = {};
-		o.ref = d;
-		o.count = r.length;
-		o.median = ( r.length ) ? mediansorted( r.length, r, 1, 0 ) : PINF;
-		o.variance = variance( r.length, 1, r, 1, 0 );
-
-		tmp.push( o );
-	}
-	// Sort the input array based on the median rank...
-	tmp.sort( ascending );
-	for ( i = 0; i < arr.length; i++ ) {
-		arr[ i ] = tmp[ i ].ref;
-	}
-	return arr;
-}
-
 
 // MAIN //
 
 /**
-* Ranks a list of NumPy APIs according to their relative usage.
+* Ranks the top `K` APIs (by name) from a provided list of NumPy APIs.
 *
 * @private
 * @param {Array<string>} list - list of NumPy APIs
-* @returns {Array<Object>} sorted JSON array based on median relative usage rank
+* @param {number} [K=list.length] - number of APIs to rank
+* @returns {Array<Object} sorted JSON array based on relative usage
 */
-function rankByUsage( list ) {
+function rankTopK( list, K ) {
 	var libs;
 	var keys;
 	var hash;
@@ -205,17 +121,22 @@ function rankByUsage( list ) {
 	var cnt;
 	var out;
 	var idx;
+	var K;
 	var d;
+	var o;
 	var i;
 	var j;
 	var k;
 
+	K = K || list.length;
+
 	// Convert the list into a hash...
 	hash = {};
 	for ( i = 0; i < list.length; i++ ) {
-		hash[ list [ i ] ] = {};
+		hash[ list[ i ] ] = {};
 	}
-	// Combine the record data with the provided API list...
+
+	// Combine the record data with the intersection list...
 	libs = {};
 	for ( i = 0; i < RECORD_DATA.length; i++ ) {
 		d = RECORD_DATA[ i ];
@@ -267,28 +188,61 @@ function rankByUsage( list ) {
 			}
 		}
 	}
-	// Generate the final output JSON array...
+	// Extract the API rankings for each library...
+	tmp = {};
 	for ( i = 0; i < list.length; i++ ) {
-		tmp = {
-			'numpy': list[ i ]
-		};
+		d = out[ i ];
 		for ( j = 0; j < keys.length; j++ ) {
 			k = keys[ j ];
-			if ( out[ i ].rank[ k ] === null ) {
-				tmp[ k ] = '-';
+			if ( !tmp[ k ] ) {
+				tmp[ k ] = [];
+			}
+			tmp[ k ].push({
+				'rank': d.rank[ k ],
+				'name': d.name
+			});
+		}
+	}
+	// Sort the rankings in ascending order...
+	out = tmp;
+	for ( j = 0; j < keys.length; j++ ) {
+		k = keys[ j ];
+		out[ k ].sort( ascending );
+	}
+	// Extract only the API names...
+	for ( j = 0; j < keys.length; j++ ) {
+		k = keys[ j ];
+		tmp = out[ k ];
+		for ( i = 0; i < tmp.length; i++ ) {
+			if ( tmp[ i ].rank === null ) {
+				tmp[ i ] = '-';
 			} else {
-				tmp[ k ] = out[ i ].rank[ k ];
+				tmp[ i ] = replace( tmp[ i ].name, /^numpy\./, '' ); // remove any `numpy.` prefix
 			}
 		}
-		out[ i ] = tmp;
 	}
-	// Lastly, sort the JSON based on the median rank...
-	out = sort( out );
+	// Retain only the top `K` most commonly used APIs...
+	for ( j = 0; j < keys.length; j++ ) {
+		tmp = out[ keys[ j ] ];
+		tmp.length = ( tmp.length > K ) ? K : tmp.length;
+	}
+	// Transform into a JSON array...
+	tmp = [];
+	for ( i = 0; i < K; i++ ) {
+		o = {};
+		for ( j = 0; j < keys.length; j++ ) {
+			k = keys[ j ];
+			o[ k ] = out[ k ][ i ];
+		}
+		tmp.push( o );
+	}
+	out = tmp;
 
+	// Return the result...
 	return out;
 }
 
 
 // EXPORTS //
 
-module.exports = rankByUsage;
+module.exports = rankTopK;
