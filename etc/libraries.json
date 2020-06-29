@@ -4,5 +4,6 @@
 	"dask.array",
 	"jax",
 	"mxnet",
-	"pytorch"
+	"pytorch",
+	"tensorflow"
 ]
