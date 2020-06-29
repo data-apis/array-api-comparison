@@ -13,7 +13,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@stdlib/stdlib": "0.0.90"
+    "@stdlib/stdlib": "0.0.92"
   },
   "keywords": []
 }
