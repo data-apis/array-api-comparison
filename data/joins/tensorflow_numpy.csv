@@ -147,7 +147,7 @@ name,numpy
 "tf.math.accumulate_n",""
 "tf.math.acos","numpy.arccos"
 "tf.math.acosh","numpy.arccosh"
-"tf.math.add",""
+"tf.math.add","numpy.add"
 "tf.math.add_n",""
 "tf.math.angle","numpy.angle"
 "tf.math.argmax","numpy.argmax"
