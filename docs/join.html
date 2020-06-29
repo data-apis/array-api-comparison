@@ -28,6 +28,7 @@
 <th>pytorch</th>
 <th>rnumpy</th>
 <th>sparse</th>
+<th>tensorflow</th>
 </tr>
 </thead>
 <tbody>
@@ -40,6 +41,7 @@
 <td>abs</td>
 <td></td>
 <td></td>
+<td>tf.math.abs</td>
 </tr>
 <tr>
 <th>numpy.add</th>
@@ -49,6 +51,7 @@
 <td>add</td>
 <td>add</td>
 <td>add</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -60,6 +63,7 @@
 <td></td>
 <td>all</td>
 <td></td>
+<td>tf.reduce_all</td>
 </tr>
 <tr>
 <th>numpy.allclose</th>
@@ -70,6 +74,7 @@
 <td>allclose</td>
 <td>allclose</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.amax</th>
@@ -77,6 +82,7 @@
 <td>max</td>
 <td>max</td>
 <td>amax</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -90,6 +96,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.angle</th>
@@ -100,6 +107,7 @@
 <td>angle</td>
 <td></td>
 <td></td>
+<td>tf.math.angle</td>
 </tr>
 <tr>
 <th>numpy.any</th>
@@ -110,6 +118,7 @@
 <td></td>
 <td>any</td>
 <td></td>
+<td>tf.math.reduce_any</td>
 </tr>
 <tr>
 <th>numpy.append</th>
@@ -120,11 +129,13 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.apply_along_axis</th>
 <td></td>
 <td>apply_along_axis</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -140,6 +151,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.arange</th>
@@ -150,6 +162,7 @@
 <td>range</td>
 <td>arange</td>
 <td></td>
+<td>tf.range</td>
 </tr>
 <tr>
 <th>numpy.arccos</th>
@@ -160,6 +173,7 @@
 <td>acos</td>
 <td>arccos</td>
 <td></td>
+<td>tf.math.acos</td>
 </tr>
 <tr>
 <th>numpy.arccosh</th>
@@ -170,6 +184,7 @@
 <td></td>
 <td>arccosh</td>
 <td></td>
+<td>tf.math.acosh</td>
 </tr>
 <tr>
 <th>numpy.arcsin</th>
@@ -180,6 +195,7 @@
 <td>asin</td>
 <td>arcsin</td>
 <td></td>
+<td>tf.math.asin</td>
 </tr>
 <tr>
 <th>numpy.arcsinh</th>
@@ -190,6 +206,7 @@
 <td></td>
 <td>arcsinh</td>
 <td></td>
+<td>tf.math.asinh</td>
 </tr>
 <tr>
 <th>numpy.arctan</th>
@@ -200,6 +217,7 @@
 <td>atan</td>
 <td>arctan</td>
 <td></td>
+<td>tf.math.atan</td>
 </tr>
 <tr>
 <th>numpy.arctan2</th>
@@ -210,6 +228,7 @@
 <td>atan2</td>
 <td>arctan2</td>
 <td></td>
+<td>tf.math.atan2</td>
 </tr>
 <tr>
 <th>numpy.arctanh</th>
@@ -220,6 +239,7 @@
 <td></td>
 <td>arctanh</td>
 <td></td>
+<td>tf.math.atanh</td>
 </tr>
 <tr>
 <th>numpy.argmax</th>
@@ -230,6 +250,7 @@
 <td>argmax</td>
 <td>argmax</td>
 <td></td>
+<td>tf.math.argmax</td>
 </tr>
 <tr>
 <th>numpy.argmin</th>
@@ -240,6 +261,7 @@
 <td>argmin</td>
 <td>argmin</td>
 <td></td>
+<td>tf.math.argmin</td>
 </tr>
 <tr>
 <th>numpy.argpartition</th>
@@ -247,6 +269,7 @@
 <td></td>
 <td></td>
 <td>argpartition</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -260,6 +283,7 @@
 <td>argsort</td>
 <td>argsort</td>
 <td></td>
+<td>tf.argsort</td>
 </tr>
 <tr>
 <th>numpy.argwhere</th>
@@ -270,6 +294,7 @@
 <td></td>
 <td></td>
 <td>argwhere</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.around</th>
@@ -277,6 +302,7 @@
 <td>round</td>
 <td>around</td>
 <td>around</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -290,6 +316,7 @@
 <td>tensor</td>
 <td>array</td>
 <td></td>
+<td>tf.make_ndarray</td>
 </tr>
 <tr>
 <th>numpy.array2string</th>
@@ -300,9 +327,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.array_equal</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -320,6 +349,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.array_repr</th>
@@ -327,6 +357,7 @@
 <td></td>
 <td>array_repr</td>
 <td>array_repr</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -340,6 +371,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.array_str</th>
@@ -347,6 +379,7 @@
 <td></td>
 <td>array_str</td>
 <td>array_str</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -360,6 +393,7 @@
 <td></td>
 <td>asanyarray</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.asarray</th>
@@ -370,6 +404,7 @@
 <td></td>
 <td>asarray</td>
 <td></td>
+<td>tf.convert_to_tensor</td>
 </tr>
 <tr>
 <th>numpy.asarray_chkfinite</th>
@@ -377,6 +412,7 @@
 <td></td>
 <td></td>
 <td>asarray_chkfinite</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -390,6 +426,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.asfarray</th>
@@ -397,6 +434,7 @@
 <td></td>
 <td></td>
 <td>asfarray</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -410,6 +448,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.asmatrix</th>
@@ -417,6 +456,7 @@
 <td></td>
 <td></td>
 <td>asmatrix</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -430,6 +470,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.atleast_1d</th>
@@ -439,6 +480,7 @@
 <td>atleast_1d</td>
 <td></td>
 <td>atleast_1d</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -450,6 +492,7 @@
 <td></td>
 <td>atleast_2d</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.atleast_3d</th>
@@ -460,6 +503,7 @@
 <td></td>
 <td>atleast_3d</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.average</th>
@@ -467,6 +511,7 @@
 <td>average</td>
 <td></td>
 <td>average</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -480,6 +525,7 @@
 <td>bartlett_window</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.base_repr</th>
@@ -487,6 +533,7 @@
 <td></td>
 <td></td>
 <td>base_repr</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -500,6 +547,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.bincount</th>
@@ -510,6 +558,7 @@
 <td>bincount</td>
 <td>bincount</td>
 <td></td>
+<td>tf.math.bincount</td>
 </tr>
 <tr>
 <th>numpy.bitwise_and</th>
@@ -520,6 +569,7 @@
 <td>bitwise_and</td>
 <td></td>
 <td></td>
+<td>tf.bitwise.bitwise_and</td>
 </tr>
 <tr>
 <th>numpy.bitwise_or</th>
@@ -530,6 +580,7 @@
 <td>bitwise_or</td>
 <td></td>
 <td></td>
+<td>tf.bitwise.bitwise_or</td>
 </tr>
 <tr>
 <th>numpy.bitwise_xor</th>
@@ -540,6 +591,7 @@
 <td>bitwise_xor</td>
 <td></td>
 <td></td>
+<td>tf.bitwise.bitwise_xor</td>
 </tr>
 <tr>
 <th>numpy.blackman</th>
@@ -548,6 +600,7 @@
 <td>blackman</td>
 <td></td>
 <td>blackman_window</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -560,6 +613,7 @@
 <td></td>
 <td>block</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.bmat</th>
@@ -567,6 +621,7 @@
 <td></td>
 <td></td>
 <td>bmat</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -580,6 +635,7 @@
 <td>broadcast_tensors</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.broadcast_to</th>
@@ -590,9 +646,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.broadcast_to</td>
 </tr>
 <tr>
 <th>numpy.busday_count</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -610,6 +668,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.can_cast</th>
@@ -620,6 +679,7 @@
 <td>can_cast</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.cbrt</th>
@@ -627,6 +687,7 @@
 <td></td>
 <td></td>
 <td>cbrt</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -640,6 +701,7 @@
 <td>ceil</td>
 <td>ceil</td>
 <td></td>
+<td>tf.math.ceil</td>
 </tr>
 <tr>
 <th>numpy.char.add</th>
@@ -650,6 +712,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.strings.join</td>
 </tr>
 <tr>
 <th>numpy.char.array</th>
@@ -657,6 +720,7 @@
 <td></td>
 <td></td>
 <td>core.defchararray.array</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -670,9 +734,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.capitalize</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -690,9 +756,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.count</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -710,6 +778,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.strings.unicode_decode</td>
 </tr>
 <tr>
 <th>numpy.char.encode</th>
@@ -720,9 +789,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.strings.unicode_encode</td>
 </tr>
 <tr>
 <th>numpy.char.endswith</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -740,9 +811,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.expandtabs</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -760,9 +833,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.greater</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -780,9 +855,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.index</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -800,9 +877,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.isalpha</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -820,9 +899,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.isdigit</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -840,9 +921,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.isnumeric</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -860,9 +943,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.istitle</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -880,9 +965,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.join</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -900,9 +987,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.less_equal</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -920,9 +1009,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.lower</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -940,9 +1031,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.mod</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -960,9 +1053,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.not_equal</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -980,9 +1075,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.replace</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1000,9 +1097,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.rindex</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1020,9 +1119,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.rpartition</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1040,9 +1141,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.rstrip</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1060,9 +1163,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.strings.split</td>
 </tr>
 <tr>
 <th>numpy.char.splitlines</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1080,9 +1185,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.str_len</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1100,9 +1207,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.strings.strip</td>
 </tr>
 <tr>
 <th>numpy.char.swapcase</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1120,9 +1229,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.translate</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1140,9 +1251,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.char.zfill</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1160,6 +1273,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.clip</th>
@@ -1170,6 +1284,7 @@
 <td></td>
 <td></td>
 <td>clip</td>
+<td>tf.clip_by_value</td>
 </tr>
 <tr>
 <th>numpy.column_stack</th>
@@ -1180,10 +1295,12 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.common_type</th>
 <td>common_type</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1200,6 +1317,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.concatenate</th>
@@ -1210,6 +1328,7 @@
 <td>cat</td>
 <td>concatenate</td>
 <td>concatenate</td>
+<td>tf.concat</td>
 </tr>
 <tr>
 <th>numpy.conj</th>
@@ -1220,6 +1339,7 @@
 <td>conj</td>
 <td>conj</td>
 <td></td>
+<td>tf.math.conj</td>
 </tr>
 <tr>
 <th>numpy.conjugate</th>
@@ -1227,6 +1347,7 @@
 <td></td>
 <td>conjugate</td>
 <td>conjugate</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1240,6 +1361,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.copy</th>
@@ -1250,6 +1372,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.identity</td>
 </tr>
 <tr>
 <th>numpy.copysign</th>
@@ -1257,6 +1380,7 @@
 <td>copysign</td>
 <td>copysign</td>
 <td>copysign</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1270,6 +1394,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.core.records.array</th>
@@ -1277,6 +1402,7 @@
 <td></td>
 <td></td>
 <td>core.records.array</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1290,6 +1416,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.core.records.fromfile</th>
@@ -1297,6 +1424,7 @@
 <td></td>
 <td></td>
 <td>core.records.fromfile</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1310,6 +1438,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.core.records.fromstring</th>
@@ -1317,6 +1446,7 @@
 <td></td>
 <td></td>
 <td>core.records.fromstring</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1330,6 +1460,7 @@
 <td></td>
 <td>corrcoef</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.correlate</th>
@@ -1339,6 +1470,7 @@
 <td>correlate</td>
 <td></td>
 <td>correlate</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -1350,6 +1482,7 @@
 <td>cos</td>
 <td>cos</td>
 <td></td>
+<td>tf.math.cos</td>
 </tr>
 <tr>
 <th>numpy.cosh</th>
@@ -1360,6 +1493,7 @@
 <td>cosh</td>
 <td>cosh</td>
 <td></td>
+<td>tf.math.cosh</td>
 </tr>
 <tr>
 <th>numpy.count_nonzero</th>
@@ -1370,6 +1504,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.math.count_nonzero</td>
 </tr>
 <tr>
 <th>numpy.cov</th>
@@ -1379,6 +1514,7 @@
 <td>cov</td>
 <td></td>
 <td>cov</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -1390,6 +1526,7 @@
 <td>cross</td>
 <td></td>
 <td></td>
+<td>tf.linalg.cross</td>
 </tr>
 <tr>
 <th>numpy.cumprod</th>
@@ -1400,6 +1537,7 @@
 <td>cumprod</td>
 <td></td>
 <td></td>
+<td>tf.math.cumprod</td>
 </tr>
 <tr>
 <th>numpy.cumsum</th>
@@ -1410,9 +1548,11 @@
 <td>cumsum</td>
 <td></td>
 <td></td>
+<td>tf.math.cumsum</td>
 </tr>
 <tr>
 <th>numpy.datetime_as_string</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1430,6 +1570,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.deg2rad</th>
@@ -1440,6 +1581,7 @@
 <td></td>
 <td>deg2rad</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.degrees</th>
@@ -1447,6 +1589,7 @@
 <td>degrees</td>
 <td>degrees</td>
 <td>degrees</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1460,6 +1603,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.diag</th>
@@ -1469,6 +1613,7 @@
 <td>diag</td>
 <td>diag</td>
 <td>diag</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -1480,9 +1625,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.diag_indices_from</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1500,6 +1647,7 @@
 <td>diagflat</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.diagonal</th>
@@ -1510,6 +1658,7 @@
 <td>diagonal</td>
 <td></td>
 <td>diagonal</td>
+<td>tf.linalg.diag</td>
 </tr>
 <tr>
 <th>numpy.diff</th>
@@ -1517,6 +1666,7 @@
 <td>diff</td>
 <td></td>
 <td>diff</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1530,6 +1680,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.divide</th>
@@ -1540,6 +1691,7 @@
 <td>div</td>
 <td>divide</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.divmod</th>
@@ -1547,6 +1699,7 @@
 <td></td>
 <td>divmod</td>
 <td>divmod</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1560,6 +1713,7 @@
 <td>dot</td>
 <td>dot</td>
 <td>dot</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.dsplit</th>
@@ -1567,6 +1721,7 @@
 <td></td>
 <td>dsplit</td>
 <td>dsplit</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1580,6 +1735,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ediff1d</th>
@@ -1587,6 +1743,7 @@
 <td>ediff1d</td>
 <td></td>
 <td>ediff1d</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1600,6 +1757,7 @@
 <td>einsum</td>
 <td>einsum</td>
 <td></td>
+<td>tf.einsum</td>
 </tr>
 <tr>
 <th>numpy.einsum_path</th>
@@ -1607,6 +1765,7 @@
 <td></td>
 <td></td>
 <td>einsum_path</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1620,6 +1779,7 @@
 <td>empty</td>
 <td>empty</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.empty_like</th>
@@ -1629,6 +1789,7 @@
 <td>empty_like</td>
 <td>empty_like</td>
 <td>empty_like</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -1640,6 +1801,7 @@
 <td>eq</td>
 <td></td>
 <td></td>
+<td>tf.math.equal</td>
 </tr>
 <tr>
 <th>numpy.exp</th>
@@ -1650,6 +1812,7 @@
 <td>exp</td>
 <td>exp</td>
 <td></td>
+<td>tf.math.exp</td>
 </tr>
 <tr>
 <th>numpy.exp2</th>
@@ -1657,6 +1820,7 @@
 <td></td>
 <td>exp2</td>
 <td>exp2</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1670,6 +1834,7 @@
 <td>unsqueeze</td>
 <td></td>
 <td></td>
+<td>tf.expand_dims</td>
 </tr>
 <tr>
 <th>numpy.expm1</th>
@@ -1680,6 +1845,7 @@
 <td>expm1</td>
 <td></td>
 <td></td>
+<td>tf.math.expm1</td>
 </tr>
 <tr>
 <th>numpy.extract</th>
@@ -1687,6 +1853,7 @@
 <td></td>
 <td></td>
 <td>extract</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1700,6 +1867,7 @@
 <td>eye</td>
 <td></td>
 <td>eye</td>
+<td>tf.eye</td>
 </tr>
 <tr>
 <th>numpy.fabs</th>
@@ -1707,6 +1875,7 @@
 <td>fabs</td>
 <td>fabs</td>
 <td>fabs</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1720,6 +1889,7 @@
 <td>fft</td>
 <td></td>
 <td></td>
+<td>tf.signal.fft</td>
 </tr>
 <tr>
 <th>numpy.fft.fft2</th>
@@ -1730,12 +1900,14 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.signal.fft2d</td>
 </tr>
 <tr>
 <th>numpy.fft.fftfreq</th>
 <td>fft.fftfreq</td>
 <td>fft.fftfreq</td>
 <td>fftfreq</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1750,6 +1922,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.signal.fft3d</td>
 </tr>
 <tr>
 <th>numpy.fft.fftshift</th>
@@ -1760,11 +1933,13 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.signal.fftshift</td>
 </tr>
 <tr>
 <th>numpy.fft.hfft</th>
 <td>fft.hfft</td>
 <td>fft.hfft</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1780,6 +1955,7 @@
 <td>ifft</td>
 <td></td>
 <td></td>
+<td>tf.signal.ifft</td>
 </tr>
 <tr>
 <th>numpy.fft.ifft2</th>
@@ -1790,6 +1966,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.signal.ifft2d</td>
 </tr>
 <tr>
 <th>numpy.fft.ifftn</th>
@@ -1800,6 +1977,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.signal.ifft3d</td>
 </tr>
 <tr>
 <th>numpy.fft.ifftshift</th>
@@ -1810,11 +1988,13 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.signal.ifftshift</td>
 </tr>
 <tr>
 <th>numpy.fft.ihfft</th>
 <td>fft.ihfft</td>
 <td>fft.ihfft</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1830,6 +2010,7 @@
 <td>irfft</td>
 <td></td>
 <td></td>
+<td>tf.signal.irfft</td>
 </tr>
 <tr>
 <th>numpy.fft.irfft2</th>
@@ -1840,6 +2021,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.signal.irfft2d</td>
 </tr>
 <tr>
 <th>numpy.fft.irfftn</th>
@@ -1850,6 +2032,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.signal.irfft3d</td>
 </tr>
 <tr>
 <th>numpy.fft.rfft</th>
@@ -1860,6 +2043,7 @@
 <td>rfft</td>
 <td></td>
 <td></td>
+<td>tf.signal.rfft</td>
 </tr>
 <tr>
 <th>numpy.fft.rfft2</th>
@@ -1870,12 +2054,14 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.signal.rfft2d</td>
 </tr>
 <tr>
 <th>numpy.fft.rfftfreq</th>
 <td>fft.rfftfreq</td>
 <td>fft.rfftfreq</td>
 <td>rfftfreq</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1890,6 +2076,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.signal.rfft3d</td>
 </tr>
 <tr>
 <th>numpy.fill_diagonal</th>
@@ -1900,9 +2087,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.linalg.set_diag</td>
 </tr>
 <tr>
 <th>numpy.find_common_type</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1920,6 +2109,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.flatnonzero</th>
@@ -1927,6 +2117,7 @@
 <td>flatnonzero</td>
 <td></td>
 <td>flatnonzero</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1940,6 +2131,7 @@
 <td>flip</td>
 <td></td>
 <td></td>
+<td>tf.reverse</td>
 </tr>
 <tr>
 <th>numpy.fliplr</th>
@@ -1947,6 +2139,7 @@
 <td>fliplr</td>
 <td>fliplr</td>
 <td>fliplr</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1960,6 +2153,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.float_power</th>
@@ -1967,6 +2161,7 @@
 <td></td>
 <td>float_power</td>
 <td>float_power</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1980,6 +2175,7 @@
 <td>floor</td>
 <td>floor</td>
 <td></td>
+<td>tf.math.floor</td>
 </tr>
 <tr>
 <th>numpy.floor_divide</th>
@@ -1990,6 +2186,7 @@
 <td>floor_divide</td>
 <td></td>
 <td></td>
+<td>tf.math.floordiv</td>
 </tr>
 <tr>
 <th>numpy.fmax</th>
@@ -1997,6 +2194,7 @@
 <td>fmax</td>
 <td>fmax</td>
 <td>fmax</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2010,6 +2208,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.fmod</th>
@@ -2020,6 +2219,7 @@
 <td>fmod</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.format_float_positional</th>
@@ -2027,6 +2227,7 @@
 <td></td>
 <td></td>
 <td>format_float_positional</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2040,6 +2241,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.frexp</th>
@@ -2047,6 +2249,7 @@
 <td>frexp</td>
 <td>frexp</td>
 <td>frexp</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2060,6 +2263,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.fromfile</th>
@@ -2067,6 +2271,7 @@
 <td></td>
 <td></td>
 <td>fromfile</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2080,6 +2285,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.fromiter</th>
@@ -2090,11 +2296,13 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.frompyfunc</th>
 <td></td>
 <td>frompyfunc</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2110,6 +2318,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.fromstring</th>
@@ -2117,6 +2326,7 @@
 <td></td>
 <td></td>
 <td>fromstring</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2130,6 +2340,7 @@
 <td>full</td>
 <td></td>
 <td>full</td>
+<td>tf.fill</td>
 </tr>
 <tr>
 <th>numpy.full_like</th>
@@ -2140,9 +2351,11 @@
 <td>full_like</td>
 <td></td>
 <td>full_like</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.fv</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2160,6 +2373,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.genfromtxt</th>
@@ -2167,6 +2381,7 @@
 <td></td>
 <td></td>
 <td>genfromtxt</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2180,6 +2395,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.get_printoptions</th>
@@ -2190,9 +2406,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.getbufsize</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2210,9 +2428,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.geterrcall</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2230,6 +2450,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.gradient</th>
@@ -2237,6 +2458,7 @@
 <td>gradient</td>
 <td></td>
 <td>gradient</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2250,6 +2472,7 @@
 <td>gt</td>
 <td></td>
 <td></td>
+<td>tf.math.greater</td>
 </tr>
 <tr>
 <th>numpy.greater_equal</th>
@@ -2260,6 +2483,7 @@
 <td>ge</td>
 <td></td>
 <td></td>
+<td>tf.math.greater_equal</td>
 </tr>
 <tr>
 <th>numpy.hamming</th>
@@ -2268,6 +2492,7 @@
 <td>hamming</td>
 <td></td>
 <td>hamming_window</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -2280,6 +2505,7 @@
 <td>hann_window</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.heaviside</th>
@@ -2287,6 +2513,7 @@
 <td></td>
 <td>heaviside</td>
 <td>heaviside</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2300,6 +2527,7 @@
 <td>histc</td>
 <td>histogram</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.histogram2d</th>
@@ -2310,6 +2538,7 @@
 <td></td>
 <td>histogram2d</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.histogram_bin_edges</th>
@@ -2317,6 +2546,7 @@
 <td></td>
 <td></td>
 <td>histogram_bin_edges</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2330,6 +2560,7 @@
 <td></td>
 <td>histogramdd</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.hsplit</th>
@@ -2337,6 +2568,7 @@
 <td></td>
 <td>hsplit</td>
 <td>hsplit</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2350,6 +2582,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.hypot</th>
@@ -2359,6 +2592,7 @@
 <td>hypot</td>
 <td></td>
 <td>hypot</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -2370,6 +2604,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.math.bessel_i0</td>
 </tr>
 <tr>
 <th>numpy.identity</th>
@@ -2377,6 +2612,7 @@
 <td></td>
 <td>identity</td>
 <td>identity</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2390,10 +2626,12 @@
 <td>imag</td>
 <td></td>
 <td></td>
+<td>tf.math.imag</td>
 </tr>
 <tr>
 <th>numpy.in1d</th>
 <td>in1d</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2410,9 +2648,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.info</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2430,6 +2670,7 @@
 <td></td>
 <td>inner</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.insert</th>
@@ -2437,6 +2678,7 @@
 <td>insert</td>
 <td></td>
 <td>insert</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2450,6 +2692,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.intersect1d</th>
@@ -2460,6 +2703,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.sets.intersection</td>
 </tr>
 <tr>
 <th>numpy.invert</th>
@@ -2470,9 +2714,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.bitwise.invert</td>
 </tr>
 <tr>
 <th>numpy.ipmt</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2490,9 +2736,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.is_busday</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2510,6 +2758,7 @@
 <td></td>
 <td>isclose</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.iscomplex</th>
@@ -2520,10 +2769,12 @@
 <td>is_complex</td>
 <td>iscomplex</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.iscomplexobj</th>
 <td>iscomplexobj</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2540,10 +2791,12 @@
 <td>isfinite</td>
 <td>isfinite</td>
 <td></td>
+<td>tf.math.is_finite</td>
 </tr>
 <tr>
 <th>numpy.isfortran</th>
 <td>isfortran</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2560,6 +2813,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.isinf</th>
@@ -2569,6 +2823,7 @@
 <td></td>
 <td>isinf</td>
 <td>isinf</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -2580,9 +2835,11 @@
 <td>isnan</td>
 <td>isnan</td>
 <td></td>
+<td>tf.math.is_nan</td>
 </tr>
 <tr>
 <th>numpy.isnat</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2600,6 +2857,7 @@
 <td></td>
 <td></td>
 <td>isneginf</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.isposinf</th>
@@ -2610,6 +2868,7 @@
 <td></td>
 <td></td>
 <td>isposinf</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.isreal</th>
@@ -2620,10 +2879,12 @@
 <td>is_floating_point</td>
 <td>isreal</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.isrealobj</th>
 <td>isrealobj</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2640,9 +2901,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.issctype</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2660,12 +2923,14 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.issubdtype</th>
 <td></td>
 <td></td>
 <td>issubdtype</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2680,12 +2945,14 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ix_</th>
 <td>ix_</td>
 <td></td>
 <td>ix_</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2700,6 +2967,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.kron</th>
@@ -2710,6 +2978,7 @@
 <td></td>
 <td></td>
 <td>kron</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.lcm</th>
@@ -2717,6 +2986,7 @@
 <td></td>
 <td>lcm</td>
 <td>lcm</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2730,6 +3000,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.left_shift</th>
@@ -2740,6 +3011,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.bitwise.left_shift</td>
 </tr>
 <tr>
 <th>numpy.less</th>
@@ -2750,6 +3022,7 @@
 <td>lt</td>
 <td></td>
 <td></td>
+<td>tf.math.less</td>
 </tr>
 <tr>
 <th>numpy.less_equal</th>
@@ -2760,6 +3033,7 @@
 <td>le</td>
 <td></td>
 <td></td>
+<td>tf.math.less_equal</td>
 </tr>
 <tr>
 <th>numpy.lexsort</th>
@@ -2767,6 +3041,7 @@
 <td></td>
 <td></td>
 <td>lexsort</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2780,6 +3055,7 @@
 <td>cholesky</td>
 <td></td>
 <td></td>
+<td>tf.linalg.cholesky</td>
 </tr>
 <tr>
 <th>numpy.linalg.cond</th>
@@ -2787,6 +3063,7 @@
 <td></td>
 <td>cond</td>
 <td>linalg.cond</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2800,6 +3077,7 @@
 <td>det</td>
 <td></td>
 <td></td>
+<td>tf.linalg.det</td>
 </tr>
 <tr>
 <th>numpy.linalg.eig</th>
@@ -2810,6 +3088,7 @@
 <td>eig</td>
 <td></td>
 <td></td>
+<td>tf.linalg.eigh</td>
 </tr>
 <tr>
 <th>numpy.linalg.eigh</th>
@@ -2817,6 +3096,7 @@
 <td></td>
 <td>eigh</td>
 <td>linalg.eigh</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2830,6 +3110,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.eigvals</td>
 </tr>
 <tr>
 <th>numpy.linalg.eigvalsh</th>
@@ -2840,6 +3121,7 @@
 <td>symeig</td>
 <td></td>
 <td></td>
+<td>tf.linalg.eigvalsh</td>
 </tr>
 <tr>
 <th>numpy.linalg.inv</th>
@@ -2850,6 +3132,7 @@
 <td>inverse</td>
 <td></td>
 <td></td>
+<td>tf.linalg.inv</td>
 </tr>
 <tr>
 <th>numpy.linalg.lstsq</th>
@@ -2860,6 +3143,7 @@
 <td>lstsq</td>
 <td></td>
 <td></td>
+<td>tf.linalg.lstsq</td>
 </tr>
 <tr>
 <th>numpy.linalg.matrix_power</th>
@@ -2868,6 +3152,7 @@
 <td>matrix_power</td>
 <td>linalg.matrix_power</td>
 <td>matrix_power</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -2880,6 +3165,7 @@
 <td>matrix_rank</td>
 <td></td>
 <td></td>
+<td>tf.rank</td>
 </tr>
 <tr>
 <th>numpy.linalg.multi_dot</th>
@@ -2887,6 +3173,7 @@
 <td></td>
 <td>multi_dot</td>
 <td>linalg.multi_dot</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2900,6 +3187,7 @@
 <td>norm</td>
 <td></td>
 <td></td>
+<td>tf.norm</td>
 </tr>
 <tr>
 <th>numpy.linalg.pinv</th>
@@ -2910,6 +3198,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.linalg.pinv</td>
 </tr>
 <tr>
 <th>numpy.linalg.qr</th>
@@ -2920,6 +3209,7 @@
 <td>qr</td>
 <td></td>
 <td></td>
+<td>tf.linalg.qr</td>
 </tr>
 <tr>
 <th>numpy.linalg.slogdet</th>
@@ -2930,6 +3220,7 @@
 <td>slogdet</td>
 <td></td>
 <td></td>
+<td>tf.linalg.slogdet</td>
 </tr>
 <tr>
 <th>numpy.linalg.solve</th>
@@ -2940,6 +3231,7 @@
 <td>solve</td>
 <td></td>
 <td></td>
+<td>tf.linalg.solve</td>
 </tr>
 <tr>
 <th>numpy.linalg.svd</th>
@@ -2950,6 +3242,7 @@
 <td>svd</td>
 <td></td>
 <td></td>
+<td>tf.linalg.svd</td>
 </tr>
 <tr>
 <th>numpy.linalg.tensorinv</th>
@@ -2957,6 +3250,7 @@
 <td></td>
 <td>tensorinv</td>
 <td>linalg.tensorinv</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2970,6 +3264,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.linspace</th>
@@ -2980,6 +3275,7 @@
 <td>linspace</td>
 <td>linspace</td>
 <td></td>
+<td>tf.linspace</td>
 </tr>
 <tr>
 <th>numpy.load</th>
@@ -2990,6 +3286,7 @@
 <td></td>
 <td>load</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.loadtxt</th>
@@ -2997,6 +3294,7 @@
 <td></td>
 <td></td>
 <td>loadtxt</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3010,6 +3308,7 @@
 <td>log</td>
 <td>log</td>
 <td></td>
+<td>tf.math.log</td>
 </tr>
 <tr>
 <th>numpy.log10</th>
@@ -3018,6 +3317,7 @@
 <td>log10</td>
 <td>log10</td>
 <td>log10</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -3030,6 +3330,7 @@
 <td>log1p</td>
 <td></td>
 <td></td>
+<td>tf.math.log1p</td>
 </tr>
 <tr>
 <th>numpy.log2</th>
@@ -3038,6 +3339,7 @@
 <td>log2</td>
 <td>log2</td>
 <td>log2</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -3050,6 +3352,7 @@
 <td>logsumexp</td>
 <td>logaddexp</td>
 <td></td>
+<td>tf.math.reduce_logsumexp</td>
 </tr>
 <tr>
 <th>numpy.logaddexp2</th>
@@ -3057,6 +3360,7 @@
 <td>logaddexp2</td>
 <td>logaddexp2</td>
 <td>logaddexp2</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3070,6 +3374,7 @@
 <td>logical_and</td>
 <td>logical_and</td>
 <td></td>
+<td>tf.math.logical_and</td>
 </tr>
 <tr>
 <th>numpy.logical_not</th>
@@ -3080,6 +3385,7 @@
 <td>logical_not</td>
 <td>logical_not</td>
 <td></td>
+<td>tf.math.logical_not</td>
 </tr>
 <tr>
 <th>numpy.logical_or</th>
@@ -3090,6 +3396,7 @@
 <td>logical_or</td>
 <td>logical_or</td>
 <td></td>
+<td>tf.math.logical_or</td>
 </tr>
 <tr>
 <th>numpy.logical_xor</th>
@@ -3100,6 +3407,7 @@
 <td>logical_xor</td>
 <td>logical_xor</td>
 <td></td>
+<td>tf.math.logical_xor</td>
 </tr>
 <tr>
 <th>numpy.logspace</th>
@@ -3110,9 +3418,11 @@
 <td>logspace</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.lookfor</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3130,9 +3440,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.allclose</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3150,9 +3462,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.anom</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3170,9 +3484,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.any</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3190,9 +3506,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.apply_along_axis</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3210,9 +3528,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.argmax</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3230,9 +3550,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.argsort</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3250,9 +3572,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.array</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3270,9 +3594,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.asarray</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3290,9 +3616,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.atleast_2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3310,6 +3638,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.average</th>
@@ -3320,9 +3649,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.choose</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3340,9 +3671,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.clump_masked</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3360,9 +3693,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.column_stack</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3380,9 +3715,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.compress_cols</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3400,9 +3737,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.compress_rows</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3420,9 +3759,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.concatenate</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3440,9 +3781,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.copy</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3460,9 +3803,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.count</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3480,9 +3825,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.cov</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3500,9 +3847,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.cumsum</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3520,9 +3869,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.diag</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3540,9 +3891,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.dstack</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3560,9 +3913,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.dumps</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3580,9 +3935,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.empty</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3600,9 +3957,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.expand_dims</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3620,6 +3979,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.fix_invalid</th>
@@ -3630,9 +3990,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.flatnotmasked_contiguous</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3650,9 +4012,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.frombuffer</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3670,6 +4034,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.getdata</th>
@@ -3680,9 +4045,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.getmask</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3700,9 +4067,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.harden_mask</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3720,9 +4089,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.hstack</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3740,9 +4111,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.indices</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3760,9 +4133,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.innerproduct</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3780,9 +4155,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.is_masked</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3800,9 +4177,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.loads</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3820,9 +4199,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.make_mask_descr</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3840,9 +4221,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.mask_cols</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3860,9 +4243,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.mask_rowcols</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3880,9 +4265,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.masked_all</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3900,11 +4287,13 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.masked_equal</th>
 <td></td>
 <td>ma.masked_equal</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3920,11 +4309,13 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.masked_greater_equal</th>
 <td></td>
 <td>ma.masked_greater_equal</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3940,11 +4331,13 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.masked_invalid</th>
 <td></td>
 <td>ma.masked_invalid</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3960,11 +4353,13 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.masked_less_equal</th>
 <td></td>
 <td>ma.masked_less_equal</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3980,9 +4375,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.masked_object</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4000,11 +4397,13 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.masked_values</th>
 <td></td>
 <td>ma.masked_values</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4020,9 +4419,11 @@
 <td>masked_select</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.max</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4040,9 +4441,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.mean</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4060,9 +4463,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.min</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4080,9 +4485,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.notmasked_contiguous</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4100,9 +4507,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.ones</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4120,9 +4529,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.outerproduct</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4140,9 +4551,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.power</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4160,9 +4573,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.ptp</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4180,9 +4595,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.reshape</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4200,9 +4617,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.round</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4220,6 +4639,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.set_fill_value</th>
@@ -4230,9 +4650,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.shape</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4250,9 +4672,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.soften_mask</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4270,9 +4694,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.squeeze</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4290,9 +4716,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.std</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4310,9 +4738,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.swapaxes</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4330,9 +4760,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.transpose</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4350,9 +4782,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.var</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4370,9 +4804,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ma.where</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4390,9 +4826,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.mask_indices</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4410,9 +4848,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.matlib.empty</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4430,9 +4870,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.matlib.identity</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4450,9 +4892,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.matlib.rand</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4470,9 +4914,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.matlib.repmat</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4490,6 +4936,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.matmul</th>
@@ -4500,6 +4947,7 @@
 <td>mm</td>
 <td></td>
 <td>matmul</td>
+<td>tf.linalg.matmul</td>
 </tr>
 <tr>
 <th>numpy.maximum</th>
@@ -4510,9 +4958,11 @@
 <td>max</td>
 <td></td>
 <td></td>
+<td>tf.math.reduce_max</td>
 </tr>
 <tr>
 <th>numpy.maximum_sctype</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4530,6 +4980,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.mean</th>
@@ -4540,6 +4991,7 @@
 <td>mean</td>
 <td>mean</td>
 <td></td>
+<td>tf.math.reduce_mean</td>
 </tr>
 <tr>
 <th>numpy.median</th>
@@ -4549,6 +5001,7 @@
 <td>median</td>
 <td>median</td>
 <td>median</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -4560,9 +5013,11 @@
 <td>meshgrid</td>
 <td>meshgrid</td>
 <td></td>
+<td>tf.meshgrid</td>
 </tr>
 <tr>
 <th>numpy.min_scalar_type</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4580,9 +5035,11 @@
 <td>min</td>
 <td></td>
 <td></td>
+<td>tf.math.reduce_min</td>
 </tr>
 <tr>
 <th>numpy.mintypecode</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4600,6 +5057,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.mod</th>
@@ -4610,6 +5068,7 @@
 <td></td>
 <td>mod</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.modf</th>
@@ -4617,6 +5076,7 @@
 <td>modf</td>
 <td></td>
 <td>modf</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4630,6 +5090,7 @@
 <td></td>
 <td>moveaxis</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.msort</th>
@@ -4637,6 +5098,7 @@
 <td></td>
 <td>msort</td>
 <td>msort</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4650,6 +5112,7 @@
 <td>mul</td>
 <td>multiply</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nan_to_num</th>
@@ -4657,6 +5120,7 @@
 <td>nan_to_num</td>
 <td>nan_to_num</td>
 <td>nan_to_num</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4670,6 +5134,7 @@
 <td></td>
 <td>nanargmax</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nanargmin</th>
@@ -4680,6 +5145,7 @@
 <td></td>
 <td>nanargmin</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nancumprod</th>
@@ -4687,6 +5153,7 @@
 <td>nancumprod</td>
 <td>nancumprod</td>
 <td>nancumprod</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4700,6 +5167,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nanmax</th>
@@ -4710,6 +5178,7 @@
 <td></td>
 <td>nanmax</td>
 <td>nanmax</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nanmean</th>
@@ -4720,6 +5189,7 @@
 <td></td>
 <td>nanmean</td>
 <td>nanmean</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nanmedian</th>
@@ -4729,6 +5199,7 @@
 <td>nanmedian</td>
 <td></td>
 <td>nanmedian</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -4740,6 +5211,7 @@
 <td></td>
 <td>nanmin</td>
 <td>nanmin</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nanpercentile</th>
@@ -4747,6 +5219,7 @@
 <td></td>
 <td></td>
 <td>nanpercentile</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4760,6 +5233,7 @@
 <td></td>
 <td></td>
 <td>nanprod</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nanquantile</th>
@@ -4769,6 +5243,7 @@
 <td>nanquantile</td>
 <td></td>
 <td>nanquantile</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -4780,6 +5255,7 @@
 <td></td>
 <td>nanstd</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nansum</th>
@@ -4790,6 +5266,7 @@
 <td></td>
 <td>nansum</td>
 <td>nansum</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nanvar</th>
@@ -4799,6 +5276,7 @@
 <td>nanvar</td>
 <td></td>
 <td>nanvar</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -4810,9 +5288,11 @@
 <td>neg</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.nested_iters</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4830,6 +5310,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.math.nextafter</td>
 </tr>
 <tr>
 <th>numpy.nonzero</th>
@@ -4839,6 +5320,7 @@
 <td>nonzero</td>
 <td>nonzero</td>
 <td>nonzero</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -4850,9 +5332,11 @@
 <td>ne</td>
 <td></td>
 <td></td>
+<td>tf.math.not_equal</td>
 </tr>
 <tr>
 <th>numpy.nper</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4870,9 +5354,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.obj2sctype</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4890,6 +5376,7 @@
 <td>ones</td>
 <td>ones</td>
 <td>ones</td>
+<td>tf.ones</td>
 </tr>
 <tr>
 <th>numpy.ones_like</th>
@@ -4900,6 +5387,7 @@
 <td>ones_like</td>
 <td>ones_like</td>
 <td>ones_like</td>
+<td>tf.ones_like</td>
 </tr>
 <tr>
 <th>numpy.outer</th>
@@ -4910,12 +5398,14 @@
 <td></td>
 <td>outer</td>
 <td>outer</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.packbits</th>
 <td>packbits</td>
 <td></td>
 <td>packbits</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4930,6 +5420,7 @@
 <td></td>
 <td>pad</td>
 <td></td>
+<td>tf.pad</td>
 </tr>
 <tr>
 <th>numpy.partition</th>
@@ -4937,6 +5428,7 @@
 <td></td>
 <td></td>
 <td>partition</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4950,11 +5442,13 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.piecewise</th>
 <td></td>
 <td>piecewise</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4970,9 +5464,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.pmt</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4990,9 +5486,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polyadd</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5010,9 +5508,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polydiv</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5030,9 +5530,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polyint</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5050,9 +5552,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.cheb2poly</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5070,9 +5574,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebcompanion</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5090,9 +5596,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebdiv</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5110,9 +5618,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebfromroots</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5130,9 +5640,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebgrid2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5150,9 +5662,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebint</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5170,9 +5684,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebmul</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5190,9 +5706,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebpow</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5210,9 +5728,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebsub</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5230,9 +5750,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebval</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5250,9 +5772,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebval3d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5270,9 +5794,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebvander2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5290,9 +5816,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.chebyshev.chebweight</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5310,9 +5838,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.herm2poly</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5330,9 +5860,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermcompanion</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5350,9 +5882,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermdiv</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5370,9 +5904,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermfromroots</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5390,9 +5926,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermgrid2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5410,9 +5948,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermint</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5430,9 +5970,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermmul</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5450,9 +5992,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermpow</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5470,9 +6014,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermsub</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5490,9 +6036,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermval</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5510,9 +6058,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermval3d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5530,9 +6080,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermvander2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5550,9 +6102,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite.hermweight</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5570,9 +6124,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.herme2poly</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5590,9 +6146,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermecompanion</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5610,9 +6168,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermediv</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5630,9 +6190,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermefromroots</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5650,9 +6212,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermegrid2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5670,9 +6234,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermeint</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5690,9 +6256,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermemul</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5710,9 +6278,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermepow</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5730,9 +6300,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermesub</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5750,9 +6322,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermeval</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5770,9 +6344,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermeval3d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5790,9 +6366,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermevander2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5810,9 +6388,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.hermite_e.hermeweight</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5830,9 +6410,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lag2poly</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5850,9 +6432,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagcompanion</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5870,9 +6454,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagdiv</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5890,9 +6476,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagfromroots</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5910,9 +6498,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.laggrid2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5930,9 +6520,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagint</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5950,9 +6542,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagmul</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5970,9 +6564,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagpow</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5990,9 +6586,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagsub</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6010,9 +6608,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagval</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6030,9 +6630,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagval3d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6050,9 +6652,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagvander2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6070,9 +6674,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.laguerre.lagweight</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6090,9 +6696,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.leg2poly</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6110,9 +6718,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legcompanion</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6130,9 +6740,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legdiv</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6150,9 +6762,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legfromroots</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6170,9 +6784,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.leggrid2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6190,9 +6806,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legint</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6210,9 +6828,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legmul</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6230,9 +6850,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legpow</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6250,9 +6872,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legsub</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6270,9 +6894,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legval</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6290,9 +6916,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legval3d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6310,9 +6938,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legvander2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6330,9 +6960,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.legendre.legweight</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6350,9 +6982,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polyadd</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6370,9 +7004,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polyder</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6390,9 +7026,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polyfit</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6410,9 +7048,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polygrid2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6430,9 +7070,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polyint</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6450,9 +7092,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polymul</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6470,9 +7114,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polypow</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6490,9 +7136,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polysub</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6510,6 +7158,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polyval</th>
@@ -6520,9 +7169,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.math.polyval</td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polyval2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6540,9 +7191,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polyvalfromroots</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6560,9 +7213,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polynomial.polyvander2d</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6580,9 +7235,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polyutils.as_series</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6600,9 +7257,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polyutils.mapdomain</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6620,9 +7279,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polynomial.polyutils.trimcoef</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6640,9 +7301,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.polysub</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6660,6 +7323,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.positive</th>
@@ -6667,6 +7331,7 @@
 <td></td>
 <td>positive</td>
 <td>positive</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6680,9 +7345,11 @@
 <td>pow</td>
 <td>power</td>
 <td></td>
+<td>tf.math.pow</td>
 </tr>
 <tr>
 <th>numpy.ppmt</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6700,6 +7367,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.prod</th>
@@ -6710,6 +7378,7 @@
 <td>prod</td>
 <td></td>
 <td></td>
+<td>tf.math.reduce_prod</td>
 </tr>
 <tr>
 <th>numpy.promote_types</th>
@@ -6720,6 +7389,7 @@
 <td>promote_types</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ptp</th>
@@ -6727,6 +7397,7 @@
 <td>ptp</td>
 <td>ptp</td>
 <td>ptp</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6740,9 +7411,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.put_along_axis</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6760,9 +7433,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.pv</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6780,6 +7455,7 @@
 <td></td>
 <td>quantile</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.rad2deg</th>
@@ -6789,6 +7465,7 @@
 <td>rad2deg</td>
 <td></td>
 <td>rad2deg</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -6800,9 +7477,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.random.default_rng</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6820,9 +7499,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.rate</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6840,9 +7521,11 @@
 <td></td>
 <td>ravel</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.ravel_multi_index</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6860,6 +7543,7 @@
 <td>real</td>
 <td></td>
 <td></td>
+<td>tf.math.real</td>
 </tr>
 <tr>
 <th>numpy.real_if_close</th>
@@ -6867,6 +7551,7 @@
 <td></td>
 <td></td>
 <td>real_if_close</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6880,6 +7565,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.math.reciprocal</td>
 </tr>
 <tr>
 <th>numpy.remainder</th>
@@ -6888,6 +7574,7 @@
 <td>remainder</td>
 <td>remainder</td>
 <td>remainder</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -6900,6 +7587,7 @@
 <td></td>
 <td>repeat</td>
 <td></td>
+<td>tf.repeat</td>
 </tr>
 <tr>
 <th>numpy.require</th>
@@ -6907,6 +7595,7 @@
 <td></td>
 <td></td>
 <td>require</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6920,6 +7609,7 @@
 <td>reshape</td>
 <td></td>
 <td></td>
+<td>tf.reshape</td>
 </tr>
 <tr>
 <th>numpy.resize</th>
@@ -6927,6 +7617,7 @@
 <td></td>
 <td></td>
 <td>resize</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6940,6 +7631,7 @@
 <td>result_type</td>
 <td></td>
 <td>result_type</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.right_shift</th>
@@ -6950,6 +7642,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.bitwise.right_shift</td>
 </tr>
 <tr>
 <th>numpy.rint</th>
@@ -6960,6 +7653,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.math.rint</td>
 </tr>
 <tr>
 <th>numpy.roll</th>
@@ -6970,6 +7664,7 @@
 <td>roll</td>
 <td></td>
 <td>roll</td>
+<td>tf.roll</td>
 </tr>
 <tr>
 <th>numpy.rollaxis</th>
@@ -6980,12 +7675,14 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.roots</th>
 <td></td>
 <td></td>
 <td>roots</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7000,6 +7697,7 @@
 <td>rot90</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.round_</th>
@@ -7010,6 +7708,7 @@
 <td>round</td>
 <td></td>
 <td></td>
+<td>tf.math.round</td>
 </tr>
 <tr>
 <th>numpy.save</th>
@@ -7020,6 +7719,7 @@
 <td></td>
 <td>save</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.savetxt</th>
@@ -7027,6 +7727,7 @@
 <td></td>
 <td></td>
 <td>savetxt</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7040,6 +7741,7 @@
 <td></td>
 <td>savez</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.savez_compressed</th>
@@ -7050,9 +7752,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.sctype2char</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7070,12 +7774,14 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.searchsorted</td>
 </tr>
 <tr>
 <th>numpy.select</th>
 <td></td>
 <td></td>
 <td>select</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7090,6 +7796,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.set_string_function</th>
@@ -7100,9 +7807,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.setbufsize</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7120,9 +7829,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.sets.difference</td>
 </tr>
 <tr>
 <th>numpy.seterr</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7140,9 +7851,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.seterrobj</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7160,9 +7873,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.shares_memory</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7180,6 +7895,7 @@
 <td>sign</td>
 <td>sign</td>
 <td></td>
+<td>tf.math.sign</td>
 </tr>
 <tr>
 <th>numpy.signbit</th>
@@ -7187,6 +7903,7 @@
 <td>signbit</td>
 <td>signbit</td>
 <td>signbit</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7200,6 +7917,7 @@
 <td>sin</td>
 <td>sin</td>
 <td></td>
+<td>tf.math.sin</td>
 </tr>
 <tr>
 <th>numpy.sinc</th>
@@ -7207,6 +7925,7 @@
 <td></td>
 <td>sinc</td>
 <td>sinc</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7220,6 +7939,7 @@
 <td>sinh</td>
 <td>sinh</td>
 <td></td>
+<td>tf.math.sinh</td>
 </tr>
 <tr>
 <th>numpy.sort</th>
@@ -7230,6 +7950,7 @@
 <td>sort</td>
 <td>sort</td>
 <td></td>
+<td>tf.sort</td>
 </tr>
 <tr>
 <th>numpy.sort_complex</th>
@@ -7240,9 +7961,11 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.source</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7260,6 +7983,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.split</th>
@@ -7270,6 +7994,7 @@
 <td>split</td>
 <td></td>
 <td></td>
+<td>tf.split</td>
 </tr>
 <tr>
 <th>numpy.sqrt</th>
@@ -7280,6 +8005,7 @@
 <td>sqrt</td>
 <td>sqrt</td>
 <td></td>
+<td>tf.math.sqrt</td>
 </tr>
 <tr>
 <th>numpy.square</th>
@@ -7290,6 +8016,7 @@
 <td>square</td>
 <td></td>
 <td></td>
+<td>tf.math.square</td>
 </tr>
 <tr>
 <th>numpy.squeeze</th>
@@ -7300,6 +8027,7 @@
 <td>squeeze</td>
 <td>squeeze</td>
 <td></td>
+<td>tf.squeeze</td>
 </tr>
 <tr>
 <th>numpy.stack</th>
@@ -7310,6 +8038,7 @@
 <td>stack</td>
 <td>stack</td>
 <td>stack</td>
+<td>tf.stack</td>
 </tr>
 <tr>
 <th>numpy.std</th>
@@ -7320,6 +8049,7 @@
 <td>std</td>
 <td>std</td>
 <td></td>
+<td>tf.math.reduce_std</td>
 </tr>
 <tr>
 <th>numpy.subtract</th>
@@ -7330,6 +8060,7 @@
 <td></td>
 <td>subtract</td>
 <td></td>
+<td>tf.math.subtract</td>
 </tr>
 <tr>
 <th>numpy.sum</th>
@@ -7340,6 +8071,7 @@
 <td>sum</td>
 <td></td>
 <td></td>
+<td>tf.math.reduce_sum</td>
 </tr>
 <tr>
 <th>numpy.swapaxes</th>
@@ -7349,6 +8081,7 @@
 <td>swapaxes</td>
 <td></td>
 <td>swapaxes</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -7360,12 +8093,14 @@
 <td>take</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.take_along_axis</th>
 <td>take_along_axis</td>
 <td></td>
 <td>take_along_axis</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7380,6 +8115,7 @@
 <td>tan</td>
 <td>tan</td>
 <td></td>
+<td>tf.math.tan</td>
 </tr>
 <tr>
 <th>numpy.tanh</th>
@@ -7390,6 +8126,7 @@
 <td>tanh</td>
 <td>tanh</td>
 <td></td>
+<td>tf.math.tanh</td>
 </tr>
 <tr>
 <th>numpy.tensordot</th>
@@ -7400,6 +8137,7 @@
 <td>tensordot</td>
 <td>tensordot</td>
 <td>tensordot</td>
+<td>tf.tensordot</td>
 </tr>
 <tr>
 <th>numpy.tile</th>
@@ -7410,6 +8148,7 @@
 <td></td>
 <td>tile</td>
 <td></td>
+<td>tf.tile</td>
 </tr>
 <tr>
 <th>numpy.trace</th>
@@ -7420,6 +8159,7 @@
 <td>trace</td>
 <td></td>
 <td></td>
+<td>tf.linalg.trace</td>
 </tr>
 <tr>
 <th>numpy.transpose</th>
@@ -7430,6 +8170,7 @@
 <td>transpose</td>
 <td></td>
 <td></td>
+<td>tf.transpose</td>
 </tr>
 <tr>
 <th>numpy.trapz</th>
@@ -7440,6 +8181,7 @@
 <td>trapz</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.tri</th>
@@ -7447,6 +8189,7 @@
 <td></td>
 <td>tri</td>
 <td>tri</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7460,6 +8203,7 @@
 <td>tril</td>
 <td></td>
 <td>tril</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.tril_indices</th>
@@ -7470,9 +8214,11 @@
 <td>tril_indices</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.tril_indices_from</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7490,6 +8236,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.triu</th>
@@ -7500,6 +8247,7 @@
 <td>triu</td>
 <td></td>
 <td>triu</td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.triu_indices</th>
@@ -7510,9 +8258,11 @@
 <td>triu_indices</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.triu_indices_from</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7530,6 +8280,7 @@
 <td>true_divide</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.trunc</th>
@@ -7540,9 +8291,11 @@
 <td>trunc</td>
 <td></td>
 <td></td>
+<td>tf.truncatediv</td>
 </tr>
 <tr>
 <th>numpy.typename</th>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7560,6 +8313,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.sets.union</td>
 </tr>
 <tr>
 <th>numpy.unique</th>
@@ -7570,12 +8324,14 @@
 <td>unique</td>
 <td>unique</td>
 <td></td>
+<td>tf.unique</td>
 </tr>
 <tr>
 <th>numpy.unpackbits</th>
 <td>unpackbits</td>
 <td></td>
 <td>unpackbits</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7590,6 +8346,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td>tf.unravel_index</td>
 </tr>
 <tr>
 <th>numpy.unwrap</th>
@@ -7597,6 +8354,7 @@
 <td></td>
 <td></td>
 <td>unwrap</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7610,6 +8368,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.var</th>
@@ -7620,6 +8379,7 @@
 <td>var</td>
 <td>var</td>
 <td></td>
+<td>tf.math.reduce_variance</td>
 </tr>
 <tr>
 <th>numpy.vdot</th>
@@ -7627,6 +8387,7 @@
 <td>vdot</td>
 <td>vdot</td>
 <td>vdot</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7640,6 +8401,7 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <th>numpy.vstack</th>
@@ -7647,6 +8409,7 @@
 <td>vstack</td>
 <td>vstack</td>
 <td>vstack</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7660,6 +8423,7 @@
 <td>where</td>
 <td>where</td>
 <td>where</td>
+<td>tf.where</td>
 </tr>
 <tr>
 <th>numpy.zeros</th>
@@ -7670,6 +8434,7 @@
 <td>zeros</td>
 <td>zeros</td>
 <td>zeros</td>
+<td>tf.zeros</td>
 </tr>
 <tr>
 <th>numpy.zeros_like</th>
@@ -7680,6 +8445,7 @@
 <td>zeros_like</td>
 <td>zeros_like</td>
 <td>zeros_like</td>
+<td>tf.zeros_like</td>
 </tr>
 </tbody>
 </table>
