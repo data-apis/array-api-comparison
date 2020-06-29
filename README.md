@@ -125,13 +125,13 @@ $ make view-intersection-ranks
 To view relatively common array library APIs,
 
 ```bash
-$ make view-threshold
+$ make view-common-apis
 ```
 
 To view a table ranking relatively common array library APIs,
 
 ```bash
-$ make view-threshold-ranks
+$ make view-common-apis-ranks
 ```
 
 To view array library APIs which are not in the intersection,

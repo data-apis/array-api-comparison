@@ -161,14 +161,14 @@ INTERSECTION_CSV_OUT ?= $(DATA_DIR)/intersection.csv
 INTERSECTION_HTML_OUT ?= $(DOCS_DIR)/intersection.html
 
 
-# Define the output file path for API threshold data as JSON:
-THRESHOLD_JSON_OUT ?= $(DATA_DIR)/threshold.json
+# Define the output file path for common API data as JSON:
+COMMON_APIS_JSON_OUT ?= $(DATA_DIR)/common_apis.json
 
-# Define the output file path for API threshold data as CSV:
-THRESHOLD_CSV_OUT ?= $(DATA_DIR)/threshold.csv
+# Define the output file path for common API data as CSV:
+COMMON_APIS_CSV_OUT ?= $(DATA_DIR)/common_apis.csv
 
-# Define the output file path for viewing API threshold data as an HTML table:
-THRESHOLD_HTML_OUT ?= $(DOCS_DIR)/threshold.html
+# Define the output file path for viewing common API data as an HTML table:
+COMMON_APIS_HTML_OUT ?= $(DOCS_DIR)/common_apis.html
 
 
 # Define the output file path for API complement data as JSON:
@@ -191,14 +191,14 @@ INTERSECTION_RANKS_CSV_OUT ?= $(DATA_DIR)/intersection_ranks.csv
 INTERSECTION_RANKS_HTML_OUT ?= $(DOCS_DIR)/intersection_ranks.html
 
 
-# Define the output file path for API threshold rank data as JSON:
-THRESHOLD_RANKS_JSON_OUT ?= $(DATA_DIR)/threshold_ranks.json
+# Define the output file path for common API rank data as JSON:
+COMMON_APIS_RANKS_JSON_OUT ?= $(DATA_DIR)/common_apis_ranks.json
 
-# Define the output file path for API threshold rank data as CSV:
-THRESHOLD_RANKS_CSV_OUT ?= $(DATA_DIR)/threshold_ranks.csv
+# Define the output file path for common API rank data as CSV:
+COMMON_APIS_RANKS_CSV_OUT ?= $(DATA_DIR)/common_apis_ranks.csv
 
-# Define the output file path for viewing API threshold rank data as an HTML table:
-THRESHOLD_RANKS_HTML_OUT ?= $(DOCS_DIR)/threshold_ranks.html
+# Define the output file path for viewing common API rank data as an HTML table:
+COMMON_APIS_RANKS_HTML_OUT ?= $(DOCS_DIR)/common_apis_ranks.html
 
 
 # RULES #
@@ -212,7 +212,7 @@ THRESHOLD_RANKS_HTML_OUT ?= $(DOCS_DIR)/threshold_ranks.html
 # @example
 # make all
 #/
-all: install join intersection intersection-ranks threshold threshold-ranks complement
+all: install join intersection intersection-ranks common-apis common-apis-ranks complement
 
 .PHONY: all
 
@@ -344,68 +344,68 @@ intersection-ranks: $(INTERSECTION_RANKS_JSON_OUT) $(INTERSECTION_RANKS_CSV_OUT)
 #
 # @private
 #/
-$(THRESHOLD_JSON_OUT): $(JOIN_JSON_OUT)
-	$(QUIET) $(NODE) $(SCRIPTS_DIR)/threshold_json.js > $(THRESHOLD_JSON_OUT)
+$(COMMON_APIS_JSON_OUT): $(JOIN_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/common_apis_json.js > $(COMMON_APIS_JSON_OUT)
 
 #/
 # Generates a CSV file containing common APIs (as determined by a threshold).
 #
 # @private
 #/
-$(THRESHOLD_CSV_OUT): $(THRESHOLD_JSON_OUT)
-	$(QUIET) $(NODE) $(SCRIPTS_DIR)/json2csv.js $(THRESHOLD_JSON_OUT) > $(THRESHOLD_CSV_OUT)
+$(COMMON_APIS_CSV_OUT): $(COMMON_APIS_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/json2csv.js $(COMMON_APIS_JSON_OUT) > $(COMMON_APIS_CSV_OUT)
 
 #/
 # Generates HTML assets for viewing common API data.
 #
 # @private
 #/
-$(THRESHOLD_HTML_OUT): $(THRESHOLD_JSON_OUT)
-	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(THRESHOLD_JSON_OUT) --title="Common APIs" > $(THRESHOLD_HTML_OUT)
+$(COMMON_APIS_HTML_OUT): $(COMMON_APIS_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(COMMON_APIS_JSON_OUT) --title="Common APIs" > $(COMMON_APIS_HTML_OUT)
 
 #/
 # Generates data assets computing common APIs (as determined by a threshold).
 #
 # @example
-# make threshold
+# make common-apis
 #/
-threshold: $(THRESHOLD_JSON_OUT) $(THRESHOLD_CSV_OUT) $(THRESHOLD_HTML_OUT)
+common-apis: $(COMMON_APIS_JSON_OUT) $(COMMON_APIS_CSV_OUT) $(COMMON_APIS_HTML_OUT)
 
-.PHONY: threshold
+.PHONY: common-apis
 
 #/
 # Generates a JSON file which ranks common APIs (as determined by a threshold).
 #
 # @private
 #/
-$(THRESHOLD_RANKS_JSON_OUT): $(THRESHOLD_JSON_OUT)
-	$(QUIET) $(NODE) $(SCRIPTS_DIR)/threshold_ranks.js > $(THRESHOLD_RANKS_JSON_OUT)
+$(COMMON_APIS_RANKS_JSON_OUT): $(COMMON_APIS_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/common_apis_ranks.js > $(COMMON_APIS_RANKS_JSON_OUT)
 
 #/
 # Generates a CSV file which ranks common APIs (as determined by a threshold).
 #
 # @private
 #/
-$(THRESHOLD_RANKS_CSV_OUT): $(THRESHOLD_RANKS_JSON_OUT)
-	$(QUIET) $(NODE) $(SCRIPTS_DIR)/json2csv.js $(THRESHOLD_RANKS_JSON_OUT) > $(THRESHOLD_RANKS_CSV_OUT)
+$(COMMON_APIS_RANKS_CSV_OUT): $(COMMON_APIS_RANKS_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/json2csv.js $(COMMON_APIS_RANKS_JSON_OUT) > $(COMMON_APIS_RANKS_CSV_OUT)
 
 #/
 # Generates HTML assets for viewing threshold rank data.
 #
 # @private
 #/
-$(THRESHOLD_RANKS_HTML_OUT): $(THRESHOLD_RANKS_JSON_OUT)
-	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(THRESHOLD_RANKS_JSON_OUT) --title="NumPy Common Subset Ranks" > $(THRESHOLD_RANKS_HTML_OUT)
+$(COMMON_APIS_RANKS_HTML_OUT): $(COMMON_APIS_RANKS_JSON_OUT)
+	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(COMMON_APIS_RANKS_JSON_OUT) --title="NumPy Common APIs Ranks" > $(COMMON_APIS_RANKS_HTML_OUT)
 
 #/
 # Generates data assets computing the ranks of common APIs (as determined by a threshold).
 #
 # @example
-# make threshold-ranks
+# make common-apis-ranks
 #/
-threshold-ranks: $(THRESHOLD_RANKS_JSON_OUT) $(THRESHOLD_RANKS_CSV_OUT) $(THRESHOLD_RANKS_HTML_OUT)
+common-apis-ranks: $(COMMON_APIS_RANKS_JSON_OUT) $(COMMON_APIS_RANKS_CSV_OUT) $(COMMON_APIS_RANKS_HTML_OUT)
 
-.PHONY: threshold-ranks
+.PHONY: common-apis-ranks
 
 #/
 # Generates a JSON file containing the complement of the library API intersection.
@@ -457,7 +457,7 @@ docs: $(JOIN_HTML_OUT) $(INTERSECTION_HTML_OUT) $(INTERSECTION_RANKS_HTML_OUT) $
 # @example
 # make view-docs
 #/
-view-docs: view-join view-intersection view-intersection-ranks view-threshold view-threshold-ranks view-complement
+view-docs: view-join view-intersection view-intersection-ranks view-common-apis view-common-apis-ranks view-complement
 
 .PHONY: view-docs
 
@@ -498,23 +498,23 @@ view-intersection-ranks: $(INTERSECTION_RANKS_HTML_OUT)
 # Opens an HTML table showing a common API subset in a web browser.
 #
 # @example
-# make view-threshold
+# make view-common-apis
 #/
-view-threshold: $(THRESHOLD_HTML_OUT)
-	$(QUIET) $(OPEN) $(THRESHOLD_HTML_OUT)
+view-common-apis: $(COMMON_APIS_HTML_OUT)
+	$(QUIET) $(OPEN) $(COMMON_APIS_HTML_OUT)
 
-.PHONY: view-threshold
+.PHONY: view-common-apis
 
 #/
 # Opens an HTML table showing the ranks of a common API subset in a web browser.
 #
 # @example
-# make view-threshold-ranks
+# make view-common-apis-ranks
 #/
-view-threshold-ranks: $(THRESHOLD_RANKS_HTML_OUT)
-	$(QUIET) $(OPEN) $(THRESHOLD_RANKS_HTML_OUT)
+view-common-apis-ranks: $(COMMON_APIS_RANKS_HTML_OUT)
+	$(QUIET) $(OPEN) $(COMMON_APIS_RANKS_HTML_OUT)
 
-.PHONY: view-threshold-ranks
+.PHONY: view-common-apis-ranks
 
 #/
 # Opens an HTML table showing all APIs which are not in the API intersection in a web browser.
@@ -587,25 +587,25 @@ clean-data-intersection-ranks:
 # Removes generated threshold datasets.
 #
 # @example
-# make clean-data-threshold
+# make clean-data-common-apis
 #/
-clean-data-threshold:
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(THRESHOLD_JSON_OUT)
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(THRESHOLD_CSV_OUT)
+clean-data-common-apis:
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_JSON_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_CSV_OUT)
 
-.PHONY: clean-data-threshold
+.PHONY: clean-data-common-apis
 
 #/
 # Removes generated threshold ranks datasets.
 #
 # @example
-# make clean-data-threshold-ranks
+# make clean-data-common-apis-ranks
 #/
-clean-data-threshold-ranks:
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(THRESHOLD_RANKS_JSON_OUT)
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(THRESHOLD_RANKS_CSV_OUT)
+clean-data-common-apis-ranks:
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_RANKS_JSON_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_RANKS_CSV_OUT)
 
-.PHONY: clean-data-threshold-ranks
+.PHONY: clean-data-common-apis-ranks
 
 #/
 # Removes generated complement datasets.
@@ -625,7 +625,7 @@ clean-data-complement:
 # @example
 # make clean-data
 #/
-clean-data: clean-data-join clean-data-intersection clean-data-intersection-ranks clean-data-threshold clean-data-threshold-ranks clean-data-complement
+clean-data: clean-data-join clean-data-intersection clean-data-intersection-ranks clean-data-common-apis clean-data-common-apis-ranks clean-data-complement
 
 .PHONY: clean-data
 
@@ -639,8 +639,8 @@ clean-docs:
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(JOIN_HTML_OUT)
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_HTML_OUT)
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(INTERSECTION_RANKS_HTML_OUT)
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(THRESHOLD_HTML_OUT)
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(THRESHOLD_RANKS_HTML_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_HTML_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_RANKS_HTML_OUT)
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMPLEMENT_HTML_OUT)
 
 .PHONY: clean-docs
