@@ -67,7 +67,7 @@ function descending( a, b ) {
 * @returns {number} integer indicating sort order
 */
 function ascending( a, b ) {
-	// Sort values with greater usage to lower indices...
+	// Sort values having greater counts (i.e., used by more libraries) to lower indices...
 	if ( a.count > b.count ) {
 		return -1;
 	}
