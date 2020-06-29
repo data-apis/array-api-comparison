@@ -129,7 +129,13 @@ function main() {
 		libs.push( l );
 
 		// We assume that the prefix convention, if present, matches the library name:
-		prefix = ( l === 'pytorch' ) ? 'torch' : l;
+		if ( l === 'pytorch' ) {
+			prefix = 'torch';
+		} else if ( l === 'tensorflow' ) {
+			prefix = 'tf';
+		} else {
+			prefix = l;
+		}
 
 		for ( j = 0; j < data.length; j++ ) {
 			tmp = data[ j ];
