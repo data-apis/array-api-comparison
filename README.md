@@ -181,7 +181,7 @@ The `data` directory contains the following directories
 
 -   **raw**: raw array library API data.
 -   **joins**: array library APIs matched to their NumPy equivalents.
--   **vendor**: datasets acquired from third party sources, such as the Python Record API [repository][python-record-api]
+-   **vendor**: datasets acquired from third party sources, such as those found in the Python Record API [repository][python-record-api].
 
 The **raw** data directory contains the following datasets:
 
