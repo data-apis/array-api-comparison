@@ -46,7 +46,7 @@ function main() {
 	var fpath;
 	var fopts;
 	var join;
-	var int;
+	var list;
 	var out;
 	var d;
 	var i;
@@ -62,22 +62,22 @@ function main() {
 		return;
 	}
 	fpath = resolve( __dirname, '..', 'data', 'intersection.json' );
-	int = readJSON( fpath, fopts );
-	if ( int instanceof Error ) {
-		console.error( int.message );
+	list = readJSON( fpath, fopts );
+	if ( list instanceof Error ) {
+		console.error( list.message );
 		return;
 	}
 	out = [];
 	for ( i = 0; i < join.length; i++ ) {
 		d = join[ i ];
 
-		// Check if the data is in the API intersection (if so, skip it)....
-		for ( j = 0; j < int.length; j++ ) {
-			if ( d.numpy === int[ j ].numpy ) {
+		// Check if the API is in the API intersection (if so, skip it)....
+		for ( j = 0; j < list.length; j++ ) {
+			if ( d.numpy === list[ j ].numpy ) {
 				break;
 			}
 		}
-		if ( j === int.length ) {
+		if ( j === list.length ) {
 			out.push( pick( d, LIBRARIES ) );
 		}
 	}
