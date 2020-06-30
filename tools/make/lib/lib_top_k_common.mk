@@ -85,11 +85,11 @@ view-lib-top-k-common: $(LIB_TOP_K_COMMON_HTML_OUT)
 # Removes build artifacts.
 #
 # @example
-# make clean-lib-top-k-common-data
+# make clean-lib-top-k-common
 #/
-clean-lib-top-k-common-data: clean-lib-top-k-common-data-data clean-lib-top-k-common-data-docs
+clean-lib-top-k-common: clean-lib-top-k-common-data clean-lib-top-k-common-data-docs
 
-.PHONY: clean-lib-top-k-common-data
+.PHONY: clean-lib-top-k-common
 
 #/
 # Removes generated top K common datasets.
