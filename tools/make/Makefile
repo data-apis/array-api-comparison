@@ -78,6 +78,7 @@ include $(TOOLS_MAKE_DIR)/debug.mk
 # Please keep sorted in alphabetical order:
 include $(TOOLS_MAKE_LIB_DIR)/common_apis.mk
 include $(TOOLS_MAKE_LIB_DIR)/common_apis_ranks.mk
+include $(TOOLS_MAKE_LIB_DIR)/common_complement.mk
 include $(TOOLS_MAKE_LIB_DIR)/complement.mk
 include $(TOOLS_MAKE_LIB_DIR)/intersection.mk
 include $(TOOLS_MAKE_LIB_DIR)/intersection_ranks.mk
