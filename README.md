@@ -101,6 +101,8 @@ $ make
 ```text
 Usage: make <cmd>
 
+  make help                              Print this message.
+  
   make view-docs                         View all array API tables.
 
   make view-join                         View cross-library array API data.
