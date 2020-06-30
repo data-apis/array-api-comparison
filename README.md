@@ -43,15 +43,15 @@ Through specification and array library compliance, we facilitate array interope
 
 Currently, the following array libraries are evaluated:
 
--   **NumPy**: serves as the reference API against which all other array libraries are compared.
--   **CuPy**
--   **Dask.array**
--   **JAX**
--   **MXNet**
--   **PyTorch**
--   **rnumpy**: an opinionated curation of NumPy APIs, serving as an exercise in evaluating what is most "essential" (i.e., the smallest set of building block functionality on which most array functionality can be built).
--   **PyData/Sparse**
--   **Tensorflow**
+-   [**NumPy**][numpy]: serves as the reference API against which all other array libraries are compared.
+-   [**CuPy**][cupy]
+-   [**Dask.array**][dask-array]
+-   [**JAX**][jax]
+-   [**MXNet**][mxnet]
+-   [**PyTorch**][pytorch]
+-   [**rnumpy**][rnumpy]: an opinionated curation of NumPy APIs, serving as an exercise in evaluating what is most "essential" (i.e., the smallest set of building block functionality on which most array functionality can be built).
+-   [**PyData/Sparse**][pydata-sparse]
+-   [**Tensorflow**][tensorflow]
 
 * * *
 
@@ -221,3 +221,25 @@ For example,
 ```
 
 Once added, the CSV variant can be generated using internal tooling.
+
+<!-- links -->
+
+[cupy]: https://docs-cupy.chainer.org/en/stable/reference/comparison.html
+
+[dask-array]: https://docs.dask.org/en/latest/array-api.html
+
+[jax]: https://jax.readthedocs.io/en/latest/
+
+[mxnet]: https://numpy.mxnet.io/api/deepnumpy
+
+[numpy]: https://docs.scipy.org/doc/numpy
+
+[pydata-sparse]: https://github.com/pydata/sparse
+
+[pytorch]: https://pytorch.org/docs/stable/
+
+[rnumpy]: https://github.com/Quansight-Labs/rnumpy
+
+[tensorflow]: https://www.tensorflow.org/api_docs/python
+
+<!-- /.links -->
