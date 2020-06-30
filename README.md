@@ -98,70 +98,44 @@ $ make
 
 ## Usage
 
-To view all array API tables in your local web browser,
+```text
+Usage: make <cmd>
 
-```bash
-$ make view-docs
-```
+  make view-docs                         View all array API tables.
 
-To view cross-library array API data,
+  make view-join                         View cross-library array API data.
 
-```bash
-$ make view-join
-```
+  make view-intersection                 View the intersection of array library 
+                                         APIs.
 
-To view the intersection of array library APIs,
+  make view-intersection-ranks           View a table ranking the intersection
+                                         of array library APIs.
 
-```bash
-$ make view-intersection
-```
+  make view-common-apis                  View relatively common array library
+                                         APIs.
 
-To view a table ranking the intersection of array library APIs,
+  make view-common-apis-ranks            View a table ranking relatively common
+                                         array library APIs.
 
-```bash
-$ make view-intersection-ranks
-```
+  make view-complement                   View array library APIs which are not
+                                         in the intersection.
 
-To view relatively common array library APIs,
+  make view-common-complement            View array library APIs which are not
+                                         among the list of relatively common
+                                         APIs.
 
-```bash
-$ make view-common-apis
-```
+  make view-lib-top-k-common             View a table displaying the top `K`
+                                         (relatively) common array library APIs
+                                         across various libraries.
 
-To view a table ranking relatively common array library APIs,
-
-```bash
-$ make view-common-apis-ranks
-```
-
-To view array library APIs which are not in the intersection,
-
-```bash
-$ make view-complement
-```
-
-To view array library APIs which are not among the list of relatively common APIs,
-
-```bash
-$ make view-common-complement
-```
-
-To view a table displaying the top `K` (relatively) common array library APIs across various libraries,
-
-```bash
-$ make view-lib-top-k-common
-```
-
-To view a table displaying the top `K` array library APIs in the complement across various libraries,
-
-```bash
-$ make view-lib-top-k-complement
-```
-
-To view a table displaying the top `K` array library APIs in the complement of the list of (relatively) common APIs across various libraries,
-
-```bash
-$ make view-lib-top-k-common-complement
+  make view-lib-top-k-complement         View a table displaying the top K array
+                                         library APIs in the complement across
+                                         various libraries.
+                                         
+  make view-lib-top-k-common-complement  View a table displaying the top `K`
+                                         array library APIs in the complement of
+                                         the list of (relatively) common APIs
+                                         across various libraries.
 ```
 
 * * *
