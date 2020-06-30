@@ -145,6 +145,13 @@ To view a table displaying the top `K` array (relatively) common library APIs ac
 ```bash
 $ make view-lib-top-k-common
 ```
+```
+
+To view a table displaying the top `K` array library APIs in the complement across various libraries,
+
+```bash
+$ make view-lib-top-k-complement
+```
 
 * * *
 
