@@ -117,6 +117,10 @@ $(function main() {
 		* @private
 		*/
 		function repositionStickyHead() {
+			var allowance;
+			var st;
+			var t;
+
 			// Return value of calculated allowance:
 			var allowance = calcAllowance();
 
@@ -138,11 +142,13 @@ $(function main() {
 				}
 			} else {
 				// If it is not overflowing (basic layout), position sticky header based on viewport `scrollTop`:
-				if( $w.scrollTop() > $t.offset().top && $w.scrollTop() < $t.offset().top + $t.outerHeight() - allowance ) {
+				st = $w.scrollTop();
+				t = $t.offset().top;
+				if ( st > t && st < t+$t.outerHeight()-allowance ) {
 					// When top of viewport is in the table itself...
 					$stickyHead.add( $stickyIntersect ).css({
 						'opacity': 1,
-						'top': $w.scrollTop() - $t.offset().top
+						'top': st - t
 					});
 				} else {
 					// When top of viewport is above or below table...
@@ -160,7 +166,7 @@ $(function main() {
 		* @private
 		*/
 		function repositionStickyCol() {
-			if( $stickyWrap.scrollLeft() > 0 ) {
+			if ( $stickyWrap.scrollLeft() > 0 ) {
 				// When left of wrapping parent is out of view...
 				$stickyCol.add( $stickyIntersect ).css({
 					'opacity': 1,
@@ -180,13 +186,15 @@ $(function main() {
 		*/
 		function calcAllowance() {
 			var a = 0;
+			var b;
 
 			// Calculate allowance:
 			$t.find( 'tbody tr:lt(3)' ).each( onRow );
 
 			// Set fail safe limit (last three rows might be too tall; set arbitrary limit at 0.25 of viewport height, or you can use an arbitrary pixel value):
-			if( a > $w.height()*0.25 ) {
-				a = $w.height()*0.25;
+			b = $w.height() * 0.25;
+			if ( a > b ) {
+				a = b;
 			}
 
 			// Add the height of sticky header:
