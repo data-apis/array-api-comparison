@@ -140,7 +140,13 @@ To view array library APIs which are not in the intersection,
 $ make view-complement
 ```
 
-To view a table displaying the top `K` array (relatively) common library APIs across various libraries,
+To view array library APIs which are not among the list of relatively common APIs,
+
+```bash
+$ make view-common-complement
+```
+
+To view a table displaying the top `K` (relatively) common array library APIs across various libraries,
 
 ```bash
 $ make view-lib-top-k-common
@@ -150,6 +156,12 @@ To view a table displaying the top `K` array library APIs in the complement acro
 
 ```bash
 $ make view-lib-top-k-complement
+```
+
+To view a table displaying the top `K` array library APIs in the complement of the list of (relatively) common APIs across various libraries,
+
+```bash
+$ make view-lib-top-k-common-complement
 ```
 
 * * *
