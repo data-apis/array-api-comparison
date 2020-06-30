@@ -61,7 +61,7 @@ $(COMPLEMENT_HTML_OUT): $(COMPLEMENT_JSON_OUT)
 	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(COMPLEMENT_JSON_OUT) --title="Non-Universal APIs" > $(COMPLEMENT_HTML_OUT)
 
 #/
-# Generates data assets computing the complement of the library API intersection.
+# Generates data assets.
 #
 # @example
 # make complement
@@ -71,7 +71,7 @@ complement: $(COMPLEMENT_JSON_OUT) $(COMPLEMENT_CSV_OUT) $(COMPLEMENT_HTML_OUT)
 .PHONY: complement
 
 #/
-# Opens an HTML table showing all APIs which are not in the API intersection in a web browser.
+# Opens an HTML table in a web browser.
 #
 # @example
 # make view-complement
@@ -92,7 +92,7 @@ clean-complement: clean-complement-data clean-complement-docs
 .PHONY: clean-complement
 
 #/
-# Removes generated complement datasets.
+# Removes generated datasets.
 #
 # @example
 # make clean-complement-data

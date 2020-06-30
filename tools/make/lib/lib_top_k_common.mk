@@ -61,7 +61,7 @@ $(LIB_TOP_K_COMMON_HTML_OUT): $(LIB_TOP_K_COMMON_JSON_OUT)
 	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(LIB_TOP_K_COMMON_JSON_OUT) --title="Top K Common APIs" > $(LIB_TOP_K_COMMON_HTML_OUT)
 
 #/
-# Generates data assets computing the top K common APIs for various libraries.
+# Generates data assets.
 #
 # @example
 # make lib-top-k-common
@@ -71,7 +71,7 @@ lib-top-k-common: $(LIB_TOP_K_COMMON_JSON_OUT) $(LIB_TOP_K_COMMON_CSV_OUT) $(LIB
 .PHONY: lib-top-k-common
 
 #/
-# Opens an HTML table showing the top K common APIs in a web browser.
+# Opens an HTML table in a web browser.
 #
 # @example
 # make view-lib-top-k-common
@@ -92,7 +92,7 @@ clean-lib-top-k-common: clean-lib-top-k-common-data clean-lib-top-k-common-data-
 .PHONY: clean-lib-top-k-common
 
 #/
-# Removes generated top K common datasets.
+# Removes generated datasets.
 #
 # @example
 # make clean-lib-top-k-common-data

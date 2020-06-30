@@ -61,7 +61,7 @@ $(COMMON_APIS_RANKS_HTML_OUT): $(COMMON_APIS_RANKS_JSON_OUT)
 	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(COMMON_APIS_RANKS_JSON_OUT) --title="NumPy Common APIs Ranks" > $(COMMON_APIS_RANKS_HTML_OUT)
 
 #/
-# Generates data assets computing the ranks of common APIs (as determined by a threshold).
+# Generates data assets.
 #
 # @example
 # make common-apis-ranks
@@ -71,7 +71,7 @@ common-apis-ranks: $(COMMON_APIS_RANKS_JSON_OUT) $(COMMON_APIS_RANKS_CSV_OUT) $(
 .PHONY: common-apis-ranks
 
 #/
-# Opens an HTML table showing the ranks of a common API subset in a web browser.
+# Opens an HTML table in a web browser.
 #
 # @example
 # make view-common-apis-ranks
@@ -92,7 +92,7 @@ clean-common-apis-ranks: clean-common-apis-ranks-data clean-common-apis-ranks-do
 .PHONY: clean-common-apis-ranks
 
 #/
-# Removes generated threshold ranks datasets.
+# Removes generated datasets.
 #
 # @example
 # make clean-common-apis-ranks-data

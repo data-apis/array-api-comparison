@@ -61,7 +61,7 @@ $(INTERSECTION_RANKS_HTML_OUT): $(INTERSECTION_RANKS_JSON_OUT)
 	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(INTERSECTION_RANKS_JSON_OUT) --title="NumPy Intersection Ranks" > $(INTERSECTION_RANKS_HTML_OUT)
 
 #/
-# Generates data assets computing the ranks of the intersection of library APIs.
+# Generates data assets.
 #
 # @example
 # make intersection-ranks
@@ -71,7 +71,7 @@ intersection-ranks: $(INTERSECTION_RANKS_JSON_OUT) $(INTERSECTION_RANKS_CSV_OUT)
 .PHONY: intersection-ranks
 
 #/
-# Opens an HTML table showing the API intersection ranks in a web browser.
+# Opens an HTML table in a web browser.
 #
 # @example
 # make view-intersection-ranks
@@ -92,7 +92,7 @@ clean-intersection-ranks: clean-intersection-ranks-data clean-intersection-ranks
 .PHONY: clean-intersection-ranks
 
 #/
-# Removes generated intersection ranks datasets.
+# Removes generated datasets.
 #
 # @example
 # make clean-intersection-ranks-data

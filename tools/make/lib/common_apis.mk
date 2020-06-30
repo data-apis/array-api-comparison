@@ -61,7 +61,7 @@ $(COMMON_APIS_HTML_OUT): $(COMMON_APIS_JSON_OUT)
 	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(COMMON_APIS_JSON_OUT) --title="Common APIs" > $(COMMON_APIS_HTML_OUT)
 
 #/
-# Generates data assets computing common APIs (as determined by a threshold).
+# Generates data assets.
 #
 # @example
 # make common-apis
@@ -71,7 +71,7 @@ common-apis: $(COMMON_APIS_JSON_OUT) $(COMMON_APIS_CSV_OUT) $(COMMON_APIS_HTML_O
 .PHONY: common-apis
 
 #/
-# Opens an HTML table showing a common API subset in a web browser.
+# Opens an HTML table in a web browser.
 #
 # @example
 # make view-common-apis
@@ -92,7 +92,7 @@ clean-common-apis: clean-common-apis-data clean-common-apis-docs
 .PHONY: clean-common-apis
 
 #/
-# Removes generated threshold datasets.
+# Removes generated datasets.
 #
 # @example
 # make clean-common-apis-data

@@ -61,7 +61,7 @@ $(INTERSECTION_HTML_OUT): $(INTERSECTION_JSON_OUT)
 	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(INTERSECTION_JSON_OUT) --title="API Intersection" > $(INTERSECTION_HTML_OUT)
 
 #/
-# Generates data assets computing the intersection of library APIs.
+# Generates data assets.
 #
 # @example
 # make intersection
@@ -71,7 +71,7 @@ intersection: $(INTERSECTION_JSON_OUT) $(INTERSECTION_CSV_OUT) $(INTERSECTION_HT
 .PHONY: intersection
 
 #/
-# Opens an HTML table showing the API intersection in a web browser.
+# Opens an HTML table in a web browser.
 #
 # @example
 # make view-intersection
@@ -92,7 +92,7 @@ clean-intersection: clean-intersection-data clean-intersection-docs
 .PHONY: clean-intersection
 
 #/
-# Removes generated intersection datasets.
+# Removes generated datasets.
 #
 # @example
 # make clean-intersection-data

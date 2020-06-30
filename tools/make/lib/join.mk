@@ -61,7 +61,7 @@ $(JOIN_HTML_OUT): $(JOIN_JSON_OUT)
 	$(QUIET) $(NODE) $(SCRIPTS_DIR)/html_table.js $(JOIN_JSON_OUT) --title="Array API Comparison" > $(JOIN_HTML_OUT)
 
 #/
-# Generates data assets combining individual join data.
+# Generates data assets.
 #
 # @example
 # make join
@@ -71,7 +71,7 @@ join: $(JOIN_JSON_OUT) $(JOIN_CSV_OUT) $(JOIN_HTML_OUT)
 .PHONY: join
 
 #/
-# Opens an HTML table showing all API data in a web browser.
+# Opens an HTML table in a web browser.
 #
 # @example
 # make view-join
@@ -92,7 +92,7 @@ clean-join: clean-join-data clean-join-docs
 .PHONY: clean-join
 
 #/
-# Removes generated join datasets.
+# Removes generated datasets.
 #
 # @example
 # make clean-join-data
