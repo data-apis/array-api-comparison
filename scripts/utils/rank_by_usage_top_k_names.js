@@ -230,6 +230,7 @@ function rankTopK( list, K ) {
 	tmp = [];
 	for ( i = 0; i < K; i++ ) {
 		o = {};
+		o.numpy = 'numpy.';
 		for ( j = 0; j < keys.length; j++ ) {
 			k = keys[ j ];
 			o[ k ] = out[ k ][ i ];
