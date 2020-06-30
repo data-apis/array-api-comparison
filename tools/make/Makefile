@@ -83,4 +83,5 @@ include $(TOOLS_MAKE_LIB_DIR)/intersection.mk
 include $(TOOLS_MAKE_LIB_DIR)/intersection_ranks.mk
 include $(TOOLS_MAKE_LIB_DIR)/join.mk
 include $(TOOLS_MAKE_LIB_DIR)/lib_top_k_common.mk
+include $(TOOLS_MAKE_LIB_DIR)/lib_top_k_complement.mk
 include $(TOOLS_MAKE_LIB_DIR)/node.mk
