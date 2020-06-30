@@ -173,12 +173,15 @@ This repository contains the following directories:
 -   **data**: array API data (e.g., array library APIs and their NumPy equivalents).
 -   **docs**: browser-based documentation for viewing array API data.
 -   **etc**: configuration files.
+-   **notebooks**: Jupyter notebooks for analysis.
 -   **scripts**: scripts for data manipulation and documentation generation.
+-   **tools**: project tooling.
 
 The `data` directory contains the following directories
 
 -   **raw**: raw array library API data.
 -   **joins**: array library APIs matched to their NumPy equivalents.
+-   **vendor**: datasets acquired from third party sources, such as the Python Record API [repository][python-record-api]
 
 The **raw** data directory contains the following datasets:
 
@@ -192,6 +195,13 @@ Lastly, the root **data** directory contains the following additional datasets:
 
 -   `join.(csv|json)`: array library API data combined in a single file.
 -   `intersection.(csv|json)`: array library API intersection.
+-   `common_apis.(csv|json)`: array library APIs which are (relatively) common across downstream libraries (`>67%`).
+-   `complement.(csv|json)`: array library APIs which are not in the intersection.
+-   `intersection_ranks.(csv|json)`: array library APIs which are in the intersection ranked according to relative usage in downstream libraries.
+-   `common_apis_ranks.(csv|json)`: array library APIs which are in the list of (relatively) common APIs ranked according to relative usage in downstream libraries.
+-   `lib_top_k_common.(csv|json)`: the top `K` array library API names in the list of relatively common APIs per downstream library according to relative usage.
+-   `lib_top_k_common_complement.(csv|json)`: the top `K` array library API names not in the list of relatively common APIs per downstream library according to relative usage.
+-   `lib_top_k_complement.(csv|json)`: the top `K` array library API names not in the list of API intersection per downstream library according to relative usage.
 
 When editing data files, consider the JSON data to be the source of truth. CSV files are generated from the JSON data.
 
@@ -241,5 +251,7 @@ Once added, the CSV variant can be generated using internal tooling.
 [rnumpy]: https://github.com/Quansight-Labs/rnumpy
 
 [tensorflow]: https://www.tensorflow.org/api_docs/python
+
+[python-record-api]: https://github.com/pydata-apis/python-api-record
 
 <!-- /.links -->
