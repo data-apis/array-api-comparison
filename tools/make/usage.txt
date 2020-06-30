@@ -1,0 +1,41 @@
+
+Usage: make <cmd>
+
+  make help                              Print this message.
+
+  make view-docs                         View all array API tables.
+
+  make view-join                         View cross-library array API data.
+
+  make view-intersection                 View the intersection of array library
+                                         APIs.
+
+  make view-intersection-ranks           View a table ranking the intersection
+                                         of array library APIs.
+
+  make view-common-apis                  View relatively common array library
+                                         APIs.
+
+  make view-common-apis-ranks            View a table ranking relatively common
+                                         array library APIs.
+
+  make view-complement                   View array library APIs which are not
+                                         in the intersection.
+
+  make view-common-complement            View array library APIs which are not
+                                         among the list of relatively common
+                                         APIs.
+
+  make view-lib-top-k-common             View a table displaying the top `K`
+                                         (relatively) common array library APIs
+                                         across various libraries.
+
+  make view-lib-top-k-complement         View a table displaying the top K array
+                                         library APIs in the complement across
+                                         various libraries.
+
+  make view-lib-top-k-common-complement  View a table displaying the top `K`
+                                         array library APIs in the complement of
+                                         the list of (relatively) common APIs
+                                         across various libraries.
+

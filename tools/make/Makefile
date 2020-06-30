@@ -74,6 +74,7 @@ SHELL := bash
 # Order is important:
 include $(TOOLS_MAKE_DIR)/common.mk
 include $(TOOLS_MAKE_DIR)/debug.mk
+include $(TOOLS_MAKE_DIR)/help.mk
 
 # Please keep sorted in alphabetical order:
 include $(TOOLS_MAKE_LIB_DIR)/common_apis.mk

@@ -24,51 +24,19 @@
 
 # VARIABLES #
 
-# Verbosity:
-ifndef VERBOSE
-	QUIET := @
-else
-	QUIET :=
-endif
+# Define the path to the Makefile usage text file for displaying help information:
+MAKE_USAGE ?= $(TOOLS_MAKE_DIR)/usage.txt
 
-# Determine the OS:
+
+# RULES #
+
+#/
+# Prints a `Makefile` help message which includes a list of common commands.
 #
-# [1]: https://en.wikipedia.org/wiki/Uname#Examples
-# [2]: http://stackoverflow.com/a/27776822/2225624
-OS ?= $(shell uname)
-ifneq (, $(findstring MINGW,$(OS)))
-	OS := WINNT
-else
-ifneq (, $(findstring MSYS,$(OS)))
-	OS := WINNT
-else
-ifneq (, $(findstring CYGWIN,$(OS)))
-	OS := WINNT
-else
-ifneq (, $(findstring Windows_NT,$(OS)))
-	OS := WINNT
-endif
-endif
-endif
-endif
+# @example
+# make help
+#/
+help:
+	$(QUIET) $(CAT) $(MAKE_USAGE)
 
-# Define the delete command:
-DELETE ?= -rm
-DELETE_FLAGS ?= -rf
-
-# Define the command to `cat` a file:
-CAT ?= cat
-
-# Define the command for `node`:
-NODE ?= node
-
-# Define the command for `npm`:
-NPM ?= npm
-
-# Determine the `open` command:
-ifeq ($(OS), Darwin)
-	OPEN ?= open
-else
-	OPEN ?= xdg-open
-endif
-# TODO: add Windows command
+.PHONY: help
