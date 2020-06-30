@@ -64,11 +64,11 @@ $(COMMON_COMPLEMENT_HTML_OUT): $(COMMON_COMPLEMENT_JSON_OUT)
 # Generates data assets.
 #
 # @example
-# make complement
+# make common-complement
 #/
-complement: $(COMMON_COMPLEMENT_JSON_OUT) $(COMMON_COMPLEMENT_CSV_OUT) $(COMMON_COMPLEMENT_HTML_OUT)
+common-complement: $(COMMON_COMPLEMENT_JSON_OUT) $(COMMON_COMPLEMENT_CSV_OUT) $(COMMON_COMPLEMENT_HTML_OUT)
 
-.PHONY: complement
+.PHONY: common-complement
 
 #/
 # Opens an HTML table in a web browser.
