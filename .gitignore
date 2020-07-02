@@ -28,6 +28,7 @@
 
 # Directories #
 ###############
+.ipynb_checkpoints
 reports/
 build/
 tmp/
