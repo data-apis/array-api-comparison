@@ -243,7 +243,7 @@ name,category,subcategory
 "numpy.interp","manipulation",""
 "numpy.intersect1d","sets",""
 "numpy.invert","binary_ops",""
-"numpy.ipmt",finance"",""
+"numpy.ipmt","finance",""
 "numpy.irr","finance",""
 "numpy.is_busday","datetime",""
 "numpy.isclose","logical",""
