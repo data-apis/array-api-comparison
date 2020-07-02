@@ -28,11 +28,9 @@
 
 // MODULES //
 
-var resolve = require( 'path' ).resolve;
-var readJSON = require( '@stdlib/fs/read-json' ).sync;
-var replace = require( '@stdlib/string/replace' );
 var pick = require( '@stdlib/utils/pick' );
 var LIBRARIES = require( './../etc/libraries.json' );
+var JOIN = require( './../data/join.json' );
 
 
 // MAIN //
@@ -43,27 +41,15 @@ var LIBRARIES = require( './../etc/libraries.json' );
 * @private
 */
 function main() {
-	var fpath;
-	var fopts;
-	var data;
 	var out;
 	var cnt;
 	var d;
 	var i;
 	var j;
 
-	fpath = resolve( __dirname, '..', 'data', 'join.json' );
-	fopts = {
-		'encoding': 'utf8'
-	};
-	data = readJSON( fpath, fopts );
-	if ( data instanceof Error ) {
-		console.error( data.message );
-		return;
-	}
 	out = [];
-	for ( i = 0; i < data.length; i++ ) {
-		d = data[ i ];
+	for ( i = 0; i < JOIN.length; i++ ) {
+		d = JOIN[ i ];
 		cnt = 0;
 		for ( j = 0; j < LIBRARIES.length; j++ ) {
 			if ( d[ LIBRARIES[j] ] ) {

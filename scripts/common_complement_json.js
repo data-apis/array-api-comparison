@@ -28,11 +28,10 @@
 
 // MODULES //
 
-var resolve = require( 'path' ).resolve;
-var readJSON = require( '@stdlib/fs/read-json' ).sync;
-var replace = require( '@stdlib/string/replace' );
 var pick = require( '@stdlib/utils/pick' );
 var LIBRARIES = require( './../etc/libraries.json' );
+var JOIN = require( './../data/join.json' );
+var COMMON_APIS = require( './../data/common_apis.json' );
 
 
 // MAIN //
@@ -43,41 +42,22 @@ var LIBRARIES = require( './../etc/libraries.json' );
 * @private
 */
 function main() {
-	var fpath;
-	var fopts;
-	var join;
-	var list;
 	var out;
 	var d;
 	var i;
 	var j;
 
-	fopts = {
-		'encoding': 'utf8'
-	};
-	fpath = resolve( __dirname, '..', 'data', 'join.json' );
-	join = readJSON( fpath, fopts );
-	if ( join instanceof Error ) {
-		console.error( join.message );
-		return;
-	}
-	fpath = resolve( __dirname, '..', 'data', 'common_apis.json' );
-	list = readJSON( fpath, fopts );
-	if ( list instanceof Error ) {
-		console.error( list.message );
-		return;
-	}
 	out = [];
-	for ( i = 0; i < join.length; i++ ) {
-		d = join[ i ];
+	for ( i = 0; i < JOIN.length; i++ ) {
+		d = JOIN[ i ];
 
 		// Check if the API is among the list of common APIs (if so, skip it)....
-		for ( j = 0; j < list.length; j++ ) {
-			if ( d.numpy === list[ j ].numpy ) {
+		for ( j = 0; j < COMMON_APIS.length; j++ ) {
+			if ( d.numpy === COMMON_APIS[ j ].numpy ) {
 				break;
 			}
 		}
-		if ( j === list.length ) {
+		if ( j === COMMON_APIS.length ) {
 			out.push( pick( d, LIBRARIES ) );
 		}
 	}

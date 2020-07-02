@@ -28,10 +28,9 @@
 
 // MODULES //
 
-var resolve = require( 'path' ).resolve;
-var readJSON = require( '@stdlib/fs/read-json' ).sync;
 var pluck = require( '@stdlib/utils/pluck' );
 var rankByUsage = require( './utils/rank_by_usage.js' );
+var LIST = require( './../data/common_apis.json' );
 
 
 // MAIN //
@@ -42,23 +41,11 @@ var rankByUsage = require( './utils/rank_by_usage.js' );
 * @private
 */
 function main() {
-	var fpath;
-	var fopts;
 	var list;
 	var out;
 
-	fopts = {
-		'encoding': 'utf8'
-	};
-	// Load the common APIs data:
-	fpath = resolve( __dirname, '..', 'data', 'common_apis.json' );
-	list = readJSON( fpath, fopts );
-	if ( list instanceof Error ) {
-		console.error( list.message );
-		return;
-	}
 	// Extract a list of NumPy APIs:
-	list = pluck( list, 'numpy' );
+	list = pluck( LIST, 'numpy' );
 
 	// Rank the list of NumPy APIs based on relative usage:
 	out = rankByUsage( list );

@@ -28,12 +28,10 @@
 
 // MODULES //
 
-var resolve = require( 'path' ).resolve;
-var readJSON = require( '@stdlib/fs/read-json' ).sync;
-var replace = require( '@stdlib/string/replace' );
 var pick = require( '@stdlib/utils/pick' );
 var ceil = require( '@stdlib/math/base/special/ceil' );
 var LIBRARIES = require( './../etc/libraries.json' );
+var DATA = require( './../data/join.json' );
 
 
 // VARIABLES //
@@ -50,27 +48,15 @@ var THRESHOLD = ceil( 0.67 * LIBRARIES.length );
 * @private
 */
 function main() {
-	var fpath;
-	var fopts;
-	var data;
 	var out;
 	var cnt;
 	var d;
 	var i;
 	var j;
 
-	fpath = resolve( __dirname, '..', 'data', 'join.json' );
-	fopts = {
-		'encoding': 'utf8'
-	};
-	data = readJSON( fpath, fopts );
-	if ( data instanceof Error ) {
-		console.error( data.message );
-		return;
-	}
 	out = [];
-	for ( i = 0; i < data.length; i++ ) {
-		d = data[ i ];
+	for ( i = 0; i < DATA.length; i++ ) {
+		d = DATA[ i ];
 		cnt = 0;
 		for ( j = 0; j < LIBRARIES.length; j++ ) {
 			if ( d[ LIBRARIES[j] ] ) {
