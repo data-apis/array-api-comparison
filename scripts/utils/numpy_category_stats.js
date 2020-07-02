@@ -26,58 +26,61 @@
 
 // MODULES //
 
-var keyBy = require( '@stdlib/utils/key-by' );
 var hasOwnProp = require( '@stdlib/assert/has-own-property' );
-var CATEGORIES = require( './../../data/raw/numpy_categories.json' );
-
-
-// VARIABLES //
-
-var HASH = keyBy( CATEGORIES, hashFcn );
-
-
-// FUNCTIONS //
-
-/**
-* Hash function for converting the category data into a lookup table.
-*
-* @private
-* @param {Object} value - collection value
-* @param {number} idx - index
-* @returns {string} hash value
-*/
-function hashFcn( value ) {
-	return value.name;
-}
+var numpy2category = require( './numpy2category.js' );
 
 
 // MAIN //
 
 /**
-* Returns the category associated with a specified NumPy API.
+* Returns category statistics for a provided a Numpy API list.
 *
 * @private
-* @param {string} name - NumPy API name
-* @returns {(null|string)} associated category
+* @param {Array<string>} list - list of NumPy APIs
+* @returns {Object} category statistics
 */
-function numpy2category( name ) {
+function stats( list ) {
+	var keys;
 	var out;
-	var o;
-	if ( !hasOwnProp( HASH, name ) ) {
-		return null;
+	var cat;
+	var tmp;
+	var i;
+
+	keys = [];
+	out = {};
+	for ( i = 0; i < list.length; i++ ) {
+		cat = numpy2category( list[ i ] );
+		if ( cat === null ) {
+			cat = '(unknown)';
+		}
+		if ( hasOwnProp( out, cat ) ) {
+			out[ cat ] += 1;
+		} else {
+			out[ cat ] = 1;
+		}
+		tmp = cat.split( ':' );
+		if ( tmp.length > 1 ) {
+			if ( hasOwnProp( out, tmp[ 0 ] ) ) {
+				out[ tmp[ 0 ] ] += 1;
+			} else {
+				out[ tmp[ 0 ] ] = 1;
+			}
+			keys.push( tmp[ 0 ] );
+		}
+		keys.push( cat );
 	}
-	o = HASH[ name ];
-	if ( o.category === '' ) {
-		return '(other)';
+	// Sort category keys...
+	tmp = out;
+	keys.sort();
+	out = {};
+	for ( i = 0; i < keys.length; i++ ) {
+		out[ keys[ i ] ] = tmp[ keys[ i ] ];
 	}
-	out = o.category;
-	if ( o.subcategory ) {
-		out += ':' + o.subcategory;
-	}
+
 	return out;
 }
 
 
 // EXPORTS //
 
-module.exports = numpy2category;
+module.exports = stats;
