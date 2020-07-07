@@ -432,7 +432,7 @@ name,category,subcategory
 "numpy.ma.transpose","linalg",""
 "numpy.ma.vander","creation","existing_data"
 "numpy.ma.var","statistics",""
-"numpy.ma.vstack","manipulation","existing_data"
+"numpy.ma.vstack","manipulation","joining_arrays"
 "numpy.ma.where","indexing",""
 "numpy.ma.zeros","creation",""
 "numpy.mask_indices","",""
