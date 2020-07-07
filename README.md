@@ -157,7 +157,7 @@ The `data` directory contains the following directories
 
 -   **raw**: raw array library API data.
 -   **joins**: array library APIs matched to their NumPy equivalents.
--   **vendor**: datasets acquired from third party sources, such as those found in the Python Record API [repository][python-record-api].
+-   **vendor**: datasets acquired from third party sources, such as those found in the Python API Record [repository][python-api-record].
 
 The **raw** data directory contains the following datasets:
 
@@ -228,6 +228,6 @@ Once added, the CSV variant can be generated using internal tooling.
 
 [tensorflow]: https://www.tensorflow.org/api_docs/python
 
-[python-record-api]: https://github.com/pydata-apis/python-api-record
+[python-api-record]: https://github.com/pydata-apis/python-api-record
 
 <!-- /.links -->
