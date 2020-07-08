@@ -1,6 +1,6 @@
 method,function
 "numpy.ndarray",""
-"numpy.ndarray.T","numpy.tranpose"
+"numpy.ndarray.T","numpy.transpose"
 "numpy.ndarray.__abs__","numpy.absolute"
 "numpy.ndarray.__add__","numpy.add"
 "numpy.ndarray.__and__","numpy.bitwise_and"
