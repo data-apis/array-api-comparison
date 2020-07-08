@@ -31,6 +31,7 @@ var objectKeys = require( '@stdlib/utils/keys' );
 var replace = require( '@stdlib/string/replace' );
 var RECORD_DATA = require( './../../data/vendor/record.json' );
 var METHODS_TO_FUNCTIONS = require( './../../data/raw/numpy_methods_to_functions.json' );
+var libraries = require( './downstream_libraries.js' );
 
 
 // FUNCTIONS //
@@ -141,44 +142,53 @@ function rankTopK( list, K, bool ) {
 			mthd2fcn[ d.method ] = d.function;
 		}
 	}
+	// Get the list of downstream libraries:
+	keys = libraries();
+
 	// Convert the list into a hash...
 	hash = {};
 	for ( i = 0; i < list.length; i++ ) {
-		hash[ list[ i ] ] = {};
+		tmp = {};
+		for ( j = 0; j < keys.length; j++ ) {
+			tmp[ keys[ j ] ] = 0;
+		}
+		hash[ list[ i ] ] = tmp;
 	}
-
-	// Combine the record data with the intersection list...
+	// Initialize an object for recording per library function counts...
 	libs = {};
+	for ( i = 0; i < keys.length; i++ ) {
+		libs[ keys[ i ] ] = {
+			'total': 0
+		};
+	}
+	// Combine the record data with the intersection list...
 	for ( i = 0; i < RECORD_DATA.length; i++ ) {
 		d = RECORD_DATA[ i ];
 		lib = d.library;
-		if ( !hasOwnProp( libs, lib ) ) {
-			libs[ lib ] = {
-				'total': 0
-			};
-		}
 		fcn = d.function;
 		if ( bool && hasOwnProp( mthd2fcn, fcn ) ) {
 			fcn = mthd2fcn[ fcn ] || fcn;
 		}
 		if ( hasOwnProp( hash, fcn ) ) {
 			cnt = parseInt( d.count, 10 );
-			hash[ fcn ][ lib ] = cnt;
-			libs[ lib ][ fcn ] = cnt;
+			hash[ fcn ][ lib ] += cnt;
+
+			tmp = libs[ lib ];
+			if ( hasOwnProp( tmp, fcn ) ) {
+				tmp[ fcn ] += cnt;
+			} else {
+				tmp[ fcn ] = cnt;
+			}
 			libs[ lib ].total += cnt;
 		}
 	}
-	keys = objectKeys( libs ).sort();
-
 	// Normalize library counts and fill in any missing record data...
 	for ( i = 0; i < list.length; i++ ) {
 		d = hash[ list[ i ] ];
 		for ( j = 0; j < keys.length; j++ ) {
 			k = keys[ j ];
-			if ( hasOwnProp( d, k ) ) {
+			if ( hasOwnProp( d, k ) && libs[ k ].total > 0 ) {
 				d[ k ] /= libs[ k ].total;
-			} else {
-				d[ k ] = 0;
 			}
 		}
 	}
