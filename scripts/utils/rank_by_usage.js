@@ -36,7 +36,7 @@ var variance = require( '@stdlib/stats/base/variance' );
 var mediansorted = require( '@stdlib/stats/base/mediansorted' );
 var PINF = require( '@stdlib/constants/math/float64-pinf' );
 var RECORD_DATA = require( './../../data/vendor/record.json' );
-var METHODS_TO_FUNCTIONS = require( './../../data/vendor/numpy_methods_to_functions.json' );
+var METHODS_TO_FUNCTIONS = require( './../../data/raw/numpy_methods_to_functions.json' );
 
 
 // FUNCTIONS //

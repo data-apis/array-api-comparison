@@ -30,7 +30,7 @@ var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var objectKeys = require( '@stdlib/utils/keys' );
 var replace = require( '@stdlib/string/replace' );
 var RECORD_DATA = require( './../../data/vendor/record.json' );
-var METHODS_TO_FUNCTIONS = require( './../../data/vendor/numpy_methods_to_functions.json' );
+var METHODS_TO_FUNCTIONS = require( './../../data/raw/numpy_methods_to_functions.json' );
 
 
 // FUNCTIONS //
