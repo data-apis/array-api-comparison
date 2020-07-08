@@ -48,7 +48,7 @@ function main() {
 	list = pluck( LIST, 'numpy' );
 
 	// Rank the list of NumPy APIs based on relative usage:
-	out = rankByUsage( list );
+	out = rankByUsage( list, true );
 
 	// Print the result:
 	console.log( JSON.stringify( out ) );
