@@ -30,6 +30,7 @@ var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var objectKeys = require( '@stdlib/utils/keys' );
 var replace = require( '@stdlib/string/replace' );
 var RECORD_DATA = require( './../../data/vendor/record.json' );
+var METHODS_TO_FUNCTIONS = require( './../../data/vendor/numpy_methods_to_functions.json' );
 
 
 // FUNCTIONS //
@@ -110,10 +111,12 @@ function rank( arr, lib ) {
 *
 * @private
 * @param {Array<string>} list - list of NumPy APIs
-* @param {number} [K=list.length] - number of APIs to rank
+* @param {number} K - number of APIs to rank
+* @param {boolean} [bool=false] - boolean indicating whether to account for equivalent method usage when computing ranks
 * @returns {Array<Object} sorted JSON array based on relative usage
 */
-function rankTopK( list, K ) {
+function rankTopK( list, K, bool ) {
+	var mthd2fcn;
 	var libs;
 	var keys;
 	var hash;
@@ -121,6 +124,8 @@ function rankTopK( list, K ) {
 	var cnt;
 	var out;
 	var idx;
+	var lib;
+	var fcn;
 	var K;
 	var d;
 	var o;
@@ -128,8 +133,14 @@ function rankTopK( list, K ) {
 	var j;
 	var k;
 
-	K = K || list.length;
-
+	// If we should account for method usage, construct a hash mapping NumPy method names to equivalent top-level functions...
+	if ( bool ) {
+		mthd2fcn = {};
+		for ( i = 0; i < METHODS_TO_FUNCTIONS.length; i++ ) {
+			d = METHODS_TO_FUNCTIONS[ i ];
+			mthd2fcn[ d.method ] = d.function;
+		}
+	}
 	// Convert the list into a hash...
 	hash = {};
 	for ( i = 0; i < list.length; i++ ) {
@@ -140,16 +151,21 @@ function rankTopK( list, K ) {
 	libs = {};
 	for ( i = 0; i < RECORD_DATA.length; i++ ) {
 		d = RECORD_DATA[ i ];
-		if ( !hasOwnProp( libs, d.library ) ) {
-			libs[ d.library ] = {
+		lib = d.library;
+		if ( !hasOwnProp( libs, lib ) ) {
+			libs[ lib ] = {
 				'total': 0
 			};
 		}
-		if ( hasOwnProp( hash, d.function ) ) {
+		fcn = d.function;
+		if ( bool && hasOwnProp( mthd2fcn, fcn ) ) {
+			fcn = mthd2fcn[ fcn ] || fcn;
+		}
+		if ( hasOwnProp( hash, fcn ) ) {
 			cnt = parseInt( d.count, 10 );
-			hash[ d.function ][ d.library ] = cnt;
-			libs[ d.library ][ d.function ] = cnt;
-			libs[ d.library ].total += cnt;
+			hash[ fcn ][ lib ] = cnt;
+			libs[ lib ][ fcn ] = cnt;
+			libs[ lib ].total += cnt;
 		}
 	}
 	keys = objectKeys( libs ).sort();
