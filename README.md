@@ -79,7 +79,7 @@ $ cd ./array-api-comparison
 Create an Anaconda environment
 
 ```bash
-$ conda create -n array-api-comparison -c conda-forge python=3.8 nodejs
+$ conda create -n array-api-comparison -c conda-forge python=3.8 nodejs jupyterlab
 ```
 
 To activate the environment,
@@ -140,6 +140,12 @@ Usage: make <cmd>
                                          across various libraries.
 ```
 
+To run the Jupyter notebooks, run
+
+```bash
+$ jupyter lab
+```
+
 * * *
 
 ## Organization
@@ -178,6 +184,9 @@ Lastly, the root **data** directory contains the following additional datasets:
 -   `lib_top_k_common.(csv|json)`: the top `K` array library API names in the list of relatively common APIs per downstream library according to relative usage.
 -   `lib_top_k_common_complement.(csv|json)`: the top `K` array library API names not in the list of relatively common APIs per downstream library according to relative usage.
 -   `lib_top_k_complement.(csv|json)`: the top `K` array library API names not in the list of API intersection per downstream library according to relative usage.
+-   `lib_top_100_category_stats.(csv|json)`: categorization statistics for the top `100` NumPy APIs which are consumed for each downstream library.
+
+**Note**: the datasets in the root **data** directory are generated.
 
 When editing data files, consider the JSON data to be the source of truth. CSV files are generated from the JSON data.
 
