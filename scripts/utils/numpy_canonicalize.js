@@ -26,7 +26,7 @@
 
 // MODULES //
 
-var dealias = require( './dealias.js' );
+var dealias = require( './numpy_dealias.js' );
 
 
 // MAIN //
