@@ -32,6 +32,7 @@ var replace = require( '@stdlib/string/replace' );
 var RECORD_DATA = require( './../../data/vendor/record.json' );
 var METHODS_TO_FUNCTIONS = require( './../../data/raw/numpy_methods_to_functions.json' );
 var libraries = require( './downstream_libraries.js' );
+var dealias = require( './numpy_dealias.js' );
 
 
 // FUNCTIONS //
@@ -169,6 +170,7 @@ function rankTopK( list, K, bool ) {
 		if ( bool && hasOwnProp( mthd2fcn, fcn ) ) {
 			fcn = mthd2fcn[ fcn ] || fcn;
 		}
+		fcn = dealias( fcn );
 		if ( hasOwnProp( hash, fcn ) ) {
 			cnt = parseInt( d.count, 10 );
 			hash[ fcn ][ lib ] += cnt;
