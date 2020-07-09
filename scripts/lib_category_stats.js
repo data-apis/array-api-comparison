@@ -75,7 +75,7 @@ function main() {
 	list = pluck( DATA, 'name' );
 
 	// Rank the list of NumPy APIs based on relative usage:
-	data = rankTopK( list, 50 );
+	data = rankTopK( list, 100 );
 
 	// Get the list of downstream libraries:
 	libs = objectKeys( data[ 0 ] );
