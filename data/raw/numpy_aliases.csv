@@ -1,3 +1,4 @@
 alias,name
+"numpy.divide","numpy.true_divide"
 "numpy.max","numpy.amax"
 "numpy.min","numpy.amin"

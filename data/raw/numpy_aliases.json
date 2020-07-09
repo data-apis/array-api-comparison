@@ -1,1 +1,1 @@
-[{"alias":"numpy.max","name":"numpy.amax"},{"alias":"numpy.min","name":"numpy.amin"}]
+[{"alias":"numpy.divide","name":"numpy.true_divide"},{"alias":"numpy.max","name":"numpy.amax"},{"alias":"numpy.min","name":"numpy.amin"}]
