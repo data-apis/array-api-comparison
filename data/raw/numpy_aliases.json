@@ -1,1 +1,1 @@
-[{"name":"numpy.max","alias":"numpy.amax"},{"name":"numpy.min","alias":"numpy.amin"}]
+[{"alias":"numpy.max","name":"numpy.amax"},{"alias":"numpy.min","name":"numpy.amin"}]
