@@ -1,5 +1,6 @@
 alias,name
 "numpy.divide","numpy.true_divide"
+"numpy.fabs","numpy.absolute"
 "numpy.max","numpy.amax"
 "numpy.min","numpy.amin"
 "numpy.round_","numpy.around"
