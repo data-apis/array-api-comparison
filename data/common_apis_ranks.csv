@@ -193,3 +193,4 @@ numpy,dask.array,matplotlib,pandas,skimage,xarray
 "numpy.linalg.cholesky","-","-","-","-","-"
 "numpy.linalg.matrix_power","-","-","-","-","-"
 "numpy.linalg.slogdet","-","-","-","-","-"
+"numpy.mod","-","-","-","-","-"
