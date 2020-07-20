@@ -39,5 +39,5 @@ torch.exp(input[, out=None]) → Tensor
 ## Tensorflow
 
 ```
-tf.exp(x[, name=None])
+tf.math.exp(x[, name=None])
 ```

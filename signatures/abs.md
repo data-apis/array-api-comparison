@@ -39,5 +39,5 @@ torch.abs(input[, out=None]) → Tensor
 ## Tensorflow
 
 ```
-tf.abs(x[, name=None])
+tf.math.abs(x[, name=None])
 ```
