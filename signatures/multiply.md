@@ -21,7 +21,7 @@ cupy.multiply(x1, x2[, out=None, dtype=None]) → ndarray
 ## JAX
 
 ```
-numpy.multiply(x1, x2) → ndarray
+jax.numpy.multiply(x1, x2) → ndarray
 ```
 
 ## MXNet

@@ -21,7 +21,7 @@ dask.array.tanh(x[, out=None, *, where=True, casting='same_kind', order='K', dty
 ## JAX
 
 ```
-numpy.tanh(x) → ndarray
+jax.numpy.tanh(x) → ndarray
 ```
 
 ## MXNet

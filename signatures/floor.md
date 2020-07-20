@@ -21,7 +21,7 @@ dask.array.floor(x[, out=None, *, where=True, casting='same_kind', order='K', dt
 ## JAX
 
 ```
-numpy.floor(x) → ndarray
+jax.numpy.floor(x) → ndarray
 ```
 
 ## MXNet

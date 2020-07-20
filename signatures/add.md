@@ -21,7 +21,7 @@ cupy.add(x1, x2[, out=None, dtype=None]) → ndarray
 ## JAX
 
 ```
-numpy.add(x1, x2) → ndarray
+jax.numpy.add(x1, x2) → ndarray
 ```
 
 ## MXNet

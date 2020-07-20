@@ -21,7 +21,7 @@ dask.array.log(x[, out=None, *, where=True, casting='same_kind', order='K', dtyp
 ## JAX
 
 ```
-numpy.log(x) → ndarray
+jax.numpy.log(x) → ndarray
 ```
 
 ## MXNet

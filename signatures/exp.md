@@ -21,7 +21,7 @@ dask.array.exp(x[, out=None, *, where=True, casting='same_kind', order='K', dtyp
 ## JAX
 
 ```
-numpy.exp(x) → ndarray
+jax.numpy.exp(x) → ndarray
 ```
 
 ## MXNet

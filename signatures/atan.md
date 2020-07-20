@@ -21,7 +21,7 @@ dask.array.arctan(x[, out=None, *, where=True, casting='same_kind', order='K', d
 ## JAX
 
 ```
-numpy.arctan(x) → ndarray
+jax.numpy.arctan(x) → ndarray
 ```
 
 ## MXNet

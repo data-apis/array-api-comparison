@@ -21,7 +21,7 @@ dask.array.sin(x[, out=None, *, where=True, casting='same_kind', order='K', dtyp
 ## JAX
 
 ```
-numpy.sin(x) → ndarray
+jax.numpy.sin(x) → ndarray
 ```
 
 ## MXNet

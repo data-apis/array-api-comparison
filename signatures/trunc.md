@@ -21,7 +21,7 @@ dask.array.trunc(x[, out=None, *, where=True, casting='same_kind', order='K', dt
 ## JAX
 
 ```
-numpy.trunc(x) → ndarray
+jax.numpy.trunc(x) → ndarray
 ```
 
 ## MXNet

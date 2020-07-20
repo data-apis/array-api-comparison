@@ -21,7 +21,7 @@ dask.array.sinh(x[, out=None, *, where=True, casting='same_kind', order='K', dty
 ## JAX
 
 ```
-numpy.sinh(x) → ndarray
+jax.numpy.sinh(x) → ndarray
 ```
 
 ## MXNet

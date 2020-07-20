@@ -21,7 +21,7 @@ cupy.subtract(x1, x2[, out=None, dtype=None]) → ndarray
 ## JAX
 
 ```
-numpy.subtract(x1, x2) → ndarray
+jax.numpy.subtract(x1, x2) → ndarray
 ```
 
 ## MXNet

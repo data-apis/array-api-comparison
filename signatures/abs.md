@@ -21,7 +21,7 @@ dask.array.fabs(x[, out=None, *, where=True, casting='same_kind', order='K', dty
 ## JAX
 
 ```
-numpy.abs(x) → ndarray
+jax.numpy.abs(x) → ndarray
 ```
 
 ## MXNet

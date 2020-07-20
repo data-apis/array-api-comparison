@@ -21,7 +21,7 @@ dask.array.rint(x[, out=None, *, where=True, casting='same_kind', order='K', dty
 ## JAX
 
 ```
-numpy.rint(x) → ndarray
+jax.numpy.rint(x) → ndarray
 ```
 
 ## MXNet

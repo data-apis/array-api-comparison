@@ -21,7 +21,7 @@ dask.array.arcsinh(x[, out=None, *, where=True, casting='same_kind', order='K', 
 ## JAX
 
 ```
-numpy.arcsinh(x) → ndarray
+jax.numpy.arcsinh(x) → ndarray
 ```
 
 ## MXNet

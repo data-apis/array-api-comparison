@@ -21,7 +21,7 @@ dask.array.arccos(x[, out=None, *, where=True, casting='same_kind', order='K', d
 ## JAX
 
 ```
-numpy.arccos(x) → ndarray
+jax.numpy.arccos(x) → ndarray
 ```
 
 ## MXNet

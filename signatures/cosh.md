@@ -21,7 +21,7 @@ dask.array.cosh(x[, out=None, *, where=True, casting='same_kind', order='K', dty
 ## JAX
 
 ```
-numpy.cosh(x) → ndarray
+jax.numpy.cosh(x) → ndarray
 ```
 
 ## MXNet

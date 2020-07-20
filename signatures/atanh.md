@@ -21,7 +21,7 @@ dask.array.arctanh(x[, out=None, *, where=True, casting='same_kind', order='K', 
 ## JAX
 
 ```
-numpy.arctanh(x) → ndarray
+jax.numpy.arctanh(x) → ndarray
 ```
 
 ## MXNet

@@ -21,7 +21,7 @@ dask.array.sqrt(x[, out=None, *, where=True, casting='same_kind', order='K', dty
 ## JAX
 
 ```
-numpy.sqrt(x) → ndarray
+jax.numpy.sqrt(x) → ndarray
 ```
 
 ## MXNet

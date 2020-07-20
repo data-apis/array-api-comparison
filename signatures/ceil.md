@@ -21,7 +21,7 @@ dask.array.ceil(x[, out=None, *, where=True, casting='same_kind', order='K', dty
 ## JAX
 
 ```
-numpy.ceil(x) → ndarray
+jax.numpy.ceil(x) → ndarray
 ```
 
 ## MXNet

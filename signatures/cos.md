@@ -21,7 +21,7 @@ dask.array.cos(x[, out=None, *, where=True, casting='same_kind', order='K', dtyp
 ## JAX
 
 ```
-numpy.cos(x) → ndarray
+jax.numpy.cos(x) → ndarray
 ```
 
 ## MXNet
