@@ -11,7 +11,7 @@ numpy.<name>(a[, axis=None, dtype=None, out=None, keepdims=<no value>]) → ndar
 ## CuPy
 
 ```
-cupy.<name>(a, axis=None, dtype=None, out=None, keepdims=False) → ndarray
+cupy.<name>(a[, axis=None, dtype=None, out=None, keepdims=False]) → ndarray
 ```
 
 ## dask.array
