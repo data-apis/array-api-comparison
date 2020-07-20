@@ -97,7 +97,7 @@ clean-common-apis: clean-common-apis-data clean-common-apis-docs
 # @example
 # make clean-common-apis-data
 #/
-clean-common-apis:-data
+clean-common-apis-data:
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_JSON_OUT)
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_CSV_OUT)
 
