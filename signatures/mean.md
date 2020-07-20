@@ -9,7 +9,7 @@ numpy.mean(a[, axis=None, dtype=None, out=None, keepdims=<no value>]) → ndarra
 ## CuPy
 
 ```
-cupy.mean(a, axis=None, dtype=None, out=None, keepdims=False) → ndarray
+cupy.mean(a[, axis=None, dtype=None, out=None, keepdims=False]) → ndarray
 ```
 
 ## dask.array
