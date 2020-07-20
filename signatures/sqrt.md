@@ -39,5 +39,5 @@ torch.sqrt(input[, out=None]) → Tensor
 ## Tensorflow
 
 ```
-tf.math.sqrt(x[, name=None])
+tf.math.sqrt(x[, name=None]) → Tensor
 ```

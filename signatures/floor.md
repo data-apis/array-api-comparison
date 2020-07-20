@@ -39,5 +39,5 @@ torch.floor(input[, out=None]) → Tensor
 ## Tensorflow
 
 ```
-tf.math.floor(x[, name=None])
+tf.math.floor(x[, name=None]) → Tensor
 ```

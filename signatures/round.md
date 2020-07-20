@@ -39,5 +39,5 @@ torch.round(input[, out=None]) → Tensor
 ## Tensorflow
 
 ```
-tf.math.round(x[, name=None])
+tf.math.round(x[, name=None]) → Tensor
 ```

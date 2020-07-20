@@ -39,5 +39,5 @@ torch.ceil(input[, out=None]) → Tensor
 ## Tensorflow
 
 ```
-tf.math.ceil(x[, name=None])
+tf.math.ceil(x[, name=None]) → Tensor
 ```

@@ -39,5 +39,5 @@ torch.log(input[, out=None]) → Tensor
 ## Tensorflow
 
 ```
-tf.math.log(x[, name=None])
+tf.math.log(x[, name=None]) → Tensor
 ```

@@ -39,5 +39,5 @@ torch.trunc(input[, out=None]) → Tensor
 ## Tensorflow
 
 ```
-tf.truncatediv(x, y[, name=None])
+tf.truncatediv(x, y[, name=None]) → Tensor
 ```
