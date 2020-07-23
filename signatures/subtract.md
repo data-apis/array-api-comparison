@@ -3,13 +3,13 @@
 ## NumPy
 
 ```
-numpy.subtract(x1, x2[, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]]) → ndarray
+numpy.subtract(x1, x2, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) → ndarray
 ```
 
 ## CuPy
 
 ```
-cupy.subtract(x1, x2[, out=None, dtype=None]) → ndarray
+cupy.subtract(x1, x2, out=None, dtype=None) → ndarray
 ```
 
 ## dask.array
@@ -27,7 +27,7 @@ jax.numpy.subtract(x1, x2) → ndarray
 ## MXNet
 
 ```
-np.subtract(x1, x2[, out=None, **kwargs]) → ndarray
+np.subtract(x1, x2, out=None, **kwargs) → ndarray
 ```
 
 ## PyTorch
@@ -39,5 +39,5 @@ np.subtract(x1, x2[, out=None, **kwargs]) → ndarray
 ## Tensorflow
 
 ```
-tf.math.subtract(x, y[, name=None]) → Tensor
+tf.math.subtract(x, y, name=None) → Tensor
 ```

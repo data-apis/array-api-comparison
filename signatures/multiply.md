@@ -3,13 +3,13 @@
 ## NumPy
 
 ```
-numpy.multiply(x1, x2[, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]]) → ndarray
+numpy.multiply(x1, x2, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) → ndarray
 ```
 
 ## CuPy
 
 ```
-cupy.multiply(x1, x2[, out=None, dtype=None]) → ndarray
+cupy.multiply(x1, x2, out=None, dtype=None) → ndarray
 ```
 
 ## dask.array
@@ -27,17 +27,17 @@ jax.numpy.multiply(x1, x2) → ndarray
 ## MXNet
 
 ```
-np.multiply(x1, x2[, out=None, **kwargs]) → ndarray
+np.multiply(x1, x2, out=None, **kwargs) → ndarray
 ```
 
 ## PyTorch
 
 ```
-torch.mul(input, other[, out=None]) → Tensor
+torch.mul(input, other, out=None) → Tensor
 ```
 
 ## Tensorflow
 
 ```
-tf.math.multiply(x, y[, name=None]) → Tensor
+tf.math.multiply(x, y, name=None) → Tensor
 ```

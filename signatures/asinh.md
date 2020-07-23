@@ -3,19 +3,19 @@
 ## NumPy
 
 ```
-numpy.arcsinh(x[, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]]) → ndarray
+numpy.arcsinh(x, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) → ndarray
 ```
 
 ## CuPy
 
 ```
-cupy.arcsinh(x,[, out=None, dtype=None]) → ndarray
+cupy.arcsinh(x, out=None, dtype=None) → ndarray
 ```
 
 ## dask.array
 
 ```
-dask.array.arcsinh(x[, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]]) → array
+dask.array.arcsinh(x, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) → array
 ```
 
 ## JAX
@@ -27,7 +27,7 @@ jax.numpy.arcsinh(x) → ndarray
 ## MXNet
 
 ```
-np.arcsinh(x[, out=None, **kwargs]) → ndarray
+np.arcsinh(x, out=None, **kwargs) → ndarray
 ```
 
 ## PyTorch
@@ -39,5 +39,5 @@ np.arcsinh(x[, out=None, **kwargs]) → ndarray
 ## Tensorflow
 
 ```
-tf.math.asinh(x[, name=None]) → Tensor
+tf.math.asinh(x, name=None) → Tensor
 ```

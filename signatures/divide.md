@@ -3,13 +3,13 @@
 ## NumPy
 
 ```
-numpy.divide(x1, x2[, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]]) → ndarray
+numpy.divide(x1, x2, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) → ndarray
 ```
 
 ## CuPy
 
 ```
-cupy.divide(x1, x2[, out=None, dtype=None]) → ndarray
+cupy.divide(x1, x2, out=None, dtype=None) → ndarray
 ```
 
 ## dask.array
@@ -27,17 +27,17 @@ jax.numpy.divide(x1, x2) → ndarray
 ## MXNet
 
 ```
-np.divide(x1, x2[, out=None, **kwargs]) → ndarray
+np.divide(x1, x2, out=None, **kwargs) → ndarray
 ```
 
 ## PyTorch
 
 ```
-torch.div(input, other[, out=None]) → Tensor
+torch.div(input, other, out=None) → Tensor
 ```
 
 ## Tensorflow
 
 ```
-tf.math.divide(x, y[, name=None]) → Tensor
+tf.math.divide(x, y, name=None) → Tensor
 ```
