@@ -183,7 +183,7 @@ name,numpy
 "torch.rfft","numpy.fft.rfft"
 "torch.roll","numpy.roll"
 "torch.rot90","numpy.rot90"
-"torch.round","numpy.round_"
+"torch.round","numpy.rint"
 "torch.rsqrt",""
 "torch.seed",""
 "torch.set_default_dtype",""
