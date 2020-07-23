@@ -32,9 +32,6 @@ var isNumber = require( '@stdlib/assert/is-number' ).isPrimitive;
 var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var objectKeys = require( '@stdlib/utils/keys' );
 var floor = require( '@stdlib/math/base/special/floor' );
-var variance = require( '@stdlib/stats/base/variance' );
-var mediansorted = require( '@stdlib/stats/base/mediansorted' );
-var PINF = require( '@stdlib/constants/math/float64-pinf' );
 var RECORD_DATA = require( './../../data/vendor/record.json' );
 var METHODS_TO_FUNCTIONS = require( './../../data/raw/numpy_methods_to_functions.json' );
 var libraries = require( './downstream_libraries.js' );
@@ -57,57 +54,6 @@ function descending( a, b ) {
 	}
 	if ( a.value > b.value ) {
 		return -1;
-	}
-	return 0;
-}
-
-/**
-* Comparison function for sorting in ascending order.
-*
-* @private
-* @param {Object} a - first value
-* @param {Object} b - second value
-* @returns {number} integer indicating sort order
-*/
-function ascending( a, b ) {
-	// Sort values having greater counts (i.e., used by more libraries) to lower indices...
-	if ( a.count > b.count ) {
-		return -1;
-	}
-	if ( a.count < b.count ) {
-		return 1;
-	}
-	// Sort values with a lower median rank (where "lower" means *more* common) to lower indices...
-	if ( a.median < b.median ) {
-		return -1;
-	}
-	if ( a.median > b.median ) {
-		return 1;
-	}
-	// Sort values with a more "consistent" median rank to lower indices...
-	if ( a.variance < b.variance ) {
-		return -1;
-	}
-	if ( a.variance > b.variance ) {
-		return 1;
-	}
-	return 0;
-}
-
-/**
-* Comparison function for sorting in ascending order.
-*
-* @private
-* @param {number} a - first value
-* @param {number} b - second value
-* @returns {number} integer indicating sort order
-*/
-function ascendingNumeric( a, b ) {
-	if ( a < b ) {
-		return -1;
-	}
-	if ( a > b ) {
-		return 1;
 	}
 	return 0;
 }
@@ -139,7 +85,13 @@ function rank( arr, lib ) {
 }
 
 /**
-* Sorts a ranked array based on the median rank across libraries.
+* Sorts a ranked array using a [Borda count][1] variant called the Dowdall System.
+*
+* ## Notes
+*
+* -   The basic idea is that voting systems can provide a mechanism for ranking APIs based on downstream library usage. How downstream libraries "vote" is by usage. The more heavily an API is used, the higher a downstream library's voting preference for that API. So while a downstream library never fills in a traditional ballot indicating its assessment of API importance, we empirically infer such an assessment by how heavily it relies on a given API.
+*
+* [1]: https://en.wikipedia.org/wiki/Borda_count
 *
 * @private
 * @param {Array<Object>} arr - array to sort
@@ -148,6 +100,7 @@ function rank( arr, lib ) {
 function sort( arr ) {
 	var keys;
 	var tmp;
+	var pts;
 	var N;
 	var r;
 	var d;
@@ -160,30 +113,26 @@ function sort( arr ) {
 	N = keys.length;
 
 	tmp = [];
-	r = [];
 	for ( i = 0; i < arr.length; i++ ) {
 		d = arr[ i ];
-		r.length = 0;
+
+		// Award voting "points" to each API...
+		pts = 0.0;
 		for ( j = 0; j < N; j++ ) {
 			k = keys[ j ];
 			if ( isNumber( d[ k ] ) ) {
-				r.push( d[ k ] );
+				// Fractional weighting based on a harmonic progression (see https://en.wikipedia.org/wiki/Positional_voting)...
+				pts += 1.0 / d[ k ];
 			}
 		}
-		// Sort in ascending order...
-		r.sort( ascendingNumeric );
-
-		// Compute statistics...
 		o = {};
 		o.ref = d;
-		o.count = r.length;
-		o.median = ( r.length ) ? mediansorted( r.length, r, 1, 0 ) : PINF;
-		o.variance = variance( r.length, 1, r, 1, 0 );
+		o.value = pts;
 
 		tmp.push( o );
 	}
-	// Sort the input array based on the median rank...
-	tmp.sort( ascending );
+	// Sort the input array based on awarded points...
+	tmp.sort( descending );
 	for ( i = 0; i < arr.length; i++ ) {
 		arr[ i ] = tmp[ i ].ref;
 	}
@@ -266,7 +215,7 @@ function rankByUsage( list, bool ) {
 			libs[ lib ].total += cnt;
 		}
 	}
-	// Normalize library counts and fill in any missing record data...
+	// Normalize library counts...
 	for ( i = 0; i < list.length; i++ ) {
 		d = hash[ list[ i ] ];
 		for ( j = 0; j < keys.length; j++ ) {
@@ -289,6 +238,8 @@ function rankByUsage( list, bool ) {
 	for ( i = 0; i < keys.length; i++ ) {
 		k = keys[ i ];
 		idx = rank( out, k );
+
+		// For each API, extract its rank for each library...
 		for ( j = 0; j < idx.length; j++ ) {
 			tmp = out[ idx[ j ] ];
 			if ( tmp.counts[ k ] > 0 ) {
@@ -313,7 +264,7 @@ function rankByUsage( list, bool ) {
 		}
 		out[ i ] = tmp;
 	}
-	// Lastly, sort the JSON based on the median rank...
+	// Lastly, sort the JSON array in rank order...
 	out = sort( out );
 
 	return out;

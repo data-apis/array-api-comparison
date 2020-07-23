@@ -115,7 +115,7 @@ function rank( arr, lib ) {
 * @param {Array<string>} list - list of NumPy APIs
 * @param {number} K - number of APIs to rank
 * @param {boolean} [bool=false] - boolean indicating whether to account for equivalent method usage when computing ranks
-* @returns {Array<Object} sorted JSON array based on relative usage
+* @returns {Array<Object>} sorted JSON array based on relative usage
 */
 function rankTopK( list, K, bool ) {
 	var mthd2fcn;
@@ -184,7 +184,7 @@ function rankTopK( list, K, bool ) {
 			libs[ lib ].total += cnt;
 		}
 	}
-	// Normalize library counts and fill in any missing record data...
+	// Normalize library counts...
 	for ( i = 0; i < list.length; i++ ) {
 		d = hash[ list[ i ] ];
 		for ( j = 0; j < keys.length; j++ ) {
@@ -207,6 +207,8 @@ function rankTopK( list, K, bool ) {
 	for ( i = 0; i < keys.length; i++ ) {
 		k = keys[ i ];
 		idx = rank( out, k );
+
+		// For each API, extract its rank for each library...
 		for ( j = 0; j < idx.length; j++ ) {
 			tmp = out[ idx[ j ] ];
 			if ( tmp.counts[ k ] > 0 ) {
