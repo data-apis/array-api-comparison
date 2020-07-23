@@ -43,6 +43,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.prod","prod","prod","product","prod","prod","math.reduce_prod"
 "numpy.real","real","real","real","real","real","math.real"
 "numpy.reshape","reshape","reshape","reshape","reshape","reshape","reshape"
+"numpy.rint","rint","rint","rint","rint","round","math.rint"
 "numpy.roll","roll","roll","roll","roll","roll","roll"
 "numpy.sign","sign","sign","sign","sign","sign","math.sign"
 "numpy.sin","sin","sin","sin","sin","sin","math.sin"
