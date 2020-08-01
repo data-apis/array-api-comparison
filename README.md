@@ -66,7 +66,7 @@ $ cd ./repository/destination/directory
 Next, clone the repository
 
 ```bash
-$ git clone https://github.com/pydata-apis/array-api-comparison.git
+$ git clone https://github.com/data-apis/array-api-comparison.git
 ```
 
 Once cloned, navigate to the repository directory
@@ -237,6 +237,6 @@ Once added, the CSV variant can be generated using internal tooling.
 
 [tensorflow]: https://www.tensorflow.org/api_docs/python
 
-[python-api-record]: https://github.com/pydata-apis/python-api-record
+[python-api-record]: https://github.com/data-apis/python-api-record
 
 <!-- /.links -->
