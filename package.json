@@ -6,10 +6,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/pydata-apis/array-api-comparison.git"
+    "url": "git://github.com/data-apis/array-api-comparison.git"
   },
   "bugs": {
-    "url": "https://github.com/pydata-apis/array-api-comparison/issues"
+    "url": "https://github.com/data-apis/array-api-comparison/issues"
   },
   "dependencies": {},
   "devDependencies": {
