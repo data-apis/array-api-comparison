@@ -1,7 +1,7 @@
 bool
 bfloat16
-complex128
 complex64
+complex128
 float16
 float32
 float64
