@@ -135,7 +135,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.digitize","","digitize","","digitize","",""
 "numpy.divide","divide","","divide","divide","div","math.divide"
 "numpy.divmod","","","divmod","divmod","",""
-"numpy.dot","dot","dot","","dot","dot",""
+"numpy.dot","dot","dot","dot","dot","dot",""
 "numpy.dsplit","dsplit","","dsplit","dsplit","",""
 "numpy.dstack","dstack","dstack","dstack","dstack","",""
 "numpy.ediff1d","","ediff1d","","ediff1d","",""

@@ -48,7 +48,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.diag","diag","diag","diag","diag","diag",""
 "numpy.diagonal","diagonal","diagonal","diagonal","","diagonal","linalg.diag"
 "numpy.divide","divide","","divide","divide","div","math.divide"
-"numpy.dot","dot","dot","","dot","dot",""
+"numpy.dot","dot","dot","dot","dot","dot",""
 "numpy.dstack","dstack","dstack","dstack","dstack","",""
 "numpy.einsum","einsum","einsum","einsum","einsum","einsum","einsum"
 "numpy.empty","empty","empty","empty","empty","empty",""
