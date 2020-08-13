@@ -67,7 +67,7 @@ name,numpy
 "diagonal","numpy.diagonal"
 "divide","numpy.divide"
 "divmod","numpy.divmod"
-"dot","numpy.mod"
+"dot","numpy.dot"
 "dsplit","numpy.dsplit"
 "dstack","numpy.dstack"
 "eig","numpy.linalg.eig"
