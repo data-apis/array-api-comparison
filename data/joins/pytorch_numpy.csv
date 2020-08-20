@@ -59,7 +59,7 @@ name,numpy
 "torch.digamma",""
 "torch.dist","numpy.linalg.norm"
 "torch.div","numpy.divide"
-"torch.dot","numpy.dot"
+"torch.dot","numpy.inner"
 "torch.eig","numpy.linalg.eig"
 "torch.einsum","numpy.einsum"
 "torch.empty","numpy.empty"
