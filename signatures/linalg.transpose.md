@@ -9,13 +9,13 @@ numpy.transpose(a, axes=None) → ndarray
 ## CuPy
 
 ```
-cupy.transpose(a, axes=None)) → ndarray
+cupy.transpose(a, axes=None) → ndarray
 ```
 
 ## dask.array
 
 ```
-dask.array.transpose(a, axes=None)) → array
+dask.array.transpose(a, axes=None) → array
 ```
 
 ## JAX
