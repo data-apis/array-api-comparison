@@ -38,6 +38,7 @@ name,numpy
 "tril","numpy.tril"
 "diag","numpy.diag"
 "diagflat","numpy.diagflat"
+"diagonal","numpy.diagonal"
 "tri","numpy.tri"
 "triu","numpy.triu"
 "vander","numpy.vander"
