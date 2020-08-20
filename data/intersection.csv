@@ -15,6 +15,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.cosh","cosh","cosh","cosh","cosh","cosh","math.cosh"
 "numpy.cumprod","cumprod","cumprod","cumproduct","cumprod","cumprod","math.cumprod"
 "numpy.cumsum","cumsum","cumsum","cumsum","cumsum","cumsum","math.cumsum"
+"numpy.diag","diag","diag","diag","diag","diag","linalg.diag"
 "numpy.einsum","einsum","einsum","einsum","einsum","einsum","einsum"
 "numpy.exp","exp","exp","exp","exp","exp","math.exp"
 "numpy.expm1","expm1","expm1","expm1","expm1","expm1","math.expm1"
