@@ -1,6 +1,6 @@
-# Statistical Reductions
+# Statistical Functions
 
-> Generalized signatures for basic statistical reductions.
+> Generalized signatures for basic statistical functions.
 
 ## NumPy
 
