@@ -3,7 +3,7 @@
 ## NumPy
 
 ```
-numpy.trace(a, offset=0, axis1=0, axis2=1, dtype=None, out=None) → ndarray
+numpy.trace(a, offset=0, axis1=0, axis2=1, dtype=None, out=None) → scalar | ndarray
 ```
 
 ## CuPy
