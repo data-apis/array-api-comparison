@@ -9,7 +9,7 @@ numpy.linalg.inv(a) → ndarray
 ## CuPy
 
 ```
-cupy.linalg.det(a) → ndarray
+cupy.linalg.inv(a) → ndarray
 ```
 
 ## dask.array
