@@ -46,7 +46,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.deg2rad","deg2rad","deg2rad","deg2rad","deg2rad","",""
 "numpy.degrees","degrees","degrees","degrees","degrees","",""
 "numpy.diag","diag","diag","diag","diag","diag","linalg.diag"
-"numpy.diagonal","diagonal","diagonal","diagonal","","diagonal","linalg.diag_part"
+"numpy.diagonal","diagonal","diagonal","diagonal","diagonal","diagonal","linalg.diag_part"
 "numpy.divide","divide","","divide","divide","div","math.divide"
 "numpy.dot","dot","dot","dot","dot","dot",""
 "numpy.dstack","dstack","dstack","dstack","dstack","",""

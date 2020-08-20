@@ -129,7 +129,6 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.diag_indices","","","diag_indices","","",""
 "numpy.diag_indices_from","","","","","",""
 "numpy.diagflat","diagflat","","","diagflat","diagflat",""
-"numpy.diagonal","diagonal","diagonal","diagonal","","diagonal","linalg.diag_part"
 "numpy.diff","diff","diff","","diff","",""
 "numpy.digitize","","digitize","","digitize","",""
 "numpy.divide","divide","","divide","divide","div","math.divide"
