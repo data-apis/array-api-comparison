@@ -33,7 +33,7 @@ np.linalg.inv(a) → ndarray
 ## PyTorch
 
 ```
-torch.inv(input, out=None) → Tensor
+torch.inverse(input, out=None) → Tensor
 ```
 
 ## Tensorflow
