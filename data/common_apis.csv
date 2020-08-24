@@ -145,7 +145,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.not_equal","not_equal","","not_equal","","ne","math.not_equal"
 "numpy.ones","ones","ones","ones","ones","ones","ones"
 "numpy.ones_like","ones_like","ones_like","ones_like","ones_like","ones_like","ones_like"
-"numpy.outer","outer","outer","outer","outer","",""
+"numpy.outer","outer","outer","outer","outer","ger",""
 "numpy.pad","pad","pad","pad","","","pad"
 "numpy.percentile","percentile","percentile","percentile","percentile","",""
 "numpy.power","power","","power","power","pow","math.pow"

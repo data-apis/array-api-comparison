@@ -443,7 +443,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.nper","","","","","",""
 "numpy.npv","","","","","",""
 "numpy.obj2sctype","","","","","",""
-"numpy.outer","outer","outer","outer","outer","",""
+"numpy.outer","outer","outer","outer","outer","ger",""
 "numpy.packbits","packbits","","packbits","","",""
 "numpy.pad","pad","pad","pad","","","pad"
 "numpy.partition","partition","","","partition","",""

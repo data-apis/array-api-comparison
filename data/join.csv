@@ -486,7 +486,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,rnumpy,sparse,tensorflow
 "numpy.obj2sctype","","","","","","","",""
 "numpy.ones","ones","ones","ones","ones","ones","ones","ones","ones"
 "numpy.ones_like","ones_like","ones_like","ones_like","ones_like","ones_like","ones_like","ones_like","ones_like"
-"numpy.outer","outer","outer","outer","outer","","outer","outer",""
+"numpy.outer","outer","outer","outer","outer","ger","outer","outer",""
 "numpy.packbits","packbits","","packbits","","","","",""
 "numpy.pad","pad","pad","pad","","","pad","","pad"
 "numpy.partition","partition","","","partition","","","",""
