@@ -33,7 +33,7 @@ np.outer(a, b) → ndarray
 ## PyTorch
 
 ```
-
+torch.ger(input, vec2, out=None) → Tensor
 ```
 
 ## Tensorflow
