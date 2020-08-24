@@ -86,7 +86,7 @@ name,numpy
 "torch.gather",""
 "torch.ge","numpy.greater_equal"
 "torch.geqrf",""
-"torch.ger",""
+"torch.ger","numpy.outer"
 "torch.get_default_dtype",""
 "torch.get_rng_state",""
 "torch.gt","numpy.greater"
