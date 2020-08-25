@@ -36,7 +36,7 @@ np.floor(x, out=None, **kwargs) → ndarray
 torch.floor(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.floor(x, name=None) → Tensor

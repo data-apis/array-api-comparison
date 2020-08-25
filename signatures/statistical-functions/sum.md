@@ -36,7 +36,7 @@ np.sum(a, axis=None, dtype=None, out=None, initial=0, keepdims=False) → ndarra
 torch.sum(input, dim, keepdim=False, dtype=True) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.reduce_sum(input_tensor, axis=None, keepdims=False, name=None) → Tensor

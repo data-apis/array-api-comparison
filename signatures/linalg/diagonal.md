@@ -36,7 +36,7 @@ np.diagonal(a, offset=0, axis1=0, axis2=1) → ndarray
 torch.diagonal(input, offset=0, dim1=0, dim2=1) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.linalg.diag_part(input, name='diag_part', k=0, padding_value=0, align='RIGHT_LEFT') → Tensor

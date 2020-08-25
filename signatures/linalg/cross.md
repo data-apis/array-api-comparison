@@ -36,7 +36,7 @@ np.cross(a, b, axisa=-1, axisb=-1, axisc=-1, axis=None) → ndarray
 torch.cross(input, other, dim=-1, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.linalg.cross(a, b, name=None) → Tensor

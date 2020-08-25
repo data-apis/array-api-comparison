@@ -36,7 +36,7 @@ np.ceil(x, out=None, **kwargs) → ndarray
 torch.ceil(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.ceil(x, name=None) → Tensor

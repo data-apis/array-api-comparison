@@ -36,7 +36,7 @@ np.sinh(x, out=None, **kwargs) → ndarray
 torch.sinh(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.sinh(x, name=None) → Tensor

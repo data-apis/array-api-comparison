@@ -36,7 +36,7 @@ np.exp(x, out=None, **kwargs) → ndarray
 torch.exp(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.exp(x, name=None) → Tensor

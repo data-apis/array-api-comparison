@@ -36,7 +36,7 @@ np.multiply(x1, x2, out=None, **kwargs) → ndarray
 torch.mul(input, other, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.multiply(x, y, name=None) → Tensor

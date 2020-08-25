@@ -36,7 +36,7 @@ jax.numpy.amax(a, axis=None, dtype=None, out=None, keepdims=False) → ndarray
 torch.max(input, dim, keepdim=False, out=None) → (Tensor, Tensor)
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.reduce_max(input_tensor, axis=None, keepdims=False, name=None) → Tensor

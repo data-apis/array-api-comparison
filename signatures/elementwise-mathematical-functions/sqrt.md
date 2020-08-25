@@ -36,7 +36,7 @@ np.sqrt(x, out=None, **kwargs) → ndarray
 torch.sqrt(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.sqrt(x, name=None) → Tensor

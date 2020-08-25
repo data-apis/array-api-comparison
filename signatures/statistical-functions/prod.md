@@ -36,7 +36,7 @@ np.prod(a, axis=None, dtype=None, out=None, keepdims=False) → ndarray
 torch.prod(input, dim, keepdim=False, dtype=True) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.reduce_prod(input_tensor, axis=None, keepdims=False, name=None) → Tensor

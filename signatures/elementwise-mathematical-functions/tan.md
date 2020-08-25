@@ -36,7 +36,7 @@ np.tan(x, out=None, **kwargs) → ndarray
 torch.tan(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.tan(x, name=None) → Tensor

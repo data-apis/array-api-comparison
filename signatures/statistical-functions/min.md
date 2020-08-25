@@ -36,7 +36,7 @@ jax.numpy.amin(a, axis=None, dtype=None, out=None, keepdims=False) → ndarray
 torch.min(input, dim, keepdim=False, out=None) → (Tensor, Tensor)
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.reduce_min(input_tensor, axis=None, keepdims=False, name=None) → Tensor

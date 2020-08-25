@@ -36,7 +36,7 @@ np.divide(x1, x2, out=None, **kwargs) → ndarray
 torch.div(input, other, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.divide(x, y, name=None) → Tensor

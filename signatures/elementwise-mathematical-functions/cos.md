@@ -36,7 +36,7 @@ np.cos(x, out=None, **kwargs) → ndarray
 torch.cos(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.cos(x, name=None) → Tensor

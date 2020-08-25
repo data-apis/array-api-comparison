@@ -36,7 +36,7 @@ np.arccos(x, out=None, **kwargs) → ndarray
 torch.acos(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.acos(x, name=None) → Tensor

@@ -36,7 +36,7 @@ np.rint(x, out=None, **kwargs) → ndarray
 torch.round(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.round(x, name=None) → Tensor

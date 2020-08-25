@@ -36,7 +36,7 @@ np.arctan(x, out=None, **kwargs) → ndarray
 torch.atan(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.atan(x, name=None) → Tensor

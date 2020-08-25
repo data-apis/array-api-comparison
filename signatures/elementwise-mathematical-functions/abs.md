@@ -36,7 +36,7 @@ np.absolute(x, out=None, **kwargs) → ndarray
 torch.abs(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.abs(x, name=None) → Tensor

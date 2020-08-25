@@ -36,7 +36,7 @@ np.std(a, axis=None, dtype=None, out=None, ddof=0, keepdims=False) → ndarray
 torch.std(input, dim, keepdim=False, unbiased=True, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.reduce_std(input_tensor, axis=None, keepdims=False, name=None) → Tensor

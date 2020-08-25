@@ -36,7 +36,7 @@ np.subtract(x1, x2, out=None, **kwargs) → ndarray
 
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.subtract(x, y, name=None) → Tensor

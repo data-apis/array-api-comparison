@@ -36,7 +36,7 @@ np.linalg.norm(x, ord=None, axis=None, keepdims=False) → ndarray
 torch.norm(input, p='fro', dim=None, keepdim=False, out=None, dtype=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.norm(tensor, ord='euclidean', axis=None, keepdims=None, name=None) → Tensor

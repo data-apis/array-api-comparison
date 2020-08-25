@@ -36,7 +36,7 @@ np.arcsin(x, out=None, **kwargs) → ndarray
 torch.asin(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.asin(x, name=None) → Tensor

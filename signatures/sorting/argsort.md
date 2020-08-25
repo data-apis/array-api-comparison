@@ -36,7 +36,7 @@ np.argsort(a, axis=-1, kind=None, order=None) → ndarray
 torch.argsort(input, dim=-1, descending=False) → LongTensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.argsort(values, axis=-1, direction='ASCENDING', stable=False, name=None) → Tensor

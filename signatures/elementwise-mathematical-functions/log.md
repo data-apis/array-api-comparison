@@ -36,7 +36,7 @@ np.log(x, out=None, **kwargs) → ndarray
 torch.log(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.log(x, name=None) → Tensor

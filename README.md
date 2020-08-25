@@ -51,7 +51,7 @@ Currently, the following array libraries are evaluated:
 -   [**PyTorch**][pytorch]
 -   [**rnumpy**][rnumpy]: an opinionated curation of NumPy APIs, serving as an exercise in evaluating what is most "essential" (i.e., the smallest set of building block functionality on which most array functionality can be built).
 -   [**PyData/Sparse**][pydata-sparse]
--   [**Tensorflow**][tensorflow]
+-   [**TensorFlow**][tensorflow]
 
 * * *
 

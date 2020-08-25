@@ -36,7 +36,7 @@ np.cosh(x, out=None, **kwargs) → ndarray
 torch.cosh(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.cosh(x, name=None) → Tensor

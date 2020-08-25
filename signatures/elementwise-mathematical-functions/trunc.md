@@ -36,7 +36,7 @@ np.trunc(x, out=None, **kwargs) → ndarray
 torch.trunc(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.truncatediv(x, y, name=None) → Tensor

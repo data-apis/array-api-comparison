@@ -36,7 +36,7 @@ np.transpose(a, axes=None) → ndarray
 torch.transpose(input, dim0, dim1) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.transpose(a, perm=None, conjugate=False, name='transpose') → Tensor

@@ -36,7 +36,7 @@ np.trace(a, offset=0, axis1=0, axis2=1, out=None) → ndarray
 torch.trace(input) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.linalg.trace(x, name=None) → Tensor

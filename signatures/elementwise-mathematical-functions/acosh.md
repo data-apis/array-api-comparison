@@ -36,7 +36,7 @@ np.arccosh(x, out=None, **kwargs) → ndarray
 
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.acosh(x, name=None) → Tensor

@@ -38,7 +38,7 @@ np.<name>(x, out=None, **kwargs) → ndarray
 torch.<name>(input, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.<name>(x, name=None) → Tensor

@@ -36,7 +36,7 @@ np.mean(a, axis=None, dtype=None, out=None, keepdims=False) → ndarray
 torch.mean(input, dim, keepdim=False, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.reduce_mean(input_tensor, axis=None, keepdims=False, name=None) → Tensor

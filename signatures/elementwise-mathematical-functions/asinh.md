@@ -36,7 +36,7 @@ np.arcsinh(x, out=None, **kwargs) → ndarray
 
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.asinh(x, name=None) → Tensor

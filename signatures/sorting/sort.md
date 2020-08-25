@@ -36,7 +36,7 @@ np.sort(a, axis=-1, kind=None, order=None) → ndarray
 torch.sort(input, dim=-1, descending=False, out=None) → (Tensor, LongTensor)
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.sort(values, axis=-1, direction='ASCENDING', name=None) → Tensor

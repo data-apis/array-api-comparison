@@ -36,7 +36,7 @@ np.outer(a, b) → ndarray
 torch.ger(input, vec2, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.tensordot(a, b, 0, name=None) → Tensor

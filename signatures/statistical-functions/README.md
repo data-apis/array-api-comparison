@@ -38,7 +38,7 @@ np.<name>(a, axis=None, dtype=None, out=None, keepdims=False) → ndarray
 torch.<name>(input, dim, keepdim=False, out=None) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.reduce_<name>(input_tensor, axis=None, keepdims=False, name=None) → Tensor

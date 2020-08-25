@@ -36,7 +36,7 @@ np.linalg.det(a) → ndarray
 torch.det(input) → Tensor
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.linalg.det(input, name=None) → Tensor

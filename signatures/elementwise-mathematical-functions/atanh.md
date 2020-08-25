@@ -36,7 +36,7 @@ np.arctanh(x, out=None, **kwargs) → ndarray
 
 ```
 
-## Tensorflow
+## TensorFlow
 
 ```
 tf.math.atanh(x, name=None) → Tensor
