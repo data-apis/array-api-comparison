@@ -1,4 +1,4 @@
-# sort
+# argsort
 
 ## NumPy
 
