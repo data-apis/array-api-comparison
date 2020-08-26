@@ -34,6 +34,7 @@ np.argmin(a, axis=None, out=None) → ndarray
 
 ```
 torch.argmin(input) → LongTensor
+torch.argmin(input, dim, keepdim=False) → LongTensor
 ```
 
 ## TensorFlow

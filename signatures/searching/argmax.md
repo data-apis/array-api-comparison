@@ -34,6 +34,7 @@ np.argmax(a, axis=None, out=None) → ndarray
 
 ```
 torch.argmax(input) → LongTensor
+torch.argmax(input, dim, keepdim=False) → LongTensor
 ```
 
 ## TensorFlow
