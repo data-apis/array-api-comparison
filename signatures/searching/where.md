@@ -33,6 +33,7 @@ np.where(condition, x=None, y=None) → ndarray
 ## PyTorch
 
 ```
+torch.where(condition) → tuple[ LongTensor, ... ]
 torch.where(condition, x, y) → Tensor
 ```
 
