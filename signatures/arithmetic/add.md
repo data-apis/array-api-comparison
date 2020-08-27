@@ -33,7 +33,7 @@ np.add(x1, x2, out=None, **kwargs) → ndarray
 ## PyTorch
 
 ```
-torch.add(input, other, alpha=1, out=None) → Tensor
+torch.add(input, other, out=None) → Tensor
 ```
 
 ## TensorFlow
