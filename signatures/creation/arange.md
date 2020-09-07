@@ -15,7 +15,7 @@ cupy.arange(start, stop=None, step=1, dtype=None) → ndarray
 ## dask.array
 
 ```
-dask.array.arange(start, stop=None, step=1, chunks=<int>, dtype=None) → ndarray
+dask.array.arange(start=0, stop, step=1, chunks=<int>, dtype=None) → ndarray
 ```
 
 ## JAX
