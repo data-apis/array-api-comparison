@@ -21,7 +21,7 @@ dask.array.reshape(x, shape) → ndarray
 ## JAX
 
 ```
-jax.numpy.reshape(a) → ndarray
+jax.numpy.reshape(a, newshape, order='C') → ndarray
 ```
 
 ## MXNet
