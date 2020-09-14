@@ -192,7 +192,7 @@ name,numpy
 "tf.math.in_top_k",""
 "tf.math.invert_permutation",""
 "tf.math.is_finite","numpy.isfinite"
-"tf.math.is_inf",""
+"tf.math.is_inf","numpy.isinf"
 "tf.math.is_nan","numpy.isnan"
 "tf.math.is_non_decreasing",""
 "tf.math.is_strictly_increasing",""

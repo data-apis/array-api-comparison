@@ -252,7 +252,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,rnumpy,sparse,tensorflow
 "numpy.isfinite","isfinite","isfinite","isfinite","","isfinite","isfinite","","math.is_finite"
 "numpy.isfortran","isfortran","","","","","","",""
 "numpy.isin","isin","isin","","","","","",""
-"numpy.isinf","isinf","isinf","isinf","","isinf","isinf","",""
+"numpy.isinf","isinf","isinf","isinf","","isinf","isinf","","math.is_inf"
 "numpy.isnan","isnan","isnan","isnan","","isnan","isnan","","math.is_nan"
 "numpy.isnat","","","","","","","",""
 "numpy.isneginf","","isneginf","isneginf","","","","isneginf",""

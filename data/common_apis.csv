@@ -93,7 +93,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.inner","inner","","inner","inner","dot",""
 "numpy.iscomplex","iscomplex","iscomplex","iscomplex","","is_complex",""
 "numpy.isfinite","isfinite","isfinite","isfinite","","isfinite","math.is_finite"
-"numpy.isinf","isinf","isinf","isinf","","isinf",""
+"numpy.isinf","isinf","isinf","isinf","","isinf","math.is_inf"
 "numpy.isnan","isnan","isnan","isnan","","isnan","math.is_nan"
 "numpy.isreal","isreal","isreal","isreal","","is_floating_point",""
 "numpy.ldexp","ldexp","ldexp","ldexp","ldexp","",""
