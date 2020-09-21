@@ -3,7 +3,7 @@
 ## NumPy
 
 ```
-numpy.pow(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) → ndarray
+numpy.power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) → ndarray
 ```
 
 ## CuPy
