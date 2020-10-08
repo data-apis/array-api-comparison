@@ -57,7 +57,7 @@ name,numpy
 "sparse.COO.__radd__","numpy.ndarray.__radd__"
 "sparse.COO.__rand__","numpy.ndarray.__rand__"
 "sparse.COO.__rdivmod__","numpy.ndarray.__rdivmod__"
-"sparse.COO.__reduce__","numpy.ndarray.__reduce__",
+"sparse.COO.__reduce__","numpy.ndarray.__reduce__"
 "sparse.COO.__reduce_ex__","numpy.ndarray.__reduce_ex__"
 "sparse.COO.__repr__","numpy.ndarray.__repr__"
 "sparse.COO.__rfloordiv__","numpy.ndarray.__rfloordiv__"
