@@ -1,4 +1,5 @@
 name,numpy
+"mxnet.nd","numpy.ndarray"
 "mxnet.nd.__repr__","numpy.ndarray.__repr__"
 "mxnet.nd.__reduce__","numpy.ndarray.__reduce__"
 "mxnet.nd.__abs__","numpy.ndarray.__abs__"

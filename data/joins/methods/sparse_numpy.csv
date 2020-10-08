@@ -1,4 +1,5 @@
 name,numpy
+"sparse.COO","numpy.ndarray"
 "sparse.COO.__abs__","numpy.ndarray.__abs__"
 "sparse.COO.__add__","numpy.ndarray.__add__"
 "sparse.COO.__and__","numpy.ndarray.__and__"

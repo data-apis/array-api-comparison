@@ -1,4 +1,5 @@
 name,numpy
+"tf.Tensor","numpy.ndarray"
 "tf.Tensor.__abs__","numpy.ndarray.__abs__"
 "tf.Tensor.__add__","numpy.ndarray.__add__"
 "tf.Tensor.__and__","numpy.ndarray.__and__"

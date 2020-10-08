@@ -1,3 +1,5 @@
+name,numpy
+"dask.array.Array","numpy.ndarray"
 "dask.array.Array.all","numpy.ndarray.all"
 "dask.array.Array.any","numpy.ndarray.any"
 "dask.array.Array.argmax","numpy.ndarray.argmax"

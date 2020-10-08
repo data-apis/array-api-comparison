@@ -1,4 +1,5 @@
 name,numpy
+"torch.Tensor","numpy.ndarray"
 "torch.Tensor.T","numpy.ndarray.T"
 "torch.Tensor.__abs__","numpy.ndarray.__abs__"
 "torch.Tensor.__add__","numpy.ndarray.__add__"

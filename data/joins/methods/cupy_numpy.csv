@@ -1,4 +1,5 @@
 name,numpy
+"cupy.ndarray","numpy.ndarray"
 "cupy.ndarray.__getitem__","numpy.ndarray.__getitem__"
 "cupy.ndarray.__setitem__","numpy.ndarray.__setitem__"
 "cupy.ndarray.__len__","numpy.ndarray.__len__"

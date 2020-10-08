@@ -1,4 +1,5 @@
 name,numpy
+"jax.ndarray","numpy.ndarray"
 "jax.ndarray.all","numpy.ndarray.all"
 "jax.ndarray.any","numpy.ndarray.any"
 "jax.ndarray.argmax","numpy.ndarray.argmax"
