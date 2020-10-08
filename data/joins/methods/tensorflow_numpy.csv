@@ -14,7 +14,7 @@ name,numpy
 "tf.Tensor.__dict__",""
 "tf.Tensor.__dir__","numpy.ndarray.__dir__"
 "tf.Tensor.__div__",""
-"tf.Tensor.__doc__",""
+"tf.Tensor.__doc__","numpy.ndarray.__doc__"
 "tf.Tensor.__eq__","numpy.ndarray.__eq__"
 "tf.Tensor.__float__","numpy.ndarray.__float__"
 "tf.Tensor.__floordiv__","numpy.ndarray.__floordiv__"
