@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Array API comparison" />
+	<meta name="keywords" content="pydata numpy numerical array library apis comparison" />
+	<meta name="author" content="Quansight" />
+	<title>Method Intersection</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Method Intersection</h1>
+		</header>
+		<div class="component">
+			<table>
+<thead>
+<tr>
+<th>numpy</th>
+<th>cupy</th>
+<th>dask.array</th>
+<th>jax</th>
+<th>mxnet</th>
+<th>pytorch</th>
+<th>tensorflow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>numpy.ndarray</th>
+<td>ndarray</td>
+<td>Array</td>
+<td>ndarray</td>
+<td>nd</td>
+<td>Tensor</td>
+<td>Tensor</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__abs__</th>
+<td>__abs__</td>
+<td>__abs__</td>
+<td>__abs__</td>
+<td>__abs__</td>
+<td>__abs__</td>
+<td>__abs__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__add__</th>
+<td>__add__</td>
+<td>__add__</td>
+<td>__add__</td>
+<td>__add__</td>
+<td>__add__</td>
+<td>__add__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__eq__</th>
+<td>__eq__</td>
+<td>__eq__</td>
+<td>__eq__</td>
+<td>__eq__</td>
+<td>__eq__</td>
+<td>__eq__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__ge__</th>
+<td>__ge__</td>
+<td>__ge__</td>
+<td>__ge__</td>
+<td>__ge__</td>
+<td>__ge__</td>
+<td>__ge__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__getitem__</th>
+<td>__getitem__</td>
+<td>__getitem__</td>
+<td>__getitem__</td>
+<td>__getitem__</td>
+<td>__getitem__</td>
+<td>__getitem__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__gt__</th>
+<td>__gt__</td>
+<td>__gt__</td>
+<td>__gt__</td>
+<td>__gt__</td>
+<td>__gt__</td>
+<td>__gt__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__le__</th>
+<td>__le__</td>
+<td>__le__</td>
+<td>__le__</td>
+<td>__le__</td>
+<td>__le__</td>
+<td>__le__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__lt__</th>
+<td>__lt__</td>
+<td>__lt__</td>
+<td>__lt__</td>
+<td>__lt__</td>
+<td>__lt__</td>
+<td>__lt__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__mod__</th>
+<td>__mod__</td>
+<td>__mod__</td>
+<td>__mod__</td>
+<td>__mod__</td>
+<td>__mod__</td>
+<td>__mod__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__mul__</th>
+<td>__mul__</td>
+<td>__mul__</td>
+<td>__mul__</td>
+<td>__mul__</td>
+<td>__mul__</td>
+<td>__mul__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__ne__</th>
+<td>__ne__</td>
+<td>__ne__</td>
+<td>__ne__</td>
+<td>__ne__</td>
+<td>__ne__</td>
+<td>__ne__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__neg__</th>
+<td>__neg__</td>
+<td>__neg__</td>
+<td>__neg__</td>
+<td>__neg__</td>
+<td>__neg__</td>
+<td>__neg__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__sub__</th>
+<td>__sub__</td>
+<td>__sub__</td>
+<td>__sub__</td>
+<td>__sub__</td>
+<td>__sub__</td>
+<td>__sub__</td>
+</tr>
+<tr>
+<th>numpy.ndarray.__truediv__</th>
+<td>__truediv__</td>
+<td>__truediv__</td>
+<td>__truediv__</td>
+<td>__truediv__</td>
+<td>__truediv__</td>
+<td>__truediv__</td>
+</tr>
+</tbody>
+</table>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
+
