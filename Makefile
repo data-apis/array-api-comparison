@@ -92,7 +92,7 @@ install: install-node
 # @example
 # make docs
 #/
-docs: join intersection intersection-ranks common-apis common-apis-ranks complement lib-top-k-common method-join
+docs: join intersection intersection-ranks common-apis common-apis-ranks complement common-complement lib-top-k-common method-join method-intersection method-common-apis method-complement method-common-complement
 
 .PHONY: docs
 
@@ -102,7 +102,7 @@ docs: join intersection intersection-ranks common-apis common-apis-ranks complem
 # @example
 # make view-docs
 #/
-view-docs: view-join view-intersection view-intersection-ranks view-common-apis view-common-apis-ranks view-complement view-lib-top-k-common view-method-join
+view-docs: view-join view-intersection view-intersection-ranks view-common-apis view-common-apis-ranks view-complement view-common-complement view-lib-top-k-common view-method-join view-method-intersection view-method-common-apis view-method-complement view-method-common-complement
 
 .PHONY: view-docs
 
@@ -122,7 +122,7 @@ clean: clean-node clean-data clean-docs
 # @example
 # make clean-data
 #/
-clean-data: clean-join-data clean-intersection-data clean-intersection-ranks-data clean-common-apis-data clean-common-apis-ranks-data clean-complement-data clean-lib-top-k-common-data clean-method-join-data
+clean-data: clean-join-data clean-intersection-data clean-intersection-ranks-data clean-common-apis-data clean-common-apis-ranks-data clean-complement-data clean-common-complement-data clean-lib-top-k-common-data clean-lib-top-k-complement-data clean-lib-top-k-common-complement-data clean-method-join-data clean-method-intersection-data clean-method-common-apis-data clean-method-complement-data clean-method-common-complement-data
 
 .PHONY: clean-data
 
@@ -132,7 +132,7 @@ clean-data: clean-join-data clean-intersection-data clean-intersection-ranks-dat
 # @example
 # make clean-docs
 #/
-clean-docs: clean-join-docs clean-intersection-docs clean-intersection-ranks-docs clean-complement-docs clean-common-apis-docs clean-common-apis-ranks-docs clean-lib-top-k-common-docs clean-method-join-docs
+clean-docs: clean-join-docs clean-intersection-docs clean-intersection-ranks-docs clean-complement-docs clean-common-apis-docs clean-common-complement-docs clean-common-apis-ranks-docs clean-lib-top-k-common-docs clean-lib-top-k-complement-docs clean-lib-top-k-common-complement-docs clean-method-join-docs clean-method-intersection-docs clean-method-common-apis-docs clean-method-complement-docs clean-method-common-complement-docs
 
 .PHONY: clean-docs
 
