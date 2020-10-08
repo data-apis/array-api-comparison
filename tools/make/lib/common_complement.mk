@@ -74,42 +74,42 @@ common-complement: $(COMMON_COMPLEMENT_JSON_OUT) $(COMMON_COMPLEMENT_CSV_OUT) $(
 # Opens an HTML table in a web browser.
 #
 # @example
-# make view-comment-complement
+# make view-common-complement
 #/
-view-comment-complement: $(COMMON_COMPLEMENT_HTML_OUT)
+view-common-complement: $(COMMON_COMPLEMENT_HTML_OUT)
 	$(QUIET) $(OPEN) $(COMMON_COMPLEMENT_HTML_OUT)
 
-.PHONY: view-comment-complement
+.PHONY: view-common-complement
 
 #/
 # Removes build artifacts.
 #
 # @example
-# make clean-comment-complement
+# make clean-common-complement
 #/
-clean-comment-complement: clean-comment-complement-data clean-comment-complement-docs
+clean-common-complement: clean-common-complement-data clean-common-complement-docs
 
-.PHONY: clean-comment-complement
+.PHONY: clean-common-complement
 
 #/
 # Removes generated datasets.
 #
 # @example
-# make clean-comment-complement-data
+# make clean-common-complement-data
 #/
-clean-comment-complement-data:
+clean-common-complement-data:
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_COMPLEMENT_JSON_OUT)
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_COMPLEMENT_CSV_OUT)
 
-.PHONY: clean-comment-complement-data
+.PHONY: clean-common-complement-data
 
 #/
 # Removes generated documentation.
 #
 # @example
-# make clean-comment-complement-docs
+# make clean-common-complement-docs
 #/
-clean-comment-complement-docs:
+clean-common-complement-docs:
 	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_COMPLEMENT_HTML_OUT)
 
-.PHONY: clean-comment-complement-docs
+.PHONY: clean-common-complement-docs

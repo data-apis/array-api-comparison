@@ -110,6 +110,6 @@ clean-common-apis-ranks-data:
 # make clean-common-apis-ranks-docs
 #/
 clean-common-apis-ranks-docs:
-	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(LIB_TOP_K_COMMON_HTML_OUT)
+	$(QUIET) $(DELETE) $(DELETE_FLAGS) $(COMMON_APIS_RANKS_HTML_OUT)
 
 .PHONY: clean-common-apis-ranks-docs
