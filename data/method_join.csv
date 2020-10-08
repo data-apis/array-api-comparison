@@ -23,7 +23,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,sparse,tensorflow
 "numpy.ndarray.__delitem__","","","","","__delitem__","",""
 "numpy.ndarray.__dir__","","__dir__","__dir__","__dir__","__dir__","__dir__","__dir__"
 "numpy.ndarray.__divmod__","__divmod__","__divmod__","__divmod__","","","__divmod__",""
-"numpy.ndarray.__doc__","","__doc__","__doc__","__doc__","__doc__","__doc__",""
+"numpy.ndarray.__doc__","","__doc__","__doc__","__doc__","__doc__","__doc__","__doc__"
 "numpy.ndarray.__eq__","__eq__","__eq__","__eq__","__eq__","__eq__","__eq__","__eq__"
 "numpy.ndarray.__float__","__float__","__float__","__float__","","__float__","","__float__"
 "numpy.ndarray.__floordiv__","__floordiv__","__floordiv__","__floordiv__","","__floordiv__","__floordiv__","__floordiv__"

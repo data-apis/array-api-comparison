@@ -12,7 +12,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.ndarray.__deepcopy__","__deepcopy__","__deepcopy__","","","__deepcopy__","__deepcopy__"
 "numpy.ndarray.__delattr__","","__delattr__","__delattr__","__delattr__","__delattr__","__delattr__"
 "numpy.ndarray.__dir__","","__dir__","__dir__","__dir__","__dir__","__dir__"
-"numpy.ndarray.__doc__","","__doc__","__doc__","__doc__","__doc__",""
+"numpy.ndarray.__doc__","","__doc__","__doc__","__doc__","__doc__","__doc__"
 "numpy.ndarray.__eq__","__eq__","__eq__","__eq__","__eq__","__eq__","__eq__"
 "numpy.ndarray.__float__","__float__","__float__","__float__","","__float__","__float__"
 "numpy.ndarray.__floordiv__","__floordiv__","__floordiv__","__floordiv__","","__floordiv__","__floordiv__"
