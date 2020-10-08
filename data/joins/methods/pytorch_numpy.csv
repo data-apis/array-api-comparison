@@ -75,7 +75,7 @@ name,numpy
 "torch.Tensor.__setattr__",""
 "torch.Tensor.__setitem__","numpy.ndarray.__setitem__"
 "torch.Tensor.__setstate__","numpy.ndarray.__setstate__"
-"torch.Tensor.__sizeof__",""
+"torch.Tensor.__sizeof__","numpy.ndarray.__sizeof__"
 "torch.Tensor.__str__","numpy.ndarray.__str__"
 "torch.Tensor.__sub__","numpy.ndarray.__sub__"
 "torch.Tensor.__subclasshook__",""

@@ -57,7 +57,7 @@ name,numpy
 "sparse.COO.__rxor__","numpy.ndarray.__rxor__"
 "sparse.COO.__setitem__","numpy.ndarray.__setitem__"
 "sparse.COO.__setstate__","numpy.ndarray.__setstate__"
-"sparse.COO.__sizeof__",""
+"sparse.COO.__sizeof__","numpy.ndarray.__sizeof__"
 "sparse.COO.__str__","numpy.ndarray.__str__"
 "sparse.COO.__sub__","numpy.ndarray.__sub__"
 "sparse.COO.__truediv__","numpy.ndarray.__truediv__"
