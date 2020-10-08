@@ -28,7 +28,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.ndarray.__rrshift__","","__rrshift__","__rrshift__","","",""
 "numpy.ndarray.__rxor__","","__rxor__","__rxor__","","","__rxor__"
 "numpy.ndarray.__setstate__","","","","__setstate__","__setstate__",""
-"numpy.ndarray.__sizeof__","","","__sizeof__","","",""
+"numpy.ndarray.__sizeof__","","","__sizeof__","","__sizeof__",""
 "numpy.ndarray.__str__","__str__","","__str__","","__str__",""
 "numpy.ndarray.argpartition","argpartition","","argpartition","","",""
 "numpy.ndarray.base","base","","","","_base",""

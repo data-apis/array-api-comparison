@@ -50,7 +50,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.ndarray.__rxor__","","__rxor__","__rxor__","","","__rxor__"
 "numpy.ndarray.__setitem__","__setitem__","__setitem__","__setitem__","__setitem__","__setitem__",""
 "numpy.ndarray.__setstate__","","","","__setstate__","__setstate__",""
-"numpy.ndarray.__sizeof__","","","__sizeof__","","",""
+"numpy.ndarray.__sizeof__","","","__sizeof__","","__sizeof__",""
 "numpy.ndarray.__str__","__str__","","__str__","","__str__",""
 "numpy.ndarray.__xor__","__xor__","__xor__","__xor__","","__xor__","__xor__"
 "numpy.ndarray.all","all","all","all","","all",""
