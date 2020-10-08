@@ -128,15 +128,6 @@ function main() {
 		}
 		libs.push( l );
 
-		// We assume that the prefix convention, if present, matches the library name:
-		if ( l === 'pytorch' ) {
-			prefix = 'torch';
-		} else if ( l === 'tensorflow' ) {
-			prefix = 'tf';
-		} else {
-			prefix = l;
-		}
-
 		for ( j = 0; j < data.length; j++ ) {
 			tmp = data[ j ];
 			if ( tmp.numpy ) {
@@ -148,7 +139,10 @@ function main() {
 				if ( !hasOwnProp( r, '__join__' ) ) {
 					r.__join__ = {};
 				}
-				r.__join__[ l ] = replace( tmp.name, prefix+'.', '' ); // replace any library name prefixes (e.g., `torch.add` => `add`)
+				// Omit any library name and array object prefixes (e.g., `torch.Tensor.__add__` => `__add__`):
+				tmp = tmp.name.split( '.' );
+
+				r.__join__[ l ] = tmp[ tmp.length-1 ];
 			}
 		}
 	}
