@@ -15,6 +15,7 @@ numpy,cupy,dask.array,jax,mxnet,pytorch,tensorflow
 "numpy.ndarray.__neg__","__neg__","__neg__","__neg__","__neg__","__neg__","__neg__"
 "numpy.ndarray.__pow__","__pow__","__pow__","__pow__","__pow__","__pow__","__pow__"
 "numpy.ndarray.__repr__","__repr__","__repr__","__repr__","__repr__","__repr__","__repr__"
+"numpy.ndarray.__str__","__str__","__str__","__str__","__str__","__str__","__str__"
 "numpy.ndarray.__sub__","__sub__","__sub__","__sub__","__sub__","__sub__","__sub__"
 "numpy.ndarray.__truediv__","__truediv__","__truediv__","__truediv__","__truediv__","__truediv__","__truediv__"
 "numpy.ndarray.dtype","dtype","dtype","dtype","dtype","dtype","dtype"
