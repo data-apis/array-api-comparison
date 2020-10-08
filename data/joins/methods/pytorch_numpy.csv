@@ -30,7 +30,7 @@ name,numpy
 "torch.Tensor.__iadd__","numpy.ndarray.__iadd__"
 "torch.Tensor.__iand__","numpy.ndarray.__iand__"
 "torch.Tensor.__idiv__",""
-"torch.Tensor.__ifloordiv__","numpy.ndarray.__floordiv__"
+"torch.Tensor.__ifloordiv__","numpy.ndarray.__ifloordiv__"
 "torch.Tensor.__ilshift__","numpy.ndarray.__ilshift__"
 "torch.Tensor.__imul__","numpy.ndarray.__imul__"
 "torch.Tensor.__index__",""
