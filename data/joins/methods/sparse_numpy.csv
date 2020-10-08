@@ -47,7 +47,7 @@ name,numpy
 "sparse.COO.__rmatmul__","numpy.ndarray.__rmatmul__"
 "sparse.COO.__rmod__","numpy.ndarray.__rmod__"
 "sparse.COO.__rmul__","numpy.ndarray.__rmul__"
-"sparse.COO.__ror__","numpy.ndarray.__ror"
+"sparse.COO.__ror__","numpy.ndarray.__ror__"
 "sparse.COO.__rpow__","numpy.ndarray.__rpow__"
 "sparse.COO.__rrshift__","numpy.ndarray.__rrshift__"
 "sparse.COO.__rshift__","numpy.ndarray.__rshift__"

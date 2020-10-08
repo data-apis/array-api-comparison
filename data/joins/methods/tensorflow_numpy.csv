@@ -11,7 +11,7 @@ name,numpy
 "tf.Tensor.__getitem__","numpy.ndarray.__getitem__"
 "tf.Tensor.__gt__","numpy.ndarray.__gt__"
 "tf.Tensor.__invert__","numpy.ndarray.__invert__"
-"tf.Tensor.__iter__",""
+"tf.Tensor.__iter__","numpy.ndarray.__iter__"
 "tf.Tensor.__le__","numpy.ndarray.__le__"
 "tf.Tensor.__len__","numpy.ndarray.__len__"
 "tf.Tensor.__lt__","numpy.ndarray.__lt__"
