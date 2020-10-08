@@ -1,6 +1,6 @@
 numpy,cupy,dask.array,jax,mxnet,pytorch,sparse,tensorflow
 "numpy.ndarray","ndarray","Array","ndarray","nd","Tensor","COO","Tensor"
-"numpy.ndarray.T","T","","T","T","T","T",""
+"numpy.ndarray.T","T","T","T","T","T","T",""
 "numpy.ndarray.__abs__","__abs__","__abs__","__abs__","__abs__","__abs__","__abs__","__abs__"
 "numpy.ndarray.__add__","__add__","__add__","__add__","__add__","__add__","__add__","__add__"
 "numpy.ndarray.__and__","__and__","__and__","__and__","","__and__","__and__","__and__"
