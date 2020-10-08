@@ -29,6 +29,7 @@ name
 "numpy.ndarray.__ipow__"
 "numpy.ndarray.__irshift__"
 "numpy.ndarray.__isub__"
+"numpy.ndarray.__iter__"
 "numpy.ndarray.__itruediv__"
 "numpy.ndarray.__ixor__"
 "numpy.ndarray.__le__"
