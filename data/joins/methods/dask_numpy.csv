@@ -1,5 +1,6 @@
 name,numpy
 "dask.array.Array","numpy.ndarray"
+"dask.array.Array.A",""
 "dask.array.Array.all","numpy.ndarray.all"
 "dask.array.Array.any","numpy.ndarray.any"
 "dask.array.Array.argmax","numpy.ndarray.argmax"
@@ -37,6 +38,7 @@ name,numpy
 "dask.array.Array.store",""
 "dask.array.Array.sum","numpy.ndarray.sum"
 "dask.array.Array.swapaxes","numpy.ndarray.swapaxes"
+"dask.array.Array.T","numpy.ndarray.T"
 "dask.array.Array.to_dask_dataframe",""
 "dask.array.Array.to_delayed",""
 "dask.array.Array.to_hdf5",""
