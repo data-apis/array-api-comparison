@@ -79,7 +79,7 @@ $ cd ./array-api-comparison
 Create an Anaconda environment
 
 ```bash
-$ conda create -n array-api-comparison -c conda-forge python=3.8 nodejs jupyterlab
+$ conda create -n array-api-comparison -c conda-forge python=3.8 nodejs jupyterlab pandas matplotlib
 ```
 
 To activate the environment,
@@ -102,12 +102,12 @@ $ make
 Usage: make <cmd>
 
   make help                              Print this message.
-  
+
   make view-docs                         View all array API tables.
 
   make view-join                         View cross-library array API data.
 
-  make view-intersection                 View the intersection of array library 
+  make view-intersection                 View the intersection of array library
                                          APIs.
 
   make view-intersection-ranks           View a table ranking the intersection
@@ -133,7 +133,7 @@ Usage: make <cmd>
   make view-lib-top-k-complement         View a table displaying the top K array
                                          library APIs in the complement across
                                          various libraries.
-                                         
+
   make view-lib-top-k-common-complement  View a table displaying the top `K`
                                          array library APIs in the complement of
                                          the list of (relatively) common APIs
