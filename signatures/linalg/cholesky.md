@@ -6,6 +6,12 @@
 numpy.linalg.cholesky(a) → ndarray
 ```
 
+## SciPy
+
+```
+scipy.linalg.cholesky(a, lower=False, overwrite_a=False, check_finite=True) → ndarray
+```
+
 ## CuPy
 
 ```
