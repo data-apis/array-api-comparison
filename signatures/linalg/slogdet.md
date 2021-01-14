@@ -3,13 +3,13 @@
 ## NumPy
 
 ```
-numpy.linalg.slogdet(a) → ndarray
+numpy.linalg.slogdet(a) → Tuple[ ndarray, ... ]
 ```
 
 ## CuPy
 
 ```
-cupy.linalg.slogdet(a) → ndarray
+cupy.linalg.slogdet(a) → Tuple[ ndarray, ... ]
 ```
 
 ## dask.array
@@ -21,23 +21,23 @@ cupy.linalg.slogdet(a) → ndarray
 ## JAX
 
 ```
-jax.numpy.linalg.slogdet(a) → ndarray
+jax.numpy.linalg.slogdet(a) → Tuple[ ndarray, ... ]
 ```
 
 ## MXNet
 
 ```
-np.linalg.slogdet(a) → ndarray
+np.linalg.slogdet(a) → Tuple[ ndarray, ... ]
 ```
 
 ## PyTorch
 
 ```
-torch.slogdet(input) → Tensor
+torch.slogdet(input) → Tuple[ Tensor, ... ]
 ```
 
 ## TensorFlow
 
 ```
-tf.linalg.slogdet(input, name=None) → Tensor
+tf.linalg.slogdet(input, name=None) → Tuple[ Tensor, ... ]
 ```
