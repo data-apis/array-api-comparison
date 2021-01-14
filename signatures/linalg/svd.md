@@ -21,7 +21,7 @@ dask.array.linalg.svd(a, coerce_signs=True) → Tuple[ ndarray, ... ]
 ## JAX
 
 ```
-jax.numpy.linalg.svd(a) → Tuple[ ndarray, ... ]
+jax.numpy.linalg.svd(a, full_matrices=True, compute_uv=True) → Tuple[ ndarray, ... ]
 ```
 
 ## MXNet
