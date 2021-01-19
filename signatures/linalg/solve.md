@@ -33,7 +33,7 @@ np.linalg.solve(a, b) → ndarray
 ## PyTorch
 
 ```
-torch.solve(nput, A, *, out=None) → Tuple[ Tensor, ... ]
+torch.solve(input, A, *, out=None) → Tuple[ Tensor, ... ]
 ```
 
 ## TensorFlow
