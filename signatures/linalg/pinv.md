@@ -21,7 +21,7 @@ cupy.linalg.pinv(a, rcond=1e-15) → ndarray
 ## JAX
 
 ```
-jax.numpy.linalg.pinv(a, rcond=1e-15) → ndarray
+jax.numpy.linalg.pinv(a, rcond=<computed>) → ndarray
 ```
 
 ## MXNet
