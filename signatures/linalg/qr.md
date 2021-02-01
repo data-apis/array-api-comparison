@@ -67,3 +67,5 @@ Returns `q` and `r`.
 ```
 tf.linalg.qr(input, full_matrices=False, name=None) → Tuple[ Tensor, ... ]
 ```
+
+Returns `q` and `r`.
