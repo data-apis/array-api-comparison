@@ -1,4 +1,4 @@
-# logsumexp
+# logaddexp
 
 ## NumPy
 
