@@ -308,7 +308,7 @@ name,numpy
 "tf.random_uniform_initializer",""
 "tf.random_uniform_initializer",""
 "tf.range","numpy.arange"
-"tf.rank","numpy.linalg.matrix_rank"
+"tf.rank","numpy.ndim"
 "tf.realdiv",""
 "tf.recompute_grad",""
 "tf.reduce_all","numpy.all"
