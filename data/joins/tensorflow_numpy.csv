@@ -225,7 +225,7 @@ name,numpy
 "tf.math.reduce_all","numpy.all"
 "tf.math.reduce_any","numpy.any"
 "tf.math.reduce_euclidean_norm","numpy.linalg.norm"
-"tf.math.reduce_logsumexp","numpy.logaddexp"
+"tf.math.reduce_logsumexp","numpy.logsumexp"
 "tf.math.reduce_max","numpy.amax"
 "tf.math.reduce_mean","numpy.mean"
 "tf.math.reduce_min","numpy.amin"

@@ -122,7 +122,7 @@ name,numpy
 "torch.logical_or","numpy.logical_or"
 "torch.logical_xor","numpy.logical_xor"
 "torch.logspace","numpy.logspace"
-"torch.logsumexp","numpy.logaddexp"
+"torch.logsumexp","numpy.logsumexp"
 "torch.lstsq","numpy.linalg.lstsq"
 "torch.lt","numpy.less"
 "torch.lu",""
