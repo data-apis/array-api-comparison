@@ -14,6 +14,8 @@ tol: `S.max() * max(M.shape) * eps`
 cupy.linalg.matrix_rank(M, tol=None)) → ndarray
 ```
 
+`tol` can only be float, not array-like.
+
 ## dask.array
 
 ```
@@ -38,9 +40,13 @@ np.linalg.matrix_rank(M, tol=None, hermitian=False) → ndarray
 torch.matrix_rank(input, tol=None, symmetric=False) → Tensor
 ```
 
+Does not support stacks.
+
 ```
 torch.linalg.matrix_rank(input, tol=None, hermitian=False, *, out=None) → Tensor
 ```
+
+`tol` can only be a float, not array-like.
 
 ## TensorFlow
 
