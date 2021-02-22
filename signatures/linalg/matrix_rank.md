@@ -11,10 +11,10 @@ tol: `S.max() * max(M.shape) * eps`
 ## CuPy
 
 ```
-cupy.linalg.matrix_rank(M, tol=None)) → ndarray
+cupy.linalg.matrix_rank(M, tol=None) → ndarray
 ```
 
-`tol` can only be float, not array-like.
+`tol` can only be float, not array-like. Does not support stacks.
 
 ## dask.array
 
