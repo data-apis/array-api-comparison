@@ -41,3 +41,5 @@ torch.tensordot(a, b, dims=2) → Tensor
 ```
 tf.tensordot(a, b, axes, name=None) → Tensor
 ```
+
+Allows providing `axes` as a `(2,K)` shaped array, in addition to an integer or tuple.
