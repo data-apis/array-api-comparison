@@ -2,8 +2,13 @@ name,description,signature,url
 "tensor.T","Is this Tensor with its dimensions reversed.","tensor.T","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.T"
 "tensor.abs","See torch.abs()","tensor.abs() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.abs"
 "tensor.abs_","In-place version of abs()","tensor.abs_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.abs_"
+"tensor.absolute","Alias for abs()","tensor.absolute() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.absolute"
+"tensor.absolute_","In-place version of absolute()
+Alias for abs_()","tensor.absolute_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.absolute_"
 "tensor.acos","See torch.acos()","tensor.acos() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.acos"
 "tensor.acos_","In-place version of acos()","tensor.acos_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.acos_"
+"tensor.acosh","See torch.acosh()","tensor.acosh() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.acosh"
+"tensor.acosh_","In-place version of acosh()","tensor.acosh_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.acosh_"
 "tensor.add","Add a scalar or tensor to self tensor. If both alpha
 and other are specified\, each element of other is scaled by
 alpha before being used.","tensor.add(other\, *\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.add"
@@ -20,20 +25,43 @@ alpha before being used.","tensor.add(other\, *\, alpha=1) → Tensor","https://
 "tensor.addmv_","In-place version of addmv()","tensor.addmv_(mat\, vec\, *\, beta=1\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.addmv_"
 "tensor.addr","See torch.addr()","tensor.addr(vec1\, vec2\, *\, beta=1\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.addr"
 "tensor.addr_","In-place version of addr()","tensor.addr_(vec1\, vec2\, *\, beta=1\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.addr_"
+"tensor.all","See torch.all()","tensor.all(dim=None\, keepdim=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.all"
 "tensor.allclose","See torch.allclose()","tensor.allclose(other\, rtol=1e-05\, atol=1e-08\, equal_nan=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.allclose"
+"tensor.amax","See torch.amax()","tensor.amax(dim=None\, keepdim=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.amax"
+"tensor.amin","See torch.amin()","tensor.amin(dim=None\, keepdim=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.amin"
 "tensor.angle","See torch.angle()","tensor.angle() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.angle"
+"tensor.any","See torch.any()","tensor.any(dim=None\, keepdim=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.any"
 "tensor.apply_","Applies the function callable to each element in the tensor\, replacing
 each element with the value returned by callable.","tensor.apply_(callable) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.apply_"
+"tensor.arccos","See torch.arccos()","tensor.arccos() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arccos"
+"tensor.arccos_","In-place version of arccos()","tensor.arccos_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arccos_"
+"tensor.arccosh","acosh() -> Tensor","tensor.arccosh()","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arccosh"
+"tensor.arccosh_","acosh_() -> Tensor","tensor.arccosh_()","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arccosh_"
+"tensor.arcsin","See torch.arcsin()","tensor.arcsin() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arcsin"
+"tensor.arcsin_","In-place version of arcsin()","tensor.arcsin_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arcsin_"
+"tensor.arcsinh","See torch.arcsinh()","tensor.arcsinh() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arcsinh"
+"tensor.arcsinh_","In-place version of arcsinh()","tensor.arcsinh_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arcsinh_"
+"tensor.arctan","See torch.arctan()","tensor.arctan() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arctan"
+"tensor.arctan_","In-place version of arctan()","tensor.arctan_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arctan_"
+"tensor.arctanh","See torch.arctanh()","tensor.arctanh() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arctanh"
+"tensor.arctanh_","In-place version of arctanh()","tensor.arctanh_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.arctanh_"
 "tensor.argmax","See torch.argmax()","tensor.argmax(dim=None\, keepdim=False) → LongTensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.argmax"
 "tensor.argmin","See torch.argmin()","tensor.argmin(dim=None\, keepdim=False) → LongTensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.argmin"
 "tensor.argsort","See torch.argsort()","tensor.argsort(dim=-1\, descending=False) → LongTensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.argsort"
 "tensor.as_strided","See torch.as_strided()","tensor.as_strided(size\, stride\, storage_offset=0) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.as_strided"
+"tensor.as_subclass","Makes a cls instance with the same data pointer as self. Changes
+in the output mirror changes in self\, and the output stays attached
+to the autograd graph. cls must be a subclass of Tensor.","tensor.as_subclass(cls) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.as_subclass"
 "tensor.asin","See torch.asin()","tensor.asin() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.asin"
 "tensor.asin_","In-place version of asin()","tensor.asin_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.asin_"
+"tensor.asinh","See torch.asinh()","tensor.asinh() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.asinh"
+"tensor.asinh_","In-place version of asinh()","tensor.asinh_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.asinh_"
 "tensor.atan","See torch.atan()","tensor.atan() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.atan"
 "tensor.atan2","See torch.atan2()","tensor.atan2(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.atan2"
 "tensor.atan2_","In-place version of atan2()","tensor.atan2_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.atan2_"
 "tensor.atan_","In-place version of atan()","tensor.atan_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.atan_"
+"tensor.atanh","See torch.atanh()","tensor.atanh() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.atanh"
+"tensor.atanh_","In-place version of atanh()","tensor.atanh_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.atanh_"
 "tensor.baddbmm","See torch.baddbmm()","tensor.baddbmm(batch1\, batch2\, *\, beta=1\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.baddbmm"
 "tensor.baddbmm_","In-place version of baddbmm()","tensor.baddbmm_(batch1\, batch2\, *\, beta=1\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.baddbmm_"
 "tensor.bernoulli","Returns a result tensor where each result[i]\texttt{result[i]}result[i]
@@ -64,6 +92,7 @@ dtype.
 "tensor.bitwise_xor_","In-place version of bitwise_xor()","tensor.bitwise_xor_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.bitwise_xor_"
 "tensor.bmm","See torch.bmm()","tensor.bmm(batch2) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.bmm"
 "tensor.bool","self.bool() is equivalent to self.to(torch.bool). See to().","tensor.bool(memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.bool"
+"tensor.broadcast_to","See torch.broadcast_to().","tensor.broadcast_to(shape) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.broadcast_to"
 "tensor.byte","self.byte() is equivalent to self.to(torch.uint8). See to().","tensor.byte(memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.byte"
 "tensor.cauchy_","Fills the tensor with numbers drawn from the Cauchy distribution:","tensor.cauchy_(median=0\, sigma=1\, *\, generator=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cauchy_"
 "tensor.ceil","See torch.ceil()","tensor.ceil() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ceil"
@@ -75,28 +104,33 @@ dtype.
 "tensor.chunk","See torch.chunk()","tensor.chunk(chunks\, dim=0) → List of Tensors","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.chunk"
 "tensor.clamp","See torch.clamp()","tensor.clamp(min\, max) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clamp"
 "tensor.clamp_","In-place version of clamp()","tensor.clamp_(min\, max) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clamp_"
-"tensor.clone","Returns a copy of the self tensor. The copy has the same size and data
-type as self.","tensor.clone(memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clone"
+"tensor.clip","Alias for clamp().","tensor.clip(min\, max) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clip"
+"tensor.clip_","Alias for clamp_().","tensor.clip_(min\, max) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clip_"
+"tensor.clone","See torch.clone()","tensor.clone(*\, memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clone"
 "tensor.conj","See torch.conj()","tensor.conj() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.conj"
 "tensor.contiguous","Returns a contiguous in memory tensor containing the same data as self tensor. If
 self tensor is already in the specified memory format\, this function returns the
 self tensor.","tensor.contiguous(memory_format=torch.contiguous_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.contiguous"
 "tensor.copy_","Copies the elements from src into self tensor and returns
 self.","tensor.copy_(src\, non_blocking=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.copy_"
+"tensor.copysign","See torch.copysign()","tensor.copysign(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.copysign"
+"tensor.copysign_","In-place version of copysign()","tensor.copysign_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.copysign_"
 "tensor.cos","See torch.cos()","tensor.cos() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cos"
 "tensor.cos_","In-place version of cos()","tensor.cos_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cos_"
 "tensor.cosh","See torch.cosh()","tensor.cosh() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cosh"
 "tensor.cosh_","In-place version of cosh()","tensor.cosh_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cosh_"
+"tensor.count_nonzero","See torch.count_nonzero()","tensor.count_nonzero(dim=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.count_nonzero"
 "tensor.cpu","Returns a copy of this object in CPU memory.","tensor.cpu(memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cpu"
 "tensor.cross","See torch.cross()","tensor.cross(other\, dim=-1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cross"
 "tensor.cuda","Returns a copy of this object in CUDA memory.","tensor.cuda(device=None\, non_blocking=False\, memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cuda"
 "tensor.cummax","See torch.cummax()","tensor.cummax(dim) -> (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cummax"
 "tensor.cummin","See torch.cummin()","tensor.cummin(dim) -> (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cummin"
 "tensor.cumprod","See torch.cumprod()","tensor.cumprod(dim\, dtype=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cumprod"
+"tensor.cumprod_","In-place version of cumprod()","tensor.cumprod_(dim\, dtype=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cumprod_"
 "tensor.cumsum","See torch.cumsum()","tensor.cumsum(dim\, dtype=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cumsum"
+"tensor.cumsum_","In-place version of cumsum()","tensor.cumsum_(dim\, dtype=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.cumsum_"
 "tensor.data_ptr","Returns the address of the first element of self tensor.","tensor.data_ptr() → int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.data_ptr"
-"tensor.dense_dim","If self is a sparse COO tensor (i.e.\, with torch.sparse_coo layout)\,
-this returns the number of dense dimensions. Otherwise\, this throws an error.","tensor.dense_dim() → int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.dense_dim"
+"tensor.deg2rad","See torch.deg2rad()","tensor.deg2rad() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.deg2rad"
 "tensor.dequantize","Given a quantized Tensor\, dequantize it and return the dequantized float Tensor.","tensor.dequantize() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.dequantize"
 "tensor.det","See torch.det()","tensor.det() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.det"
 "tensor.device","Is the torch.device where this Tensor is.","tensor.device","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.device"
@@ -104,13 +138,16 @@ this returns the number of dense dimensions. Otherwise\, this throws an error.",
 "tensor.diag_embed","See torch.diag_embed()","tensor.diag_embed(offset=0\, dim1=-2\, dim2=-1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.diag_embed"
 "tensor.diagflat","See torch.diagflat()","tensor.diagflat(offset=0) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.diagflat"
 "tensor.diagonal","See torch.diagonal()","tensor.diagonal(offset=0\, dim1=0\, dim2=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.diagonal"
+"tensor.diff","See torch.diff()","tensor.diff(n=1\, dim=-1\, prepend=None\, append=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.diff"
 "tensor.digamma","See torch.digamma()","tensor.digamma() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.digamma"
 "tensor.digamma_","In-place version of digamma()","tensor.digamma_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.digamma_"
 "tensor.dim","Returns the number of dimensions of self tensor.","tensor.dim() → int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.dim"
 "tensor.dist","See torch.dist()","tensor.dist(other\, p=2) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.dist"
-"tensor.div","See torch.div()","tensor.div(value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.div"
-"tensor.div_","In-place version of div()","tensor.div_(value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.div_"
-"tensor.dot","See torch.dot()","tensor.dot(tensor2) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.dot"
+"tensor.div","See torch.div()","tensor.div(value\, *\, rounding_mode=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.div"
+"tensor.div_","In-place version of div()","tensor.div_(value\, *\, rounding_mode=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.div_"
+"tensor.divide","See torch.divide()","tensor.divide(value\, *\, rounding_mode=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.divide"
+"tensor.divide_","In-place version of divide()","tensor.divide_(value\, *\, rounding_mode=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.divide_"
+"tensor.dot","See torch.dot()","tensor.dot(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.dot"
 "tensor.double","self.double() is equivalent to self.to(torch.float64). See to().","tensor.double(memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.double"
 "tensor.eig","See torch.eig()","tensor.eig(eigenvectors=False) -> (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.eig"
 "tensor.element_size","Returns the size in bytes of an individual element.","tensor.element_size() → int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.element_size"
@@ -132,83 +169,124 @@ self.expand_as(other) is equivalent to self.expand(other.size()).","tensor.expan
 "tensor.expm1","See torch.expm1()","tensor.expm1() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.expm1"
 "tensor.expm1_","In-place version of expm1()","tensor.expm1_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.expm1_"
 "tensor.exponential_","Fills self tensor with elements drawn from the exponential distribution:","tensor.exponential_(lambd=1\, *\, generator=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.exponential_"
-"tensor.fft","See torch.fft()","tensor.fft(signal_ndim\, normalized=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.fft"
 "tensor.fill_","Fills self tensor with the specified value.","tensor.fill_(value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.fill_"
 "tensor.fill_diagonal_","Fill the main diagonal of a tensor that has at least 2-dimensions.
 When dims>2\, all dimensions of input must be of equal length.
 This function modifies the input tensor in-place\, and returns the input tensor.","tensor.fill_diagonal_(fill_value\, wrap=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.fill_diagonal_"
+"tensor.fix","See torch.fix().","tensor.fix() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.fix"
+"tensor.fix_","In-place version of fix()","tensor.fix_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.fix_"
 "tensor.flatten","see torch.flatten()","tensor.flatten(input\, start_dim=0\, end_dim=-1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.flatten"
 "tensor.flip","See torch.flip()","tensor.flip(dims) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.flip"
+"tensor.fliplr","See torch.fliplr()","tensor.fliplr() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.fliplr"
+"tensor.flipud","See torch.flipud()","tensor.flipud() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.flipud"
 "tensor.float","self.float() is equivalent to self.to(torch.float32). See to().","tensor.float(memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.float"
+"tensor.float_power","See torch.float_power()","tensor.float_power(exponent) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.float_power"
+"tensor.float_power_","In-place version of float_power()","tensor.float_power_(exponent) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.float_power_"
 "tensor.floor","See torch.floor()","tensor.floor() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.floor"
 "tensor.floor_","In-place version of floor()","tensor.floor_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.floor_"
 "tensor.floor_divide","See torch.floor_divide()","tensor.floor_divide(value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.floor_divide"
 "tensor.floor_divide_","In-place version of floor_divide()","tensor.floor_divide_(value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.floor_divide_"
+"tensor.fmax","See torch.fmax()","tensor.fmax(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.fmax"
+"tensor.fmin","See torch.fmin()","tensor.fmin(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.fmin"
 "tensor.fmod","See torch.fmod()","tensor.fmod(divisor) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.fmod"
 "tensor.fmod_","In-place version of fmod()","tensor.fmod_(divisor) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.fmod_"
 "tensor.frac","See torch.frac()","tensor.frac() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.frac"
 "tensor.frac_","In-place version of frac()","tensor.frac_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.frac_"
 "tensor.gather","See torch.gather()","tensor.gather(dim\, index) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.gather"
-"tensor.ge","See torch.ge()","tensor.ge(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ge"
-"tensor.ge_","In-place version of ge()","tensor.ge_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ge_"
+"tensor.gcd","See torch.gcd()","tensor.gcd(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.gcd"
+"tensor.gcd_","In-place version of gcd()","tensor.gcd_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.gcd_"
+"tensor.ge","See torch.ge().","tensor.ge(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ge"
+"tensor.ge_","In-place version of ge().","tensor.ge_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ge_"
 "tensor.geometric_","Fills self tensor with elements drawn from the geometric distribution:","tensor.geometric_(p\, *\, generator=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.geometric_"
 "tensor.geqrf","See torch.geqrf()","tensor.geqrf() -> (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.geqrf"
 "tensor.ger","See torch.ger()","tensor.ger(vec2) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ger"
 "tensor.get_device","For CUDA tensors\, this function returns the device ordinal of the GPU on which the tensor resides.
 For CPU tensors\, an error is thrown.","tensor.get_device() -> Device ordinal (Integer)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.get_device"
-"tensor.gt","See torch.gt()","tensor.gt(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.gt"
-"tensor.gt_","In-place version of gt()","tensor.gt_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.gt_"
+"tensor.greater","See torch.greater().","tensor.greater(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.greater"
+"tensor.greater_","In-place version of greater().","tensor.greater_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.greater_"
+"tensor.greater_equal","See torch.greater_equal().","tensor.greater_equal(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.greater_equal"
+"tensor.greater_equal_","In-place version of greater_equal().","tensor.greater_equal_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.greater_equal_"
+"tensor.gt","See torch.gt().","tensor.gt(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.gt"
+"tensor.gt_","In-place version of gt().","tensor.gt_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.gt_"
 "tensor.half","self.half() is equivalent to self.to(torch.float16). See to().","tensor.half(memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.half"
 "tensor.hardshrink","See torch.nn.functional.hardshrink()","tensor.hardshrink(lambd=0.5) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.hardshrink"
+"tensor.heaviside","See torch.heaviside()","tensor.heaviside(values) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.heaviside"
 "tensor.histc","See torch.histc()","tensor.histc(bins=100\, min=0\, max=0) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.histc"
-"tensor.ifft","See torch.ifft()","tensor.ifft(signal_ndim\, normalized=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ifft"
-"tensor.index_add","Out-of-place version of torch.Tensor.index_add_()","tensor.index_add(dim\, index\, tensor) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_add"
+"tensor.hypot","See torch.hypot()","tensor.hypot(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.hypot"
+"tensor.hypot_","In-place version of hypot()","tensor.hypot_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.hypot_"
+"tensor.i0","See torch.i0()","tensor.i0() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.i0"
+"tensor.i0_","In-place version of i0()","tensor.i0_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.i0_"
+"tensor.igamma","See torch.igamma()","tensor.igamma(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.igamma"
+"tensor.igamma_","In-place version of igamma()","tensor.igamma_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.igamma_"
+"tensor.igammac","See torch.igammac()","tensor.igammac(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.igammac"
+"tensor.igammac_","In-place version of igammac()","tensor.igammac_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.igammac_"
+"tensor.imag","Returns a new tensor containing imaginary values of the self tensor.
+The returned tensor and self share the same underlying storage.","tensor.imag","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.imag"
+"tensor.index_add","Out-of-place version of torch.Tensor.index_add_().
+tensor1 corresponds to self in torch.Tensor.index_add_().","tensor.index_add(tensor1\, dim\, index\, tensor2) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_add"
 "tensor.index_add_","Accumulate the elements of tensor into the self tensor by adding
 to the indices in the order given in index. For example\, if dim == 0
 and index[i] == j\, then the ith row of tensor is added to the
 jth row of self.","tensor.index_add_(dim\, index\, tensor) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_add_"
-"tensor.index_copy","Out-of-place version of torch.Tensor.index_copy_()","tensor.index_copy(dim\, index\, tensor) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_copy"
+"tensor.index_copy","Out-of-place version of torch.Tensor.index_copy_().
+tensor1 corresponds to self in torch.Tensor.index_copy_().","tensor.index_copy(tensor1\, dim\, index\, tensor2) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_copy"
 "tensor.index_copy_","Copies the elements of tensor into the self tensor by selecting
 the indices in the order given in index. For example\, if dim == 0
 and index[i] == j\, then the ith row of tensor is copied to the
 jth row of self.","tensor.index_copy_(dim\, index\, tensor) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_copy_"
-"tensor.index_fill","Out-of-place version of torch.Tensor.index_fill_()","tensor.index_fill(dim\, index\, value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_fill"
+"tensor.index_fill","Out-of-place version of torch.Tensor.index_fill_().
+tensor1 corresponds to self in torch.Tensor.index_fill_().","tensor.index_fill(tensor1\, dim\, index\, value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_fill"
 "tensor.index_fill_","Fills the elements of the self tensor with value val by
 selecting the indices in the order given in index.","tensor.index_fill_(dim\, index\, val) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_fill_"
-"tensor.index_put","Out-place version of index_put_()","tensor.index_put(indices\, value\, accumulate=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_put"
-"tensor.index_put_","Puts values from the tensor value into the tensor self using
+"tensor.index_put","Out-place version of index_put_().
+tensor1 corresponds to self in torch.Tensor.index_put_().","tensor.index_put(tensor1\, indices\, values\, accumulate=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_put"
+"tensor.index_put_","Puts values from the tensor values into the tensor self using
 the indices specified in indices (which is a tuple of Tensors). The
-expression tensor.index_put_(indices\, value) is equivalent to
-tensor[indices] = value. Returns self.","tensor.index_put_(indices\, value\, accumulate=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_put_"
+expression tensor.index_put_(indices\, values) is equivalent to
+tensor[indices] = values. Returns self.","tensor.index_put_(indices\, values\, accumulate=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_put_"
 "tensor.index_select","See torch.index_select()","tensor.index_select(dim\, index) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.index_select"
-"tensor.indices","If self is a sparse COO tensor (i.e.\, with torch.sparse_coo layout)\,
-this returns a view of the contained indices tensor. Otherwise\, this throws an
-error.","tensor.indices() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.indices"
+"tensor.inner","See torch.inner().","tensor.inner(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.inner"
 "tensor.int","self.int() is equivalent to self.to(torch.int32). See to().","tensor.int(memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.int"
 "tensor.int_repr","Given a quantized Tensor\,
 self.int_repr() returns a CPU Tensor with uint8_t as data type that stores the
 underlying uint8_t values of the given Tensor.","tensor.int_repr() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.int_repr"
 "tensor.inverse","See torch.inverse()","tensor.inverse() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.inverse"
-"tensor.irfft","See torch.irfft()","tensor.irfft(signal_ndim\, normalized=False\, onesided=True\, signal_sizes=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.irfft"
 "tensor.is_complex","Returns True if the data type of self is a complex data type.","tensor.is_complex() → bool","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_complex"
 "tensor.is_contiguous","Returns True if self tensor is contiguous in memory in the order specified
 by memory format.","tensor.is_contiguous(memory_format=torch.contiguous_format) → bool","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_contiguous"
 "tensor.is_cuda","Is True if the Tensor is stored on the GPU\, False otherwise.","tensor.is_cuda","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_cuda"
 "tensor.is_floating_point","Returns True if the data type of self is a floating point data type.","tensor.is_floating_point() → bool","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_floating_point"
+"tensor.is_meta","Is True if the Tensor is a meta tensor\, False otherwise.  Meta tensors
+are like normal tensors\, but they carry no data.","tensor.is_meta","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_meta"
 "tensor.is_pinned","Returns true if this tensor resides in pinned memory.","tensor.is_pinned()","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_pinned"
 "tensor.is_quantized","Is True if the Tensor is quantized\, False otherwise.","tensor.is_quantized","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_quantized"
-"tensor.is_set_to","Returns True if this object refers to the same THTensor object from the
-Torch C API as the given tensor.","tensor.is_set_to(tensor) → bool","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_set_to"
+"tensor.is_set_to","Returns True if both tensors are pointing to the exact same memory (same
+storage\, offset\, size and stride).","tensor.is_set_to(tensor) → bool","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_set_to"
 "tensor.is_shared","Checks if tensor is in shared memory.","tensor.is_shared()[source]","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_shared"
 "tensor.is_signed","Returns True if the data type of self is a signed data type.","tensor.is_signed() → bool","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_signed"
-"tensor.is_sparse","","tensor.is_sparse","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.is_sparse"
+"tensor.isclose","See torch.isclose()","tensor.isclose(other\, rtol=1e-05\, atol=1e-08\, equal_nan=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.isclose"
+"tensor.isfinite","See torch.isfinite()","tensor.isfinite() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.isfinite"
+"tensor.isinf","See torch.isinf()","tensor.isinf() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.isinf"
+"tensor.isnan","See torch.isnan()","tensor.isnan() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.isnan"
+"tensor.isneginf","See torch.isneginf()","tensor.isneginf() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.isneginf"
+"tensor.isposinf","See torch.isposinf()","tensor.isposinf() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.isposinf"
+"tensor.isreal","See torch.isreal()","tensor.isreal() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.isreal"
+"tensor.istft","See torch.istft()","tensor.istft(n_fft\, hop_length=None\, win_length=None\, window=None\, center=True\, normalized=False\, onesided=None\, length=None\, return_complex=False)[source]","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.istft"
 "tensor.item","Returns the value of this tensor as a standard Python number. This only works
 for tensors with one element. For other cases\, see tolist().","tensor.item() → number","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.item"
 "tensor.kthvalue","See torch.kthvalue()","tensor.kthvalue(k\, dim=None\, keepdim=False) -> (Tensor\, LongTensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.kthvalue"
-"tensor.le","See torch.le()","tensor.le(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.le"
-"tensor.le_","In-place version of le()","tensor.le_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.le_"
+"tensor.lcm","See torch.lcm()","tensor.lcm(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lcm"
+"tensor.lcm_","In-place version of lcm()","tensor.lcm_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lcm_"
+"tensor.ldexp","See torch.ldexp()","tensor.ldexp(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ldexp"
+"tensor.ldexp_","In-place version of ldexp()","tensor.ldexp_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ldexp_"
+"tensor.le","See torch.le().","tensor.le(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.le"
+"tensor.le_","In-place version of le().","tensor.le_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.le_"
 "tensor.lerp","See torch.lerp()","tensor.lerp(end\, weight) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lerp"
 "tensor.lerp_","In-place version of lerp()","tensor.lerp_(end\, weight) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lerp_"
+"tensor.less","lt(other) -> Tensor","tensor.less()","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.less"
+"tensor.less_","In-place version of less().","tensor.less_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.less_"
+"tensor.less_equal","See torch.less_equal().","tensor.less_equal(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.less_equal"
+"tensor.less_equal_","In-place version of less_equal().","tensor.less_equal_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.less_equal_"
 "tensor.lgamma","See torch.lgamma()","tensor.lgamma() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lgamma"
 "tensor.lgamma_","In-place version of lgamma()","tensor.lgamma_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lgamma_"
 "tensor.log","See torch.log()","tensor.log() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.log"
@@ -228,6 +306,9 @@ parameterized by the given mean μ\muμ
 . Note that mean and std are the mean and
 standard deviation of the underlying normal distribution\, and not of the
 returned distribution:","tensor.log_normal_(mean=1\, std=2\, *\, generator=None)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.log_normal_"
+"tensor.logaddexp","See torch.logaddexp()","tensor.logaddexp(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logaddexp"
+"tensor.logaddexp2","See torch.logaddexp2()","tensor.logaddexp2(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logaddexp2"
+"tensor.logcumsumexp","See torch.logcumsumexp()","tensor.logcumsumexp(dim) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logcumsumexp"
 "tensor.logdet","See torch.logdet()","tensor.logdet() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logdet"
 "tensor.logical_and","See torch.logical_and()","tensor.logical_and() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logical_and"
 "tensor.logical_and_","In-place version of logical_and()","tensor.logical_and_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logical_and_"
@@ -237,11 +318,13 @@ returned distribution:","tensor.log_normal_(mean=1\, std=2\, *\, generator=None)
 "tensor.logical_or_","In-place version of logical_or()","tensor.logical_or_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logical_or_"
 "tensor.logical_xor","See torch.logical_xor()","tensor.logical_xor() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logical_xor"
 "tensor.logical_xor_","In-place version of logical_xor()","tensor.logical_xor_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logical_xor_"
+"tensor.logit","See torch.logit()","tensor.logit() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logit"
+"tensor.logit_","In-place version of logit()","tensor.logit_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logit_"
 "tensor.logsumexp","See torch.logsumexp()","tensor.logsumexp(dim\, keepdim=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.logsumexp"
 "tensor.long","self.long() is equivalent to self.to(torch.int64). See to().","tensor.long(memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.long"
 "tensor.lstsq","See torch.lstsq()","tensor.lstsq(A) -> (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lstsq"
-"tensor.lt","See torch.lt()","tensor.lt(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lt"
-"tensor.lt_","In-place version of lt()","tensor.lt_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lt_"
+"tensor.lt","See torch.lt().","tensor.lt(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lt"
+"tensor.lt_","In-place version of lt().","tensor.lt_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lt_"
 "tensor.lu","See torch.lu()","tensor.lu(pivot=True\, get_infos=False)[source]","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lu"
 "tensor.lu_solve","See torch.lu_solve()","tensor.lu_solve(LU_data\, LU_pivots) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.lu_solve"
 "tensor.map_","Applies callable for each element in self tensor and the given
@@ -260,19 +343,32 @@ with the shape of the underlying tensor. The source should have at least
 as many elements as the number of ones in mask","tensor.masked_scatter_(mask\, source)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.masked_scatter_"
 "tensor.masked_select","See torch.masked_select()","tensor.masked_select(mask) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.masked_select"
 "tensor.matmul","See torch.matmul()","tensor.matmul(tensor2) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.matmul"
+"tensor.matrix_exp","See torch.matrix_exp()","tensor.matrix_exp() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.matrix_exp"
 "tensor.matrix_power","See torch.matrix_power()","tensor.matrix_power(n) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.matrix_power"
 "tensor.max","See torch.max()","tensor.max(dim=None\, keepdim=False) -> Tensor or (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.max"
+"tensor.maximum","See torch.maximum()","tensor.maximum(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.maximum"
 "tensor.mean","See torch.mean()","tensor.mean(dim=None\, keepdim=False) -> Tensor or (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.mean"
 "tensor.median","See torch.median()","tensor.median(dim=None\, keepdim=False) -> (Tensor\, LongTensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.median"
 "tensor.min","See torch.min()","tensor.min(dim=None\, keepdim=False) -> Tensor or (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.min"
+"tensor.minimum","See torch.minimum()","tensor.minimum(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.minimum"
 "tensor.mm","See torch.mm()","tensor.mm(mat2) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.mm"
 "tensor.mode","See torch.mode()","tensor.mode(dim=None\, keepdim=False) -> (Tensor\, LongTensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.mode"
-"tensor.mul","See torch.mul()","tensor.mul(value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.mul"
-"tensor.mul_","In-place version of mul()","tensor.mul_(value)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.mul_"
+"tensor.moveaxis","See torch.moveaxis()","tensor.moveaxis(source\, destination) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.moveaxis"
+"tensor.movedim","See torch.movedim()","tensor.movedim(source\, destination) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.movedim"
+"tensor.msort","See torch.msort()","tensor.msort() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.msort"
+"tensor.mul","See torch.mul().","tensor.mul(value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.mul"
+"tensor.mul_","In-place version of mul().","tensor.mul_(value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.mul_"
 "tensor.multinomial","See torch.multinomial()","tensor.multinomial(num_samples\, replacement=False\, *\, generator=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.multinomial"
+"tensor.multiply","See torch.multiply().","tensor.multiply(value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.multiply"
+"tensor.multiply_","In-place version of multiply().","tensor.multiply_(value) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.multiply_"
 "tensor.mv","See torch.mv()","tensor.mv(vec) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.mv"
 "tensor.mvlgamma","See torch.mvlgamma()","tensor.mvlgamma(p) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.mvlgamma"
 "tensor.mvlgamma_","In-place version of mvlgamma()","tensor.mvlgamma_(p) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.mvlgamma_"
+"tensor.nan_to_num","See torch.nan_to_num().","tensor.nan_to_num(nan=0.0\, posinf=None\, neginf=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.nan_to_num"
+"tensor.nan_to_num_","In-place version of nan_to_num().","tensor.nan_to_num_(nan=0.0\, posinf=None\, neginf=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.nan_to_num_"
+"tensor.nanmedian","See torch.nanmedian()","tensor.nanmedian(dim=None\, keepdim=False) -> (Tensor\, LongTensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.nanmedian"
+"tensor.nanquantile","See torch.nanquantile()","tensor.nanquantile(q\, dim=None\, keepdim=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.nanquantile"
+"tensor.nansum","See torch.nansum()","tensor.nansum(dim=None\, keepdim=False\, dtype=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.nansum"
 "tensor.narrow","See torch.narrow()","tensor.narrow(dimension\, start\, length) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.narrow"
 "tensor.narrow_copy","Same as Tensor.narrow() except returning a copy rather
 than shared storage.  This is primarily for sparse tensors\, which
@@ -281,10 +377,12 @@ with `dimemsion > self.sparse_dim()` will return a copy with the
 relevant dense dimension narrowed\, and `self.shape` updated accordingly.","tensor.narrow_copy(dimension\, start\, length) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.narrow_copy"
 "tensor.ndim","Alias for dim()","tensor.ndim","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ndim"
 "tensor.ndimension","Alias for dim()","tensor.ndimension() → int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ndimension"
-"tensor.ne","See torch.ne()","tensor.ne(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ne"
-"tensor.ne_","In-place version of ne()","tensor.ne_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ne_"
+"tensor.ne","See torch.ne().","tensor.ne(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ne"
+"tensor.ne_","In-place version of ne().","tensor.ne_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ne_"
 "tensor.neg","See torch.neg()","tensor.neg() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.neg"
 "tensor.neg_","In-place version of neg()","tensor.neg_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.neg_"
+"tensor.negative","See torch.negative()","tensor.negative() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.negative"
+"tensor.negative_","In-place version of negative()","tensor.negative_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.negative_"
 "tensor.nelement","Alias for numel()","tensor.nelement() → int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.nelement"
 "tensor.new_empty","Returns a Tensor of size size filled with uninitialized data.
 By default\, the returned Tensor has the same torch.dtype and
@@ -301,16 +399,21 @@ torch.device as this tensor.","tensor.new_tensor(data\, dtype=None\, device=None
 "tensor.new_zeros","Returns a Tensor of size size filled with 0.
 By default\, the returned Tensor has the same torch.dtype and
 torch.device as this tensor.","tensor.new_zeros(size\, dtype=None\, device=None\, requires_grad=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.new_zeros"
+"tensor.nextafter","See torch.nextafter()","tensor.nextafter(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.nextafter"
+"tensor.nextafter_","In-place version of nextafter()","tensor.nextafter_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.nextafter_"
 "tensor.nonzero","See torch.nonzero()","tensor.nonzero() → LongTensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.nonzero"
 "tensor.norm","See torch.norm()","tensor.norm(p='fro'\, dim=None\, keepdim=False\, dtype=None)[source]","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.norm"
 "tensor.normal_","Fills self tensor with elements samples from the normal distribution
 parameterized by mean and std.","tensor.normal_(mean=0\, std=1\, *\, generator=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.normal_"
+"tensor.not_equal","See torch.not_equal().","tensor.not_equal(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.not_equal"
+"tensor.not_equal_","In-place version of not_equal().","tensor.not_equal_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.not_equal_"
 "tensor.numel","See torch.numel()","tensor.numel() → int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.numel"
 "tensor.numpy","Returns self tensor as a NumPy ndarray. This tensor and the
 returned ndarray share the same underlying storage. Changes to
 self tensor will be reflected in the ndarray and vice versa.","tensor.numpy() → numpy.ndarray","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.numpy"
 "tensor.orgqr","See torch.orgqr()","tensor.orgqr(input2) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.orgqr"
 "tensor.ormqr","See torch.ormqr()","tensor.ormqr(input2\, input3\, left=True\, transpose=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ormqr"
+"tensor.outer","See torch.outer().","tensor.outer(vec2) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.outer"
 "tensor.permute","Returns a view of the original tensor with its dimensions permuted.","tensor.permute(*dims) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.permute"
 "tensor.pin_memory","Copies the tensor to pinned memory\, if it’s not already pinned.","tensor.pin_memory() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.pin_memory"
 "tensor.pinverse","See torch.pinverse()","tensor.pinverse() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.pinverse"
@@ -338,12 +441,17 @@ returns the scale of the underlying quantizer().","tensor.q_scale() → float","
 returns the zero_point of the underlying quantizer().","tensor.q_zero_point() → int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.q_zero_point"
 "tensor.qr","See torch.qr()","tensor.qr(some=True) -> (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.qr"
 "tensor.qscheme","Returns the quantization scheme of a given QTensor.","tensor.qscheme() → torch.qscheme","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.qscheme"
+"tensor.quantile","See torch.quantile()","tensor.quantile(q\, dim=None\, keepdim=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.quantile"
+"tensor.rad2deg","See torch.rad2deg()","tensor.rad2deg() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.rad2deg"
 "tensor.random_","Fills self tensor with numbers sampled from the discrete uniform
 distribution over [from\, to - 1]. If not specified\, the values are usually
 only bounded by self tensor’s data type. However\, for floating point
 types\, if unspecified\, range will be [0\, 2^mantissa] to ensure that every
 value is representable. For example\, torch.tensor(1\, dtype=torch.double).random_()
 will be uniform in [0\, 2^53].","tensor.random_(from=0\, to=None\, *\, generator=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.random_"
+"tensor.ravel","see torch.ravel()","tensor.ravel(input) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.ravel"
+"tensor.real","Returns a new tensor containing real values of the self tensor.
+The returned tensor and self share the same underlying storage.","tensor.real","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.real"
 "tensor.reciprocal","See torch.reciprocal()","tensor.reciprocal() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.reciprocal"
 "tensor.reciprocal_","In-place version of reciprocal()","tensor.reciprocal_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.reciprocal_"
 "tensor.record_stream","Ensures that the tensor memory is not reused for another tensor until all
@@ -371,7 +479,6 @@ underlying storage is not changed. Existing elements are preserved but any new
 memory is uninitialized.","tensor.resize_(*sizes\, memory_format=torch.contiguous_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.resize_"
 "tensor.resize_as_","Resizes the self tensor to be the same size as the specified
 tensor. This is equivalent to self.resize_(tensor.size()).","tensor.resize_as_(tensor\, memory_format=torch.contiguous_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.resize_as_"
-"tensor.rfft","See torch.rfft()","tensor.rfft(signal_ndim\, normalized=False\, onesided=True) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.rfft"
 "tensor.roll","See torch.roll()","tensor.roll(shifts\, dims) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.roll"
 "tensor.rot90","See torch.rot90()","tensor.rot90(k\, dims) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.rot90"
 "tensor.round","See torch.round()","tensor.round() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.round"
@@ -382,7 +489,7 @@ tensor. This is equivalent to self.resize_(tensor.size()).","tensor.resize_as_(t
 "tensor.scatter_","Writes all values from the tensor src into self at the indices
 specified in the index tensor. For each value in src\, its output
 index is specified by its index in src for dimension != dim and by
-the corresponding value in index for dimension = dim.","tensor.scatter_(dim\, index\, src) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.scatter_"
+the corresponding value in index for dimension = dim.","tensor.scatter_(dim\, index\, src\, reduce=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.scatter_"
 "tensor.scatter_add","Out-of-place version of torch.Tensor.scatter_add_()","tensor.scatter_add(dim\, index\, src) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.scatter_add"
 "tensor.scatter_add_","Adds all values from the tensor other into self at the indices
 specified in the index tensor in a similar fashion as
@@ -396,14 +503,19 @@ This function returns a view of the original tensor with the given dimension rem
 self tensor will share the same storage and have the same size and
 strides as source. Changes to elements in one tensor will be reflected
 in the other.","tensor.set_(source=None\, storage_offset=0\, size=None\, stride=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.set_"
+"tensor.sgn","See torch.sgn()","tensor.sgn() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sgn"
+"tensor.sgn_","In-place version of sgn()","tensor.sgn_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sgn_"
 "tensor.share_memory_","Moves the underlying storage to shared memory.","tensor.share_memory_()[source]","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.share_memory_"
 "tensor.short","self.short() is equivalent to self.to(torch.int16). See to().","tensor.short(memory_format=torch.preserve_format) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.short"
 "tensor.sigmoid","See torch.sigmoid()","tensor.sigmoid() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sigmoid"
 "tensor.sigmoid_","In-place version of sigmoid()","tensor.sigmoid_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sigmoid_"
 "tensor.sign","See torch.sign()","tensor.sign() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sign"
 "tensor.sign_","In-place version of sign()","tensor.sign_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sign_"
+"tensor.signbit","See torch.signbit()","tensor.signbit() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.signbit"
 "tensor.sin","See torch.sin()","tensor.sin() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sin"
 "tensor.sin_","In-place version of sin()","tensor.sin_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sin_"
+"tensor.sinc","See torch.sinc()","tensor.sinc() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sinc"
+"tensor.sinc_","In-place version of sinc()","tensor.sinc_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sinc_"
 "tensor.sinh","See torch.sinh()","tensor.sinh() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sinh"
 "tensor.sinh_","In-place version of sinh()","tensor.sinh_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sinh_"
 "tensor.size","Returns the size of the self tensor. The returned value is a subclass of
@@ -411,11 +523,6 @@ tuple.","tensor.size() → torch.Size","https://pytorch.org/docs/stable/tensors.
 "tensor.slogdet","See torch.slogdet()","tensor.slogdet() -> (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.slogdet"
 "tensor.solve","See torch.solve()","tensor.solve(A) → Tensor\, Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.solve"
 "tensor.sort","See torch.sort()","tensor.sort(dim=-1\, descending=False) -> (Tensor\, LongTensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sort"
-"tensor.sparse_dim","If self is a sparse COO tensor (i.e.\, with torch.sparse_coo layout)\,
-this returns the number of sparse dimensions. Otherwise\, this throws an error.","tensor.sparse_dim() → int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sparse_dim"
-"tensor.sparse_mask","Returns a new SparseTensor with values from Tensor input filtered
-by indices of mask and values are ignored. input and mask
-must have the same shape.","tensor.sparse_mask(input\, mask) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sparse_mask"
 "tensor.split","See torch.split()","tensor.split(split_size\, dim=0)[source]","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.split"
 "tensor.sqrt","See torch.sqrt()","tensor.sqrt() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sqrt"
 "tensor.sqrt_","In-place version of sqrt()","tensor.sqrt_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sqrt_"
@@ -424,20 +531,22 @@ must have the same shape.","tensor.sparse_mask(input\, mask) → Tensor","https:
 "tensor.squeeze","See torch.squeeze()","tensor.squeeze(dim=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.squeeze"
 "tensor.squeeze_","In-place version of squeeze()","tensor.squeeze_(dim=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.squeeze_"
 "tensor.std","See torch.std()","tensor.std(dim=None\, unbiased=True\, keepdim=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.std"
-"tensor.stft","See torch.stft()","tensor.stft(n_fft\, hop_length=None\, win_length=None\, window=None\, center=True\, pad_mode='reflect'\, normalized=False\, onesided=True)[source]","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.stft"
+"tensor.stft","See torch.stft()","tensor.stft(n_fft\, hop_length=None\, win_length=None\, window=None\, center=True\, pad_mode='reflect'\, normalized=False\, onesided=None\, return_complex=None)[source]","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.stft"
 "tensor.storage","Returns the underlying storage.","tensor.storage() → torch.Storage","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.storage"
 "tensor.storage_offset","Returns self tensor’s offset in the underlying storage in terms of
 number of storage elements (not bytes).","tensor.storage_offset() → int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.storage_offset"
 "tensor.storage_type","Returns the type of the underlying storage.","tensor.storage_type() → type","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.storage_type"
 "tensor.stride","Returns the stride of self tensor.","tensor.stride(dim) → tuple or int","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.stride"
-"tensor.sub","Subtracts a scalar or tensor from self tensor. If both alpha
-and other are specified\, each element of other is scaled by
-alpha before being used.","tensor.sub(other\, *\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sub"
+"tensor.sub","See torch.sub().","tensor.sub(other\, *\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sub"
 "tensor.sub_","In-place version of sub()","tensor.sub_(other\, *\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sub_"
+"tensor.subtract","See torch.subtract().","tensor.subtract(other\, *\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.subtract"
+"tensor.subtract_","In-place version of subtract().","tensor.subtract_(other\, *\, alpha=1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.subtract_"
 "tensor.sum","See torch.sum()","tensor.sum(dim=None\, keepdim=False\, dtype=None) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sum"
 "tensor.sum_to_size","Sum this tensor to size.
 size must be broadcastable to this tensor size.","tensor.sum_to_size(*size) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.sum_to_size"
 "tensor.svd","See torch.svd()","tensor.svd(some=True\, compute_uv=True) -> (Tensor\, Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.svd"
+"tensor.swapaxes","See torch.swapaxes()","tensor.swapaxes(axis0\, axis1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.swapaxes"
+"tensor.swapdims","See torch.swapdims()","tensor.swapdims(dim0\, dim1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.swapdims"
 "tensor.symeig","See torch.symeig()","tensor.symeig(eigenvectors=False\, upper=True) -> (Tensor\, Tensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.symeig"
 "tensor.t","See torch.t()","tensor.t() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.t"
 "tensor.t_","In-place version of t()","tensor.t_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.t_"
@@ -446,13 +555,14 @@ size must be broadcastable to this tensor size.","tensor.sum_to_size(*size) → 
 "tensor.tan_","In-place version of tan()","tensor.tan_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.tan_"
 "tensor.tanh","See torch.tanh()","tensor.tanh() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.tanh"
 "tensor.tanh_","In-place version of tanh()","tensor.tanh_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.tanh_"
+"tensor.tensor_split","See torch.tensor_split()","tensor.tensor_split(indices_or_sections\, dim=0) → List of Tensors","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.tensor_split"
+"tensor.tile","See torch.tile()","tensor.tile(*reps) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.tile"
 "tensor.to","Performs Tensor dtype and/or device conversion. A torch.dtype and torch.device are
 inferred from the arguments of self.to(*args\, **kwargs).","tensor.to(*args\, **kwargs) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.to"
 "tensor.to_mkldnn","Returns a copy of the tensor in torch.mkldnn layout.","tensor.to_mkldnn() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.to_mkldnn"
-"tensor.to_sparse","Returns a sparse copy of the tensor.  PyTorch supports sparse tensors in
-coordinate format.","tensor.to_sparse(sparseDims) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.to_sparse"
-"tensor.tolist","”
-tolist() -> list or number","tensor.tolist()","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.tolist"
+"tensor.tolist","Returns the tensor as a (nested) list. For scalars\, a standard
+Python number is returned\, just like with item().
+Tensors are automatically moved to the CPU first if necessary.","tensor.tolist() → list or number","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.tolist"
 "tensor.topk","See torch.topk()","tensor.topk(k\, dim=None\, largest=True\, sorted=True) -> (Tensor\, LongTensor)","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.topk"
 "tensor.trace","See torch.trace()","tensor.trace() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.trace"
 "tensor.transpose","See torch.transpose()","tensor.transpose(dim0\, dim1) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.transpose"
@@ -478,14 +588,14 @@ distribution:","tensor.uniform_(from=0\, to=1) → Tensor","https://pytorch.org/
 "tensor.unique_consecutive","Eliminates all but the first element from every consecutive group of equivalent elements.","tensor.unique_consecutive(return_inverse=False\, return_counts=False\, dim=None)[source]","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.unique_consecutive"
 "tensor.unsqueeze","See torch.unsqueeze()","tensor.unsqueeze(dim) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.unsqueeze"
 "tensor.unsqueeze_","In-place version of unsqueeze()","tensor.unsqueeze_(dim) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.unsqueeze_"
-"tensor.values","If self is a sparse COO tensor (i.e.\, with torch.sparse_coo layout)\,
-this returns a view of the contained values tensor. Otherwise\, this throws an
-error.","tensor.values() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.values"
 "tensor.var","See torch.var()","tensor.var(dim=None\, unbiased=True\, keepdim=False) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.var"
+"tensor.vdot","See torch.vdot()","tensor.vdot(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.vdot"
 "tensor.view","Returns a new tensor with the same data as the self tensor but of a
 different shape.","tensor.view(*shape) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.view"
 "tensor.view_as","View this tensor as the same size as other.
 self.view_as(other) is equivalent to self.view(other.size()).","tensor.view_as(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.view_as"
 "tensor.where","self.where(condition\, y) is equivalent to torch.where(condition\, self\, y).
 See torch.where()","tensor.where(condition\, y) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.where"
+"tensor.xlogy","See torch.xlogy()","tensor.xlogy(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.xlogy"
+"tensor.xlogy_","In-place version of xlogy()","tensor.xlogy_(other) → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.xlogy_"
 "tensor.zero_","Fills self tensor with zeros.","tensor.zero_() → Tensor","https://pytorch.org/docs/stable/tensors.html#torch.Tensor.zero_"
