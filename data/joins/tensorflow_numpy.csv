@@ -371,7 +371,7 @@ name,numpy
 "tf.sets.intersection","numpy.intersect1d"
 "tf.sets.size",""
 "tf.sets.union","numpy.union1d"
-"tf.shape",""
+"tf.shape","numpy.shape"
 "tf.shape_n",""
 "tf.signal.dct",""
 "tf.signal.fft","numpy.fft.fft"
