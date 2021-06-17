@@ -611,7 +611,7 @@
     "dask": "&#128640",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -633,7 +633,7 @@
     "dask": "",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -655,7 +655,7 @@
     "dask": "",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -666,7 +666,7 @@
     "dask": "",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -688,7 +688,7 @@
     "dask": "&#128640",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -732,7 +732,7 @@
     "dask": "",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -743,7 +743,7 @@
     "dask": "&#128640",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": ""
   },
@@ -765,7 +765,7 @@
     "dask": "",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -776,7 +776,7 @@
     "dask": "&#128640",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -787,7 +787,7 @@
     "dask": "",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -798,7 +798,7 @@
     "dask": "&#128640",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -809,7 +809,7 @@
     "dask": "&#128640",
     "jax": "",
     "mxnet": "",
-    "pytorch": "",
+    "pytorch": "&#128640",
     "sparse": "",
     "tensorflow": "&#128640"
   },
@@ -1458,7 +1458,7 @@
     "dask": 87,
     "jax": 90,
     "mxnet": 61,
-    "pytorch": 92,
+    "pytorch": 104,
     "sparse": 13,
     "tensorflow": 36
   }

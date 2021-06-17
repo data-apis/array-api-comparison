@@ -30,11 +30,29 @@
 
 var join = require( 'path' ).join;
 var readJSON = require( '@stdlib/fs/read-json' ).sync;
+var contains = require( '@stdlib/assert/contains' );
 var ARRAY_API = require( './../data/raw/array_api.json' );
 
 
 // VARIABLES //
 
+var TORCH_LINALG = [
+	'torch.linalg.cholesky',
+	'torch.linalg.cond',
+	'torch.linalg.det',
+	'torch.linalg.slogdet',
+	'torch.linalg.eigh',
+	'torch.linalg.eigvalsh',
+	'torch.linalg.matrix_rank',
+	'torch.linalg.norm',
+	'torch.linalg.pinv',
+	'torch.linalg.svd',
+	'torch.linalg.solve',
+	'torch.linalg.tensorinv',
+	'torch.linalg.tensorsolve',
+	'torch.linalg.inv',
+	'torch.linalg.qr'
+];
 var LIBRARIES = [
 	'numpy',
 	'cupy',
@@ -115,7 +133,7 @@ function main() {
 			alias = PREFIXES[ key ] + name;
 			for ( k = 0; k < data.length; k++ ) {
 				o = data[ k ];
-				if ( o.name === alias ) {
+				if ( o.name === alias || ( key === 'pytorch' && contains( TORCH_LINALG, alias ) ) ) {
 					// TODO: remove once https://github.com/numpy/numpy/pull/18585 is merged; here, we mark with an asterisk to indicate that this is in-progress...
 					if ( key === 'numpy' ) {
 						key += '<sup>*</sup>';
