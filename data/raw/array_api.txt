@@ -87,7 +87,7 @@ logical_and
 logical_not
 logical_or
 logical_xor
-mamtul
+matmul
 max
 mean
 meshgrid

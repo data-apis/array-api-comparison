@@ -77,6 +77,7 @@ include $(TOOLS_MAKE_DIR)/debug.mk
 include $(TOOLS_MAKE_DIR)/help.mk
 
 # Please keep sorted in alphabetical order:
+include $(TOOLS_MAKE_LIB_DIR)/array_api.mk
 include $(TOOLS_MAKE_LIB_DIR)/common_apis.mk
 include $(TOOLS_MAKE_LIB_DIR)/common_apis_ranks.mk
 include $(TOOLS_MAKE_LIB_DIR)/common_complement.mk
