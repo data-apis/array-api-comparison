@@ -18,6 +18,8 @@ cupy.take(a, indices, axis=None, out=None) → ndarray
 dask.array.take(a, indices, axis=0) → ndarray
 ```
 
+Default is along the first axis.
+
 ## JAX
 
 ```
@@ -27,7 +29,7 @@ jax.numpy.take(a, indices, axis=None, out=None, mode=None) → ndarray
 ## MXNet
 
 ```
-
+mxnet.numpy.take(a, indices, axis=None, mode='raise', out=None) → ndarray
 ```
 
 ## PyTorch
