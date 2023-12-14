@@ -12,7 +12,7 @@ numpy.topk(a, k, axis=-1, largest=True, sorted=True) → [ndarray, ndarray]
 numpy.partition(a, kth, axis=-1, kind='introselect', order=None) → ndarray
 ```
 
-**Note**: returns an array of the same shape as `a` and requires sorting the return value to get the top `k` values in order.
+**Note**: returns an array of the same shape as `a` and requires sorting the return value to get the top `k` values in order. If `axis` is `None`, partitions a flattened array.
 
 ```
 numpy.argpartition(a, kth, axis=-1, kind='introselect', order=None) → ndarray
@@ -27,6 +27,10 @@ cupy.argpartition(a, kth, axis=-1) → ndarray
 ```
 
 **Note**: performs a full sort.
+
+```
+cupy.partition(a, kth, axis=-1) → ndarray
+```
 
 ## dask.array
 
