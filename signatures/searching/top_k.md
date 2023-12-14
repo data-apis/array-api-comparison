@@ -68,7 +68,7 @@ jax.numpy.argpartition(a, kth, axis=-1) → ndarray
 npx.topk(data, axis=-1, k=1, ret_typ='indices', is_ascend=False, dtype='float32') → ndarray | [ndarray, ndarray]
 ```
 
-**Note**: whether a single ndarray or a list of ndarrays is returned is determined by `ret_type`.
+**Note**: whether a single ndarray or a list of ndarrays is returned is determined by `ret_type`. Differs from NumPy et al in providing a default value for `k`.
 
 ## PyTorch
 
