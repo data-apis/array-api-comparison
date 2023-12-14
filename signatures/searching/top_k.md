@@ -65,7 +65,7 @@ jax.numpy.argpartition(a, kth, axis=-1) → ndarray
 ## MXNet
 
 ```
-npx.topk(data, axis=-1, k=1, ret_typ='indices', is_ascend=False, dtype='float32') → ndarray | [ndarray, ndarray]
+npx.topk(data, axis=-1, k=1, ret_typ='indices', is_ascend=False, dtype='float32') → ndarray | tuple[ndarray, ndarray]
 ```
 
 **Note**: whether a single ndarray or a list of ndarrays is returned is determined by `ret_type`. Differs from NumPy et al in providing a default value for `k`.
@@ -73,7 +73,7 @@ npx.topk(data, axis=-1, k=1, ret_typ='indices', is_ascend=False, dtype='float32'
 ## PyTorch
 
 ```
-torch.topk(input, k, dim=None, largest=True, sorted=True, *, out=None) → (Tensor, LongTensor)
+torch.topk(input, k, dim=None, largest=True, sorted=True, *, out=None) → tuple[Tensor, LongTensor]
 ```
 
 **Note**: returns a named tuple containing values and indices. Differs from NumPy et al for default `dim`.
@@ -82,7 +82,7 @@ torch.topk(input, k, dim=None, largest=True, sorted=True, *, out=None) → (Tens
 
 ```
 tf.math.top_k(input, k=1, sorted=True, index_type=tf.dtypes.int32, name=None
-) → (Tensor, Tensor)
+) → tuple[Tensor, Tensor]
 ```
 
 **Note**: returns a `(values, indices)` tuple. Only supports last axis.
