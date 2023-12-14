@@ -85,4 +85,4 @@ tf.math.top_k(input, k=1, sorted=True, index_type=tf.dtypes.int32, name=None
 ) → tuple[Tensor, Tensor]
 ```
 
-**Note**: returns a `(values, indices)` tuple. Only supports last axis.
+**Note**: returns a `(values, indices)` tuple. Only supports last axis. Provides a default for `k`.
