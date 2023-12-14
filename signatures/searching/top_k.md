@@ -52,7 +52,7 @@ dask.array.argtopk(a, k, axis=-1, split_every=None)
 jax.lax.top_k(operand, k) → ndarray
 ```
 
-**Note**: only returns values.
+**Note**: only returns values. Always operates along the last axis.
 
 ```
 jax.numpy.partition(a, kth, axis=-1) → ndarray
