@@ -8,8 +8,10 @@ numpy.broadcast_shapes(*args) → Tuple
 
 ## CuPy
 
-```
+CuPy borrows `broadcast_shapes` from NumPy (see https://github.com/cupy/cupy/blob/a888cc94c79729cf24ebb808d15b9702c0342392/cupy/__init__.py#L302)
 
+```
+cupy.broadcast_shapes(*args) → Tuple
 ```
 
 ## dask.array
