@@ -14,7 +14,7 @@ numpy.broadcast_shapes(*args) → Tuple
 
 ## dask.array
 
-Appears to support for not in docs: <https://github.com/dask/dask/issues/11433>
+Appears to support but not in docs: <https://github.com/dask/dask/issues/11433>
 
 ```
 dask.array.broadcast_shapes(*args) → Tuple
