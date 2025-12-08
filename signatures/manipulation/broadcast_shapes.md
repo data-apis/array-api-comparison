@@ -16,7 +16,7 @@ cupy.broadcast_shapes(*args) → Tuple
 
 ## dask.array
 
-Appears to support but not in docs: <https://github.com/dask/dask/issues/11433>
+Appears to support but not in docs: <https://github.com/dask/dask/issues/11433> and <https://github.com/dask/dask/pull/11434/files>
 
 ```
 dask.array.broadcast_shapes(*args) → Tuple
@@ -43,3 +43,7 @@ tf.broadcast_static_shape(shape_x, shape_y) → TensorShape
 ```
 tf.broadcast_dynamic_shape(shape_x, shape_y) → Tensor
 ```
+
+## ndonnx
+
+Not supported. Has `broadcast_arrays` and `broadcast_to`.
